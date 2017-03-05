@@ -1,0 +1,50 @@
+afstand.m
+l -> x, b -> y
+
+bord.m
+B -> grid
+A -> infomatrix
+l -> lengte
+b -> breedte
+
+happiness.m
+B -> grid
+t -> type
+
+info.m
+A -> infomatrix
+l -> lengte
+b -> breedte
+t -> types
+
+test.m
+t -> types
+l -> lengte
+b -> breedte
+h -> happy
+vk -> vierkant
+rv -> random
+
+verplaats.m
+A -> infomatrix
+B -> grid
+i -> individu
+l -> lengte
+b -> breedte
+vk -> vierkant
+
+verplaats_random.m
+A -> infomatrix
+B -> grid
+i -> individu
+l -> lengte
+b -> breedte
+
+Menu.m
+t -> types
+l -> lengte
+b -> breedte
+h -> happy
+rv -> random
+q -> Radius
+w = Vierkant
