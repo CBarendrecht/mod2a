@@ -9,7 +9,7 @@ prompt = {'Aantal mensen:',
           };
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'40','2' ,'8', '8', '1/3', '2', 'false'} ;
+defaultans = {'40','2' ,'8', '8', '1/3', '2', 'False'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 n = str2num(answer{1});
 types = str2num(answer{2});
