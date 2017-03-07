@@ -1,10 +1,10 @@
-function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv)
+function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv,acrim)
     if menu
         [n,t,l,b,h,vk,r,rv] = Menu();
     end
-    A = info(n,l,b,t);
-    B = bord(A,l,b,n);
-    C = bord(A,l,b,n);
+    A = info(n,l,b,t,acrim);
+    [B,K] = bord(A,l,b,n,acrim);
+    %[C,K1] = bord(A,l,b,n,acrim); %niet nodig bij veel simulaties
     klaar = false;
     teller = 0;
     totmoves = 0;
@@ -12,11 +12,11 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv)
     while klaar == false 
         klaar = true;
         for i = 1:n
-            if happiness(B,A(2,i),A(3,i),A(1,i),vk,r) < h
+            if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
                 if (~rv)
-                    [A,B,v] = verplaats(A,B,i,l,b,vk,r);
+                    [A,B,K,v] = verplaats(A,B,K,i,l,b,vk,r);
                 else
-                    [A,B,v] = verplaats_random(A,B,i,l,b);
+                    [A,B,K,v] = verplaats_random(A,B,K,i,l,b);
                 end
             else
                 v = false;
@@ -39,7 +39,7 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv)
             klaar = true;
         end
     end
-    if (teller <= 10000)
+    %if (teller <= 10000)
         %display('equilibrium reached');
         %disp(['aantal generaties = ', num2str(teller)]);
         %disp(['totaal aantal moves = ', num2str(totmoves)]);
@@ -50,7 +50,7 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv)
         %for i = 1:n
         %    disp(['moves van nr.', num2str(i), ' = ', num2str(A(4,i))]);
         %end
-    end
+    %end
     
     %figure;
     %plot(g);
@@ -60,19 +60,19 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv)
     data = teller; 
     
     %display('klaar');
-    map = [1, 1, 1
-           1, 0.5, 0
-           1, 0, 1
-           1, 1, 0
-           0, 1, 0
-           0, 1, 1
-           1, 0, 0
-           0, 0, 1
-           0.5,0,1
-           0, 1, 0.5
-           0, 0, 0];
-    Eindbord = B + ones(l,b);
-    Beginbord = C + ones(l,b);
+    %map = [1, 1, 1
+    %       1, 0.5, 0
+    %       1, 0, 1
+    %       1, 1, 0
+    %       0, 1, 0
+    %       0, 1, 1
+    %       1, 0, 0
+    %       0, 0, 1
+    %       0.5,0,1
+    %       0, 1, 0.5
+    %       0, 0, 0];
+    %Eindbord = B + ones(l,b);
+    %Beginbord = C + ones(l,b);
     %figure;
     %image(Eindbord);
     %colormap(map);
