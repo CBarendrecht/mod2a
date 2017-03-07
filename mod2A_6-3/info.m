@@ -1,4 +1,4 @@
-function A = info(n, l, b, t,cr)
+function A = info(n,l,b,t,cr)
     A = zeros(5,sum(n)); %infomatrix; nummer, positie, aantal moves, crimineel
 %     for i = 1:t
 %         A(1,i) = i;
@@ -8,8 +8,8 @@ function A = info(n, l, b, t,cr)
 %     end
     tel = 0;
     for k1 = 1:t
-        for k2 = 1:n(t)
-            tel = tel+1; %teller pas ophogen als dat nodig is
+        for k2 = 1:n(k1)
+            tel = tel + 1; %teller pas ophogen als dat nodig is
             A(1,tel) = k1;
         end
     end
@@ -29,11 +29,11 @@ function A = info(n, l, b, t,cr)
         tel = 1;
         tel1 = 0;
     end
-    if (0<cr) && (cr<=sum(n)) %dit moet zo!
-    C = randperm(n,cr); %zelfde riedeltje met criminelen
-        while tel2<=cr
-            A(5,C(tel2))=1;
-            tel2=tel2+1;
+    if (0 < cr) && (cr <= sum(n)) %dit moet zo!
+        C = randperm(sum(n),cr); %zelfde riedeltje met criminelen
+        while tel2 <= cr
+            A(5,C(tel2)) = 1;
+            tel2 = tel2 + 1;
         end
     end
 end

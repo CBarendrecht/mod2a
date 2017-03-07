@@ -10,19 +10,19 @@ function fractietype = happiness(B,C,x,y,t,vk,r,c)
     beneden = min(x + vk,l); %check rand
     for i = boven:beneden
         for j = links:rechts
-           if C(i,j)==1 && c==0 
-               fractietype = 0;%niet-criminelen willen weg van de criminelen
-               break;
-           else
-            if afstand(i,j,x,y) <= r && afstand(i,j,x,y) > 0 %je bent je eigen buur niet
-                if B(i,j) == t %check type
-                    teltype = teltype + 1;
-                end
-                if B(i,j) ~= 0 %lege plaatsen tellen niet mee
-                    telburen = telburen + 1;
+            if C(i,j) == 1 && c == 0 
+                fractietype = 0;%niet-criminelen willen weg van de criminelen
+                break;
+            else
+                if afstand(i,j,x,y) <= r && afstand(i,j,x,y) > 0 %je bent je eigen buur niet
+                    if B(i,j) == t %check type
+                        teltype = teltype + 1;
+                    end
+                    if B(i,j) ~= 0 %lege plaatsen tellen niet mee
+                        telburen = telburen + 1;
+                    end
                 end
             end
-          end
         end
     end
     if telburen == 0 %mag niet door nul delen

@@ -14,12 +14,9 @@ function [S,T,U,v] = verplaats_random(infomatrix,grid,crbord,individu,lengte,bre
     end
     r = randi([1 f], 1, 1);
     grid(infomatrix(2,individu),infomatrix(3,individu)) = 0;
-    crbord(infomatrix(2,individu),infomatrix(3,individu)) =0;
     grid(x(r),y(r)) = infomatrix(1,individu);
-    crbord(x(r),y(r)) = infomatrix(5,individu);
     infomatrix(2,individu) = x(r);
     infomatrix(3,individu) = y(r);
     S = infomatrix;
     T = grid;
-    U = crbord;
 end

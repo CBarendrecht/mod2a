@@ -18,6 +18,7 @@ function infomatrix = info(n, lengte, breedte, types, acrim)
     B = randperm(lengte*breedte,sum(n));
     tel = 1;
     tel1 = 0;
+    tel2 = 1; 
     for i = 1:sum(n)
         tel1 = B(i);
         while tel1 > lengte
@@ -33,6 +34,8 @@ function infomatrix = info(n, lengte, breedte, types, acrim)
         C = randperm(sum(n),acrim); %zelfde riedeltje met criminelen
         for i = 1:acrim
             infomatrix(5,C(i)) = 1;
+            tel2 = tel2 + 1;
         end
     end
+    
 end

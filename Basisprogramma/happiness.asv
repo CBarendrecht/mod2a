@@ -1,7 +1,6 @@
 function fractietype = happiness(grid,crbord,x,y,type,vk,r,crim)
     teltype = 0;
     telburen = 0;
-    crbuurt = false;
     [l,b] = size(grid);
     links = max(1,y - vk); %check whether on the edge or not
     rechts = min(y + vk,b); %same
@@ -9,10 +8,11 @@ function fractietype = happiness(grid,crbord,x,y,type,vk,r,crim)
     beneden = min(x + vk,l); %same
     for i = boven:beneden
         for j = links:rechts
+            if crbord(i,j) == 1 && crim == 0 
+                fractietype = 0; %niet-criminelen willen weg van de criminelen
+                break;
+            
             if afstand(i,j,x,y) <= r && afstand(i,j,x,y) > 0 %je bent je eigen buur niet
-                if crbord(i,j) == 1 && crim == 0 
-                    crbuurt = true; %niet-criminelen willen weg van de criminelen
-                    break;
                 else
                     if grid(i,j) == type %check same type
                         teltype = teltype + 1;
@@ -28,8 +28,5 @@ function fractietype = happiness(grid,crbord,x,y,type,vk,r,crim)
         fractietype = 0.5;
     else
         fractietype = teltype / telburen;
-    end
-    if crbuurt
-        fractietype = 0;
     end
 end

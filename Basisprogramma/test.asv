@@ -12,9 +12,9 @@ while klaar == false
     for i = 1:sum(n)
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vierkant,r,A(5,i)) < happy
             if (~random)
-                [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vierkant,r);
+                [A,B,v] = verplaats(A,B,K,i,lengte,breedte,vierkant,r);
             else
-                [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
+                [A,B,v] = verplaats_random(A,B,i,lengte,breedte);
             end
         else
             v = false;
@@ -51,11 +51,6 @@ if (teller <= 10000)
 end
 display('klaar');
 
-figure;
-plot(g);
-figure;
-hist(A(4,:),0:teller);
-
 map = [1, 1, 1
        1, 0.5, 0
        1, 0, 1
@@ -66,20 +61,10 @@ map = [1, 1, 1
        0, 0, 1
        0.5,0,1
        0, 1, 0.5
-       0, 0, 0 
-       1, 0.5, 0 %vanaf hier de kleur voor criminelen
-       1, 0, 1   %maar die moeten net iets anders worden
-       1, 1, 0
-       0, 1, 0
-       0, 1, 1
-       1, 0, 0
-       0, 0, 1
-       0.5,0,1
-       0, 1, 0.5
        0, 0, 0
        ];
-Eindbord = B + ones(lengte,breedte) + 10*K;%+10*K voor de criminelen
-Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
+Eindbord = B + ones(lengte,breedte) + 10*K;
+Beginbord = C + ones(lengte,breedte);
 figure;
 image(Eindbord);
 colormap(map);
