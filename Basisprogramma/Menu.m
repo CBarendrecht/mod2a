@@ -10,7 +10,8 @@ function [n, types, lengte, breedte, happy, Vierkant, Radius, random, acrim] = M
     dlg_title = 'Input';
     num_lines = 1;
     defaultans = {'2' ,'8', '8', '1/3', '2', 'False','0'} ;
-    answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
+    options.Resize ='on';
+    answer = inputdlg(prompt,dlg_title,num_lines,defaultans,options);
     types = str2num(answer{1});
     lengte = str2num(answer{2});
     breedte = str2num(answer{3});
@@ -22,14 +23,22 @@ function [n, types, lengte, breedte, happy, Vierkant, Radius, random, acrim] = M
     Radius = Z(2,borde);
     random = str2num(answer{6});
     acrim = str2num(answer{7});
+    
+    
     n = zeros(1,types); %vector van aantal mensen per type
-    for k = 1:types
-        str = sprintf('Aantal mensen van type %d',k);
-        prompt = {str};
-        dlg_title = 'Input';
-        num_lines = 1;
-        defaultans = {'20'} ;
-        answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
-        n(k) = str2num(answer{1});
+    
+    for k=1:types
+        A(k)= cellstr(['Aantal mensen van type ',num2str(k)]);
+        B(k)= cellstr('20');
     end
+    prompt = transpose(A);
+    dlg_title = 'Specificaties';
+    defaultans = transpose(B) ;
+    options.Resize ='on';
+    answer = inputdlg(prompt,dlg_title,num_lines,defaultans,options);
+    
+    for k=1:types
+        n(k) = str2num(answer{k});
+    end
+
 end
