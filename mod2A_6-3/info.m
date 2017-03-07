@@ -8,7 +8,7 @@ function A = info(n, l, b, t,cr)
 %     end
     tel = 0;
     for k1 = 1:t
-        for k2 = 1:n(t)
+        for k2 = 1:n(k1)
             tel = tel+1; %teller pas ophogen als dat nodig is
             A(1,tel) = k1;
         end
