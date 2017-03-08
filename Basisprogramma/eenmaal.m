@@ -7,6 +7,7 @@ klaar = false;
 teller = 0;
 totmoves = 0;
 nonmoves = 0;
+
 while klaar == false 
     klaar = true;
     for i = 1:sum(n)
