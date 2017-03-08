@@ -18,3 +18,9 @@ end
 hist(gen,1:max(gen));
 figure;
 plot(g);
+
+for i = 1:max(gen)
+    h(i) = sum(g(i,:))/hh;
+end
+figure;
+plot(h);

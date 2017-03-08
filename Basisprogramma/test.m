@@ -67,16 +67,16 @@ map = [1, 1, 1
        0.5,0,1
        0, 1, 0.5
        0, 0, 0 
-       1, 0.5, 0 %vanaf hier de kleur voor criminelen
-       1, 0, 1   %maar die moeten net iets anders worden
-       1, 1, 0
-       0, 1, 0
-       0, 1, 1
-       1, 0, 0
-       0, 0, 1
-       0.5,0,1
-       0, 1, 0.5
-       0, 0, 0
+       0.8, 0.3, 0 %vanaf hier de kleur voor criminelen
+       0.8, 0, 0.8   %maar die moeten net iets anders worden
+       0.8, 0.8, 0
+       0, 0.8, 0
+       0, 0.8, 0.8
+       0.8, 0, 0
+       0, 0, 0.8
+       0.3,0,0.8
+       0, 0.8, 0.3
+       0.2, 0.2, 0.2
        ];
 Eindbord = B + ones(lengte,breedte) + 10*K;%+10*K voor de criminelen
 Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
