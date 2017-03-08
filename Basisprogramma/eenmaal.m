@@ -1,5 +1,5 @@
 clear all; %gebruik dit bestand enkel voor één simulatie
-[n,types,lengte,breedte,happy,vierkant,r,random,acrim] = Menu();
+[n,types,lengte,breedte,happy,vk,r,random,acrim] = Menu();
 A = info(n,lengte,breedte,types,acrim);
 [B, K] = bord(A,lengte,breedte,sum(n),acrim);
 [C, K1] = bord(A,lengte,breedte,sum(n),acrim);
@@ -11,9 +11,9 @@ nonmoves = 0;
 while klaar == false 
     klaar = true;
     for i = 1:sum(n)
-        if happiness(B,K,A(2,i),A(3,i),A(1,i),vierkant,r,A(5,i)) < happy
+        if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             if (~random)
-                [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vierkant,r);
+                [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
             else
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
             end

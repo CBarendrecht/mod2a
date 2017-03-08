@@ -1,16 +1,16 @@
-function [S,T,U,v] = verplaats(infomatrix,grid,crbord,individu,lengte,breedte,vierkant,r)
+function [S,T,U,v] = verplaats(infom,grid,crbord,i,lengte,breedte,vk,r)
     v = false;
-    c = crbord(infomatrix(2,individu),infomatrix(3,individu));
-    s = happiness(grid,crbord,infomatrix(2,individu),infomatrix(3,individu),infomatrix(1,individu),vierkant,r,c);
+    c = crbord(infom(2,i),infom(3,i));
+    s = happiness(grid,crbord,infom(2,i),infom(3,i),infom(1,i),vk,r,c);
     d = inf;
     x = 0;
     y = 0;
-    grid(infomatrix(2,individu),infomatrix(3,individu)) = 0;
+    grid(infom(2,i),infom(3,i)) = 0;
     for j = 1:lengte
         for k = 1:breedte
             if grid(j,k) == 0
-                if happiness(grid,crbord,j,k,infomatrix(1,individu),vierkant,r,c) > s
-                    afst = afstand(infomatrix(2,individu),infomatrix(3,individu),j,k);
+                if happiness(grid,crbord,j,k,infom(1,i),vk,r,c) > s
+                    afst = afstand(infom(2,i),infom(3,i),j,k);
                     if afst < d
                         d = afst;
                         x = j;
@@ -20,17 +20,17 @@ function [S,T,U,v] = verplaats(infomatrix,grid,crbord,individu,lengte,breedte,vi
             end
         end
     end
-    grid(infomatrix(2,individu),infomatrix(3,individu)) = infomatrix(1,individu);
+    grid(infom(2,i),infom(3,i)) = infom(1,i);
     if d < inf
-        grid(infomatrix(2,individu),infomatrix(3,individu)) = 0;
-        crbord(infomatrix(2,individu),infomatrix(3,individu)) = 0;
-        grid(x,y) = infomatrix(1,individu);
-        crbord(x,y) = infomatrix(5,individu);
-        infomatrix(2,individu) = x;
-        infomatrix(3,individu) = y;
+        grid(infom(2,i),infom(3,i)) = 0;
+        crbord(infom(2,i),infom(3,i)) = 0;
+        grid(x,y) = infom(1,i);
+        crbord(x,y) = infom(5,i);
+        infom(2,i) = x;
+        infom(3,i) = y;
         v = true;
     end
-    S = infomatrix;
+    S = infom;
     T = grid;
     U = crbord;
 end
