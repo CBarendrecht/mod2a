@@ -7,10 +7,12 @@ klaar = false;
 teller = 0;
 totmoves = 0;
 nonmoves = 0;
+volg = randperm(sum(n),sum(n));
 
 while klaar == false 
     klaar = true;
-    for i = 1:sum(n)
+    for j = 1:sum(n)
+        i = volg(j);
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             if (~random)
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);

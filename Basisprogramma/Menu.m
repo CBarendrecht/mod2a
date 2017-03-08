@@ -34,10 +34,10 @@ function [n, types, lengte, breedte, happy, Vierkant, Radius, random, acrim] = M
     prompt = transpose(A);
     dlg_title = 'Specificaties';
     defaultans = transpose(B) ;
-    options.Resize ='on';
+    options.Resize = 'on';
     answer = inputdlg(prompt,dlg_title,num_lines,defaultans,options);
     
-    for k=1:types
+    for k = 1:types
         n(k) = str2num(answer{k});
     end
 

@@ -7,7 +7,7 @@ function [data,g] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim)
     nonmoves = 0;
     while klaar == false 
         klaar = true;
-        for j = 1:n
+        for j = 1:sum(n)
             i = volg(j);
             if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
                 if (~rv)
