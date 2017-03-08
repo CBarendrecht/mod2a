@@ -4,7 +4,6 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv,acrim)
     end
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
-    %[C,K1] = bord(A,l,b,n,acrim); %niet nodig bij veel simulaties
     klaar = false;
     teller = 0;
     totmoves = 0;
@@ -39,47 +38,6 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv,acrim)
             klaar = true;
         end
     end
-    %if (teller <= 10000)
-        %display('equilibrium reached');
-        %disp(['aantal generaties = ', num2str(teller)]);
-        %disp(['totaal aantal moves = ', num2str(totmoves)]);
-        %disp(['totaal aantal niet-moves = ', num2str(nonmoves)]);
-        %for i = 1:teller
-        %    disp(['moves in generatie', num2str(i), ' = ', num2str(g(i))]);
-        %end
-        %for i = 1:n
-        %    disp(['moves van nr.', num2str(i), ' = ', num2str(A(4,i))]);
-        %end
-    %end
-    
-    %figure;
-    %plot(g);
-    %figure;
-    %hist(A(4,:),0:teller);
-    
-    data = teller; 
-    
-    %display('klaar');
-    %map = [1, 1, 1
-    %       1, 0.5, 0
-    %       1, 0, 1
-    %       1, 1, 0
-    %       0, 1, 0
-    %       0, 1, 1
-    %       1, 0, 0
-    %       0, 0, 1
-    %       0.5,0,1
-    %       0, 1, 0.5
-    %       0, 0, 0];
-    %Eindbord = B + ones(l,b);
-    %Beginbord = C + ones(l,b);
-    %figure;
-    %image(Eindbord);
-    %colormap(map);
-    %figure;
-    %image(Beginbord);
-    %colormap(map); %kleurtjes!!!
-    %colorbar;
-
+    data = teller;  
 end
 
