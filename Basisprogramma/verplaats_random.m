@@ -1,5 +1,4 @@
 function [S,T,U,v] = verplaats_random(infomatrix,grid,crbord,individu,lengte,breedte)
-    %A is individuenmatrix, B is het bord, i is het individu, size(B) = [l,b]
     v = false;
     f = 0; %f is tellertje
     for j = 1:lengte

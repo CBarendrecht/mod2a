@@ -2,7 +2,7 @@ clear all;
 prompt = {'Hoe vaak herhalen?'};
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'100'} ;
+defaultans = {'500'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim] = Menu();
