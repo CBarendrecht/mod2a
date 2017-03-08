@@ -1,4 +1,4 @@
-function [data,g] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim)
+function [data,g,totmoves] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
