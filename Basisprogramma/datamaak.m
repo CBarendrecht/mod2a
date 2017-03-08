@@ -6,8 +6,9 @@ defaultans = {'100'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim] = Menu();
+volg = randperm(sum(n),sum(n));
 for i = 1:hh
-    [gen(i),v] = simulatie(false,n,t,l,b,h,vk,r,rv,acrim);
+    [gen(i),v] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
     for k = 1:gen(i)
         g(k,i) = v(k);
     end

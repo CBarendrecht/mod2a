@@ -1,7 +1,4 @@
-function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv,acrim)
-    if menu
-        [n,t,l,b,h,vk,r,rv] = Menu();
-    end
+function [data,g] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
@@ -10,7 +7,8 @@ function [data,g] = simulatie(menu,n,t,l,b,h,vk,r,rv,acrim)
     nonmoves = 0;
     while klaar == false 
         klaar = true;
-        for i = 1:n
+        for j = 1:n
+            i = volg(j);
             if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
                 if (~rv)
                     [A,B,K,v] = verplaats(A,B,K,i,l,b,vk,r);
