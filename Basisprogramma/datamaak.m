@@ -16,7 +16,7 @@ for i = 1:hh
         disp([num2str(i)]);
     end
 end
-figure:
+figure;
 hist(gen,1:max(gen));
 figure;
 hist(moves,1:max(moves));
