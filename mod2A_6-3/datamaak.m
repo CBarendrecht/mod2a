@@ -1,5 +1,5 @@
 clear all;
-hh = 100;
+hh = 500;
 [n,t,l,b,h,vk,r,rv,cr] = Menu();
 for i = 1:hh
     [gen(i),v] = test(false,n,t,l,b,h,vk,r,rv,cr);
