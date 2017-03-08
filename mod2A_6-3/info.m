@@ -9,7 +9,11 @@ function A = info(n,l,b,t,cr)
     tel = 0;
     for k1 = 1:t
         for k2 = 1:n(k1)
+<<<<<<< HEAD
             tel = tel + 1; %teller pas ophogen als dat nodig is
+=======
+            tel = tel+1; %teller pas ophogen als dat nodig is
+>>>>>>> ff605bd1299f6585151aa747f6cd9a6477e0c1bf
             A(1,tel) = k1;
         end
     end
