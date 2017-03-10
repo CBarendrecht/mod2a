@@ -16,15 +16,43 @@ for i = 1:hh
         disp([num2str(i)]);
     end
 end
+tel = 0;
+for i = 1:hh
+    if gen(i) > 10000
+        tel = tel + 1;
+        del(tel) = i;
+    end
+end
+if tel > 0
+    gen(:,del) = [];
+    g(:,del) = [];
+    moves(:,del) = [];
+end
+noeq = tel/hh;
+
 figure;
 hist(gen,1:max(gen));
+xlabel('Aantal Generaties');
+ylabel('Aantal Keer');
+title(['Histogram Aantal Generaties']);
 figure;
 hist(moves,1:max(moves));
+xlabel('Totaal Aantal Moves');
+ylabel('Aantal Keer');
 figure;
 plot(g);
+xlabel('Generatie');
+ylabel('Aantal Moves in die Generatie');
+figure;
+scatter(gen,moves,25,[0,0,1],'p','filled');
+xlabel('Aantal Generaties');
+ylabel('Totaal Aantal Moves');
 
 for i = 1:max(gen)
-    h(i) = sum(g(i,:))/hh;
+    h(i) = sum(g(i,:))/(hh-tel);
 end
 figure;
 plot(h);
+xlabel('Generatie');
+ylabel('Gemiddeld Aantal Moves');
+
