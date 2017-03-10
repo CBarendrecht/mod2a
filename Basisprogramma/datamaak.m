@@ -23,8 +23,11 @@ for i = 1:hh
         del(tel) = i;
     end
 end
-gen(:,del) = [];
-g(:,del) = [];
+if tel > 0
+    gen(:,del) = [];
+    g(:,del) = [];
+    moves(:,del) = [];
+end
 noeq = tel/hh;
 
 figure;
@@ -34,7 +37,7 @@ hist(moves,1:max(moves));
 figure;
 plot(g);
 figure;
-plot([gen,moves]);
+scatter(gen,moves,2,[0,1,0]);
 
 for i = 1:max(gen)
     h(i) = sum(g(i,:))/(hh-tel);
