@@ -34,7 +34,10 @@ figure;
 hist(gen,1:max(gen));
 xlabel('Aantal Generaties');
 ylabel('Aantal Keer');
-title(['Histogram Aantal Generaties']);
+title(['Histogram Aantal Generaties op ', num2str(l), ' bij ', num2str(b), 
+    ' buurt met happinessrule van ', num2str(h),
+    ' buurtorde van ', num2str(),
+    ' en ', num2str(n())]);
 figure;
 hist(moves,1:max(moves));
 xlabel('Totaal Aantal Moves');
