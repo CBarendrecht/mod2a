@@ -1,0 +1,14 @@
+\section{Goedkoopste route}
+De onderstaande code werd gebruikt om een goedkoopste route te vinden zoals beschreven in \ref{sec:laagsteKosten}.\\
+\\
+Het script waar een deel van de configuratiewaardes ingevuld moeten worden.
+\lstinputlisting{../laagsteKosten/laagsteKosten.m}
+
+De functie die bepaald hoe goed een bepaalde oplossing is en die wordt meegegeven aan \mcode{fminsearch}.
+\lstinputlisting{../laagsteKosten/evaluateODE.m}
+
+De functie die de voor bepaalde startwaardes de \mcode{ode45} uitvoerd.
+\lstinputlisting{../laagsteKosten/executeODE.m}
+
+De functie die de hamiltoniaan evalueert voor de gevonden \(T\).
+\lstinputlisting{../laagsteKosten/hamiltonian.m}

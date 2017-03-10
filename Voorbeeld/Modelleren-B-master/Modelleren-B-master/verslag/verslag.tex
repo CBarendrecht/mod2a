@@ -1,0 +1,64 @@
+\documentclass{report}
+\usepackage[dutch]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fixltx2e} % overbodig?
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[toc,page]{appendix}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{ragged2e}
+\usepackage[numbered]{mcode}
+\usepackage{wallpaper} %voor voorpagina
+
+% Voor plaatje(s)
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{datetime}
+\usepackage[nomessages]{fp}
+\usepackage{float}
+
+\title{Rivier oversteken}
+\date{\today}
+\author{Casper Barendrecht\\ Bram van den Heuvel \\ Arnoud van der Leer \\ Reena Sitaram}
+
+\begin{document}
+	%\maketitle	
+	
+	\input{Titelpagina}	
+	
+	\input{gebruikteSymbolen}	
+
+	\input{voorwoord}
+
+	\setcounter{tocdepth}{1}
+	\tableofcontents
+
+	\input{inleiding}
+	
+	\input{situatieschets}
+
+	\input{tijdsoptimalisatie}
+
+	\input{numeriekeOplossingsmethoden}
+
+	\input{kostenOptimalisatie}
+	
+	\input{discussie}
+
+	\input{conclusie}
+
+	\input{bibliography}
+	
+	\appendix
+
+	\input{hamiltoniaanstelling}
+		
+	\input{odeSolver}
+	
+	\input{bisectieMethode}
+
+	\input{matlab}
+\end{document}

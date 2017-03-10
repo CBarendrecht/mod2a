@@ -1,0 +1,67 @@
+Opmaak titelpagina
+
+Samenvatting
+
+Lijst met gebruikte symbolen, dit moet een lijst zijn
+
+Verklarende woordenlijst
+	ODE solver noemen?
+
+Voorwoord
+	Geen dingen die in de inleiding horen
+	In welke context dit project plaatsvond
+	Motivatie
+	Lezerspubliek
+
+Inleiding
+	Veel vertellen over relevantie van probleem
+		Economisch, oceanen oversteken, voorbeelden noemen
+		Algemene toepasbaarheid van de gebruikte technieken etc
+		Waarom doen we dit?
+	Wat gaan wij onderzoeken
+	Welke vragen hebben we
+	In welke volgorde komen de onderwerpen langs
+
+
+Hoofdtekst
+	Tijdsoptimalisatie
+		Plots
+		Realistische waardes
+
+	Niet triviale
+		Titel veranderen, veel korter
+		Wiskunde uitwerken om iets als C = a T + b E of C = a T + (1 - a) E te realiseren
+		Het probleem wordt toch niet gediscretiseerd?
+		Realistische waardes
+
+Conclusie
+	Niet samenvatten maar concluderen
+
+Discussie
+	Wat is er goed en slecht aan onze onderzoeksmethode
+	Wat zouden we gedaan hebben als we meer tijd hadden
+	Wat kan er nog meer onderzocht worden
+
+Literatuurlijst
+
+---
+
+Casper
+Plaatje aan de voorkant
+Plots
+	Neem bij enkele van deze plots ook andere begin en eindpunten
+	sinus bij de snelste route
+	de a * (x - 0.5) bij snelste route
+
+	Nog een ander leuk profiel verzinnen voor bij goedkoopste route
+	En onderschriften etc.
+	Het praktische voorbeel met realistische getallen implementeren
+		Pak de oorsprong en een ander punt, rivier geen breedt 1
+		
+
+Arnoud
+Situatieschets
+	tikz?
+	moet denk ik onder de lijst met gebruikte symbolen, dan moet de titel wel anders (Conventies?)
+Precies maken van natuurkunde bij de F
+

@@ -1,0 +1,14 @@
+\chapter{De Bisectiemethode}\label{sec:bisectiemethode}
+De bisectiemethode is een numerieke methode om in \(\log(n)\) tijd het snijpunt van een continue functie \(f(x)\) en een lijn \(x=a\) te vinden.
+
+Gegeven een \(x_{0_+}:f(x_{0_+})>a\) en een \(x_{0_-}:f(x_{0_-})<a\) kan wegens met behulp van de middelwaardestelling het bestaan van een punt \(f(x)=a\) vastgesteld worden. Het algoritme om deze \(x\) te benaderen werkt als volgt:\\
+\\
+We kiezen \({x_{n+1}}_{mid}=\frac{x_{n_-}+x_{n_+}}{2}\).
+\begin{itemize}
+	\item[] Als \(f({x_{n+1}}_{mid}) = a\) dan: Het algoritme is klaar.
+	\item[] Als \(f({x_{n+1}}_{mid}) < a\) dan: \(x_{{n+1}_-} = {x_{n+1}}_{mid}\) en \(x_{{n+1}_+} = x_{n_+}\).
+	\item[] Als \(f({x_{n+1}}_{mid}) > a\) dan: \(x_{{n+1}_+} = {x_{n+1}}_{mid}\) en \(x_{{n+1}_-} = x_{n_-}\).
+\end{itemize}
+Deze methode wordt steeds herhaald: Eerstvolgend wordt een \({x_{n+2}}_{mid}\) gekozen.
+
+Dit proces wordt herhaald tot \(f(x_{mid}) \approx a\). De complexiteit van dit algoritme is gegeven door \(\Theta(\log_2(\frac{\epsilon_0}{\epsilon}))\) waar \(\epsilon_0=|x_{0_+}-x_{0_-}|\) en \(\epsilon\) de gekozen foutmarge is.

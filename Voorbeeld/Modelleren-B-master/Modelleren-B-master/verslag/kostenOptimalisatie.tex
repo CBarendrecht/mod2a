@@ -1,0 +1,185 @@
+\chapter{Minimaliseren van kosten}\label{sec:laagsteKosten}
+Waar het eerste model een constante snelheid aannam laten we in dit model de snelheid varieren afhankelijk van een stuwkracht die in de richting waarin de boot vaart wordt gezet. Dit betekent dat de staat van een bootje niet alleen meer bepaald is door diens locatie maar ook door diens snelheid. Ook is er een extra variabele waarmee gestuurd kan worden: de stuwkracht.
+
+De kosten van een reis worden in dit model bepaald door de som van de verbruikte tijd en de verbruikte energie. We defini\"eren we een kostenfunctie \(C(t)\) die de kosten tot een bepaald tijdstip aangeeft.
+	\begin{align}
+		C(t) = at +(1-a)E(t)
+	\end{align}
+Hier geeft \(E(t)\) de totaal verbruikte energie op tijdstip \(t\) aan, \(a\in[0,1]\) is een te kiezen constante die de verhouding tussen de kosten van energie en de kosten van tijd aangeeft. Wederom is \(T\) het tijdstip van aankomst en dus willen we \(C(T)\) minimaliseren. Merk op dat voor \(a = 1\) de te minimaliseren kotsen functie gelijk is aan de functie die we minimaliseerden in de voorgaande hoofdstukken.
+
+\section{Enkele eisen}
+We stellen enkele randvoorwaarden bovenop de randvoorwaarden van het eerste model:
+\begin{itemize}
+	\item[] \(v(0) = v(T) = 0\). Dit is van toepassing bij het oversteken van een rivier: De boot moet eerst vaart maken en niet tegen de tegenoverstaande wal botsen.
+	\item[] Tot slot stellen we dat \(v(t) \geq 0:\forall t \in \mathbb{R}_{\geq 0}\). Dit omdat er voor enigzins realistische stromingen niet van het doel afgevaren moet worden in een goedkoopste oplossing.
+\end{itemize}
+
+\section{Schrijven als integraal}
+Om de kostenfunctie \(C(T)\) te minimaliseren met gebruik van de hamiltoniaanstelling moeten we wederom onze functie als integraal van \(0\) tot \(T\) schrijven.
+
+Allereerst vinden we een bruikbare vorm van \(E(T)\). 
+We beschouwen de totale hoeveelheid energie als de verrichte arbeid \(W\) over het traject dat de boot aflegt. Dit traject noemen we \(\mathcal{C}\). 
+Voor \( \mathcal{C} \) hebben we een parametrisatie \( \mathbf{f}: [0, T] \rightarrow \mathcal{C},~t \mapsto (x(t), y(t)) \) met afgeleide $ f^\prime(t) = (x^\prime(t), y^\prime(t)) $. 
+Verder heeft $ \mathcal{C} $ een ori\"entatie $ \mathbf{\tau} $ waar deze parametrisatie bij past. Laat $ F_{x_1} $ en $ F_{x_2} $ de componenten van $ F $ in respectievelijk de $ x_1 $- en $ x_2 $-richting zijn. 
+Dan geldt voor de arbeid de eigenschap:
+\begin{align*}
+		W &= \int_\mathcal{C} \langle \mathbf{F}, \mathbf{\tau} \rangle dq \\
+		&= \int_\mathcal{C} F_{x_1} dx_1 + F_{x_2} dx_2
+\end{align*}
+\(F\) is zoals gebruikelijk de geleverde kracht van de boot.\\
+Ook geldt:
+\begin{align*}
+		v_{x_1} &= \frac{dx_1}{dt} & v_{x_2} &= \frac{dx_2}{dt}
+\end{align*}
+Met toepassing van de substitutiemethode volgt nu:
+\begin{align*}
+	dx_1 &= v_{x_1}dt & dx_2 &= v_{x_2}dt\\
+\end{align*}
+en
+\begin{align*}
+	W = \int_\mathcal{C} F_{x_1} dx_1 + F_{x_2} dx_2 &= \int_0^T F_{x_1} v_{x_1} + F_{x_2} v_{x_2} \, dt\\
+	&= \int_0^T \langle \mathbf{F}, \mathbf{v} \rangle \, dt
+\end{align*}
+Omdat in ons model \( \mathbf{F} \) en $ \mathbf{v} $ dezelfde richting hebben, geldt $ \langle \mathbf{F}, \mathbf{v} \rangle = \Vert \mathbf{F} \Vert \Vert \mathbf{v} \Vert $. Als we nu $ F $ schrijven voor $ \Vert \mathbf{F} \Vert $ en $ v $ voor $ \Vert \mathbf{v} \Vert $ , vinden we, omdat \(W=E(T)\), dat:
+\begin{align}
+	E(T) &= \int_0^T \langle \mathbf{F}, \mathbf{v} \rangle \, dt\\
+	&= \int_0^T \Vert \mathbf{F} \Vert \Vert \mathbf{v} \Vert \, dt\\
+	&= \int_{0}^{T} v(t)F(t) dt\label{eq:E(T)int}
+\end{align}
+Hierbij geeft \(v(t)\) de snelheid van de boot op tijdstip \(t\) aan en \(F(t)\) de geleverde kracht op tijdstip \(t\). Verder geldt de bekende integraal:
+\begin{align}
+	T &= \int_{0}^{T} dt.\label{eq:T-energ}
+\end{align}
+Met \eqref{eq:E(T)int} en \eqref{eq:T-energ} zijn we nu in staat om een integraal voor \(C\) op te stellen afhankelijk van \(T\):
+\begin{align*}
+	C(T) = a T + (1 - a) E(T) = a \int_{0}^{T} dt + (1-a)\int_0^T F v dt 
+\end{align*}
+Voor \(C(T)\) vinden we dus de uitdrukking:
+\begin{align}
+	C(T)=\int_0^T a + (1-a)F(t)v(t) dt\label{eq:Cint}
+\end{align}
+
+\section{Nieuwe hamiltoniaan opstellen}
+Omdat \(C(T)\) nu als integraal guitgedrukt is en de begin- en eindvoorwaarden bepaald zijn kan \(C(T)\) door middel van de Hamiltoniaanstelling geoptimaliseerd worden. Analoog aan sectie \ref{sec:Hamilton1} worden de afgeleiden voor \(x_1\) en \(x_2\) opgesteld. Omdat de snelheid nu echter niet constant is wordt deze ook meegenomen in de afgeleiden.
+\begin{align}
+	x_1^\prime &= v \cos(u(t)) \label{eq:x1'kosten}\\ 
+ 	x_2^\prime &= v \sin(u(t)) + S(x_1)\label{eq:x2'kosten}
+\end{align}
+Om \(v^\prime\) te bepalen defini\"eren we eerst \(\widetilde{F}\), de som van alle werkende krachten op de boot. De tweede wet van Newton stelt
+\begin{align*}
+	\widetilde{F} = m v^\prime
+\end{align*}
+In dit model worden alleen de door de boot geleverde kracht \(F\) en de wrijvingskracht \(F_w(v)\) in de berekeningen opgenomen. \(\widetilde{F}\) wordt gegeven als de som van deze twee krachten
+\begin{align*}
+	\widetilde{F}= F+ F_w(v)
+\end{align*}
+en dus geldt
+\begin{align}
+v^\prime   = \frac{F + F_w(v)}{m}. \label{eq:v'}
+\end{align}\\
+Nu alle afgeleiden en randvoorwaarden bekend zijn kan de Hamiltoniaan \(H_2\) worden opgesteld.
+\begin{align*}
+	H_2(x_1,x_2,v,\lambda_1,\lambda_2,\lambda_3,F,u) &= \lambda_1  x_1^\prime(t) + \lambda_2 x_2^\prime(t)+ \lambda_3 v^\prime(t) + f(x_1,x_2,v,F,u)
+\end{align*}
+Specifiek wordt deze gegeven door
+\begin{align*}
+H_2 = \lambda_1v\cos(u)+\lambda_2(v\sin(u)+ S(x_1)) + \lambda_3\frac{(F+F_w (v))}{m} + (1-a)Fv + a
+\end{align*}
+Met de voorwaardes
+\begin{align*}
+	x_1(0) = 0 && x_1(T) &= {x_1}_T\\
+	x_2(0) = 0 && x_2(T) &= {x_2}_T\\
+	v(0) = 0 && v(T) &= 0
+\end{align*}
+
+\section{Hamiltoniaanstelling gebruiken}
+Met behulp van de zojuist opgestelde hamiltoniaan bepalen we de afgeleiden van de schaduwvariabelen \(\lambda_1, \lambda_2\) en \(\lambda_3\).
+\begin{align}
+	\lambda_1^\prime = -\frac{\partial H_2}{\partial x_1} &= -\lambda_2 S^\prime(x_1)\label{eq:lambda1'} \\ 
+	\lambda_2^\prime = -\frac{\partial H_2}{\partial x_2} & = 0 \label{eq:lambda2'}\\ 
+	\lambda_3^\prime = -\frac{\partial H_2}{\partial v} &= -(\lambda_1 \cos(u)+\lambda_2 \sin (u) +\lambda_3 \frac{F_w^\prime(v)}{m} +(1-a)F) \label{eq:lambda3'}\\
+\end{align}
+Volgens de Hamiltoniaanstelling geldt bij een minimale \(C(T)\) dat
+\begin{align}
+	0 = \frac{\partial H_2}{\partial u} &= -\lambda_1 v \sin(u)+\lambda_2 v \cos(u)\label{eq:dH/du}\\ 
+	0 =	\frac{\partial H_2}{\partial F} &= \frac{\lambda_3}{m} + (1-a)v \label{eq:dH/dF}
+\end{align}
+
+\section{Eliminatie en vereenvoudigen van de afgeleiden}
+Door analytische manipulaties kunnen deze vergelijkingen gereduceerd worden tot slechts vier afgeleiden.
+\subsection{Eliminatie van Sinus en Cosinus en \(u\)}		
+Vegelijking \eqref{eq:dH/du} geeft
+	\begin{align*}
+	0 = v(-\lambda_1\sin(u) + \lambda_2 \cos(u))
+\end{align*}
+dus \(v=0\) of
+\begin{align*}
+	\lambda_1 \sin(u) = \lambda_2\cos(u).
+\end{align*}
+Dit probleem is identiek het probleem beschreven in \ref{sec:Eliminatie van u} en kent daarom ook dezelfde oplossingen zijnde:
+\begin{align}
+	\sin(u) = \frac{\mu}{\sqrt{1+\mu^2}} &&
+	\cos(u) = \frac{1}{\sqrt{1+\mu^2}} \label{eq:Coswaarde}
+\end{align} 
+
+\subsection{Eliminatie van \(F, F_w(v),\lambda_3\) en \(v\)}
+Uit vergelijking \eqref{eq:dH/dF} volgt
+\begin{equation}
+	\lambda_3=-(1-a)mv \label{eq:l3=-v}
+\end{equation}
+dus
+\begin{align}
+	\lambda_3^\prime =-(1-a)mv^\prime. \label{eq:l3'=-v'}
+\end{align}
+Invullen van vergelijkingen \eqref{eq:v'} en \eqref{eq:lambda3'} in vergelijking \eqref{eq:l3'=-v'} geeft nu
+\begin{align*}
+	(1-a)m\frac{F + F_w(v)}{m} = \lambda_1 \cos(u)+\lambda_2 \sin (u) +\lambda_3 \frac{F_w^\prime (v)}{m} +(1-a)F.
+\end{align*} 
+Invullen van vergelijking \eqref{eq:l3=-v} geeft
+\begin{align*}
+	(1-a)F + (1-a)F_w(v) = \lambda_1 \cos(u)+\lambda_2 \sin (u) -(1-a)mv\frac{F_w^\prime (v)}{m} +(1-a)F
+\end{align*}	  
+dus voor \(v\neq 0\) geldt nu
+\begin{align*}
+	(1-a)F_w(v) &= \lambda_1 \frac{1}{\sqrt{1+\mu^2}}+\lambda_2 \frac{\mu}{\sqrt{1+\mu^2}} -(1-a)v F_w^\prime (v)\\
+	(1-a)(F_w(v) + v F_w^\prime (v)) &= (\lambda_1+\lambda_2\mu)\frac{1}{\sqrt{1+ \mu^2}}\\
+	F_w(v) + v F_w^\prime (v) &= \lambda_1 \frac{1+\mu^2}{\sqrt{1+\mu^2}}~\frac{1}{1-a}
+\end{align*}
+Voor \(F_w (v)\) kiezen we
+\begin{align}
+	F_w (v) = -cv^2.
+\end{align}	 
+Hier is \(c>0\) de wrijvingsconstante. Nu geldt:
+\begin{align}
+	F_w^\prime (v) = -2cv.
+\end{align}
+Invullen in de eerdere gelijkheid geeft
+\begin{align*}
+	-cv^2 + v(-2cv) &= \lambda_1\frac{\sqrt{1+\mu^2}}{1-a}\\
+	-3cv^2 &= \lambda_1\frac{\sqrt{1+\mu^2}}{1-a}.
+\end{align*}
+We vinden dus een uitdrukking voor \(v\) in \(\lambda_1\),  \(\mu\) en de constanten \(a\) en \(c\):
+\begin{equation}
+	v = \sqrt{\frac{-\lambda_1\sqrt{1+\mu^2}}{3c\cdot(1-a)}} \label{eq:Vwaarde}
+\end{equation}
+
+\subsection{Invullen van de gelijkheden}
+Nu blijven enkel de volgende vergelijkingen over:
+\begin{align*}
+	x_1^\prime &= v \cos(u)\\
+	x_2^\prime &= v \sin(u) + S(x_1)\\
+	\lambda_1^\prime &= -\lambda_2 S^\prime(x_1)\\
+	\lambda_2^\prime &= 0
+\end{align*}
+Met de gevonden gelijkheden \eqref{eq:Coswaarde} en \eqref{eq:Vwaarde} reduceren deze vergelijkingen zich verder tot:
+\begin{align}
+	x_1^\prime &= \sqrt{\frac{-\lambda_1}{3c\cdot(1-a)\sqrt{1+\mu^2}}} \\
+	x_2^\prime &= \mu \sqrt{\frac{-\lambda_1}{3c \cdot (1-a)\sqrt{1+\mu^2}}} +S(x_1) \\
+	\lambda_1^\prime &= -\lambda_2 S^\prime(x_1)\\
+	\lambda_2^\prime &= 0
+\end{align}
+met de eisen:
+\begin{align*}
+	x_1(0) = 0 && x_1(T) &= {x_1}_T\\
+	x_2(0) = 0  && x_2(T) &= {x_2}_T
+\end{align*}

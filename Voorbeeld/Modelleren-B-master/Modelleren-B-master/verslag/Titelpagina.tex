@@ -1,0 +1,59 @@
+
+\LRCornerWallPaper{2.3}{boot1.jpg}
+\LRCornerWallPaper{1}{LeidenLogo.png}
+\LLCornerWallPaper{1}{tudelft.pdf}
+
+
+% In de onderstaande renews kunnen naar voorkeur de logos worden verplaatst op een niet hele nette manier
+\begin{comment}
+%hieronder kan in hspace\vspace de locatie van het leiden logo worden verplaatst. Een lelijke manier maar werkt voor nu :) 
+\renewcommand{\ThisLRCornerWallPaper}[2]{%
+  \AddToShipoutPicture*{%
+    \AtPageLowerLeft{%
+      \parbox[b]{\paperwidth}{%       
+        \hfill \includegraphics[width=#1\paperwidth,height=#1\paperheight,%
+        keepaspectratio]{#2}%
+	\hspace{1cm}\vspace{0.5cm}
+      }
+    }
+  }
+}
+
+%Analoog vor het TU Delft Logo
+\renewcommand{\ThisLLCornerWallPaper}[2]{%
+\AddToShipoutPicture*{%
+  \AtPageLowerLeft{%
+  	\parbox[b]{\paperwidth}{%
+		\hspace{0.8cm}    
+   	 	\includegraphics[width=#1\paperwidth,height=#1\paperheight,%
+    	  keepaspectratio]{#2}%
+		\vspace{0.5cm}    
+	}
+   }
+  }
+}
+\end{comment}
+
+\begin{titlepage}
+
+	\LRCornerWallPaper{2.3}{boot1.jpg}
+
+	\centering
+	{\scshape\Large Technische Universiteit Delft\par}
+	\vspace{1cm}
+	{\scshape\Large Modelleren 1B\par}
+	\vspace{1.5cm}
+	{\Huge\bfseries Rivier Oversteken\par}
+	\vspace{2cm}
+	{\Large
+	C. Barendrecht\\ 
+	B. van den Heuvel\\
+	A. van der Leer\\
+	R.Sitaram\par}
+	\vfill
+	Onder begeleiding van:\par
+	Dr.~B. Meulenbroek
+
+	\vfill
+\end{titlepage}
+\ClearWallPaper

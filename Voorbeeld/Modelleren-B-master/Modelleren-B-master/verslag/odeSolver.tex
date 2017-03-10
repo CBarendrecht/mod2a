@@ -1,0 +1,10 @@
+\chapter{Ordinary Differential Equation Solvers}\label{sec:odeSolver}
+Zoals eerder genoemd is  het vaak lastig of niet mogelijk om de gevonden vergelijkingen analytisch op te lossen. Om deze problemen alsnog op te kunnen lossen zijn verscheidene numerieke methoden ontwikkeld. Een functie om differentiaalvergelijkingen op te lossen is de \mcode{ode45}.
+
+Een ordinary differential equation is een differentiaal vergelijking waarbij de de functies slechts van \'e\'en variable afhangen (in dit model dus \(t\)). Er is sprake van een partial differential equation als de functies van meerdere variabelen afhankelijk zijn.
+
+\section{De ode45-solver}
+De ode45-solver is een ode-solver die in MATLAB en GNU Octave ge\"implementeerd is. Solvers van dit soort nemen \(n\) differentiaal vergelijkingen en \(n\) startwaardes als input. Voor deze vergelijkingen geldt dat deze enkel van elkaar en constantes afhankelijk zijn. 
+Vervolgens zal de solver dan op een gekozen interval de functies evalueren voor de specifieke beginwaarden. Voor de problemen gesteld in dit verslag wordt gebruik gemaakt van de ode45 solver. Er bestaan naast de ode45 solver echter ook andere solvers zoals \mcode{ode23, ode23s, ode113} en velen meer. Er is voor de \mcode{ode45} solver gekozen, omdat deze nauwkeuriger is dan de \mcode{ode23}. Andere solvers binnen MATLAB zijn hoofdzakelijk bedoeld voor problemen van een andere vorm.
+
+Voor meer informatie over de implementatie van \mcode{ode45} zie de documentatie op de site van MATLAB maker Mathworks\footnote{\url{https://mathworks.com/help/matlab/ref/ode45.html}}.

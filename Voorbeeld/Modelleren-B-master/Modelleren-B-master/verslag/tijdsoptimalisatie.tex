@@ -1,0 +1,98 @@
+\chapter{Het eerste probleem: Tijdsoptimalisatie}
+We zoeken nu de snelste route van een punt \((x_1(0), x_2(0))\) naar een punt \((x_1(T), x_2(T))\) waar \(T\) de tijd van aankomst is. De functies \(x_1(t), x_2(t)\) zijn de locatie van de boot in de \(x_1\) en \(x_2\) richting respectievelijk. Voor de volgende begin en eindpunten onderzoeken we het probleem
+\begin{align*}
+	x_1(0) = 0 && x_1(T) = 1\\
+	x_2(0) = 0 && x_2(T) = 0	
+\end{align*}
+De boot vaart met een constante snelheid van \(1\). We noteren \(u(t)\) voor de stuurrichting op tijdstip \(t\), dit is de hoek met de \(x_1\)-as in radialen. We nemen aan dat de boot altijd naar de positieve kant van de \(x_1\)-as toevaart. Dan geldt dus \(-\frac{\pi}{2} < u(t) < \frac{\pi}{2}\). 
+
+\(S(x)\) geeft de stroming van de rivier aan. De stroming is hierbij enkel afhankelijk van de \(x_1\) richting. We noemen \(S(x)\) \textbf{positief} is als de stroming naar de \textbf{positieve} kant van de \(x_2\)-as gericht is.
+
+\section{De Hamiltoniaan}\label{sec:Hamilton1}
+In onze analyse gebruiken we de hamiltoniaanstelling. We schrijven de te optimaliseren parameter als een functie in een integraal. Omdat we de eindtijd \(T\) niet kennen stellen de volgende integraal voor \(T\) op
+\begin{equation}
+	T = \int_{0}^{T} 1~dt \label{eq:Tint}.
+\end{equation}
+De verandering in de \(x_1\)-locatie en \(x_2\)-locatie worden gegeven door
+\begin{align}
+	x_1^\prime(t) &= \cos (u(t))\label{eq:x1'}\\
+	x_2^\prime(t) &= \sin (u(t))\label{eq:x2'}.
+\end{align}
+Nu de afgeleiden en randvoorwaarden bekend zijn stellen we de hamiltoniaan op.
+\begin{equation}
+	H_1(x_1, x_2, \lambda_1, \lambda_2, u) = \lambda_1 \cos(u) + \lambda_2 (\sin(u) + S(x)) + 1 \label{eq:Hamilton1}.
+\end{equation}
+Hierbij zijn \(\lambda_1\) en \(\lambda_2\) schaduwfuncties die gekenmerkt worden door de afgeleiden
+\begin{align}
+	\lambda_1^\prime(t) &= -\frac{\partial H_1}{\partial x_1} = -\lambda_2S^\prime(x_1) \label{eq:l1'}\\
+	\lambda_2^\prime(t) &= -\frac{\partial H_1}{\partial x_2} = 0 \label{eq:l2'}.
+\end{align}
+Volgens de Hamiltoniaanstelling moet bij een minimale \(T\) gelden dat
+\begin{equation}
+	0 = \frac{\partial H_1}{\partial u} = -\lambda_1 \sin(u) + \lambda_2 \cos(u) \label{eq:dH/du_1}.
+\end{equation}
+
+\section{Eliminatie van stuurfunctie \(u\)}\label{sec:Eliminatie van u}
+Door analytische manipulaties uit te voeren elimineren we nu de stuurfunctie \(u(t)\). Uit \eqref{eq:dH/du_1} volgt dat
+\begin{equation*}
+	\lambda_1 \sin(u) = \lambda_2 \cos(u)
+\end{equation*}
+en dus
+\begin{equation*}
+	\sin(u) = \frac{\lambda_2 }{\lambda_1}\cos(u)
+\end{equation*}
+mits \(\lambda_1\neq0\). We laten \(\mu := \frac{\lambda_2 }{\lambda_1}\)\label{mu}. Nu geldt dat \(\cos(u)>0\) omdat \(-\frac{\pi}{2} < u < \frac{\pi}{2}\). Daarom kunnen we gebruik maken van de gelijkheid \(\cos(u) =\sqrt{1-sin^2(u)}\). Na enig herschrijven vinden we nu voor \(sin(u)\) en \(cos(u)\)
+\begin{align*}
+	\sin(u) &= \mu\sqrt{1-sin^2(u)} & \cos(u) &= \sqrt{1-\sin^2(u)}\\
+	\mu^2 &= \sin^2(u)~(1+\mu^2) & \cos(u) &= \sqrt{\frac{1+\mu^2}{1+\mu^2}-\frac{\mu^2}{1+\mu^2}}\\
+	\sin(u) &= \frac{\mu}{\sqrt{1+\mu^2}} & \cos(u) &= \frac{1}{\sqrt{1+\mu^2}}
+\end{align*}
+Door de gevonden vormen in te vullen in functies \(x_1^\prime\) \eqref{eq:x1'} en \(x_2^\prime\) \eqref{eq:x2'} vinden we het stelsel differentiaalvergelijkingen
+\begin{align*}
+	x_1^\prime &= \frac{1}{\sqrt{1+(\frac{\lambda_2}{\lambda_1})^2}}\\
+	x_2^\prime &= \frac{\frac{\lambda_2}{\lambda_1}}{\sqrt{1+(\frac{\lambda_2}{\lambda_1})^2}}\\
+	\lambda_1^\prime(t) &= -\lambda_2S^\prime(x_1)\\
+	\lambda_2^\prime(t) &= 0.
+\end{align*}
+
+\section{Constante stroming}
+In het algemeen is het niet mogelijk om een dergelijk stelsel analytisch op te lossen. Dit is echter wel mogelijk wanneer het stromingsprofiel \(S(x_1)\) constant is. We noteren dit constante profiel met \(S(x_1)=s\). Omdat
+\begin{equation*}
+	S^\prime(x_1) = 0
+\end{equation*}
+vinden we
+\begin{equation*}
+	\lambda_1^\prime(t) =  -\lambda_2S^\prime(x_1) = 0.
+\end{equation*}
+Nu zien we dat \(\lambda_1^\prime(t) = \lambda_2^\prime(t)=0\) en concluderen dat \(\lambda_1\), \(\lambda_2\) en \(\mu\) allen constant zijn. We noteren dit als
+\begin{align*}
+	\lambda_1 &= c_1 \\
+	\lambda_2 &= c_2 \\
+	\mu = \frac{\lambda_2 }{\lambda_1} = \frac{c_2 }{c_1} &= c_3.
+\end{align*}
+We weten nu ook dat \(x_1^\prime(t)\) en \(x_2^\prime(t)\) constant zijn. Dit noteren we met
+\begin{align*}
+	x_1^\prime &= c_4 \\
+	x_2^\prime &= c_5.
+\end{align*}
+Door nu gebruik te maken van de randvoorwaarde \(x_1(T)=1\) vinden we
+\begin{equation}
+	1 = x_1(T) = \int_0^T c_4 ~dt = c_4 T 
+\end{equation}
+en analoog
+\begin{equation}
+	0= x_2(T) = \int_0^T c_5 + s~ dt = T(c_5 + s).
+\end{equation}
+Omdat \(T \neq 0\) concluderen we
+\begin{equation*}
+	c_5=-s.
+\end{equation*}
+Door gebruik te maken van de eigenschap \(\cos(u) = \sqrt{1-\sin^2(u)}\) vinden we
+\begin{align*}
+	c_4 &= \sqrt{1-{c_5}^2}\\
+	\frac{1}{T} &= \sqrt{1-(-s)^2}
+\end{align*}
+En we vinden dus voor een constante stroom \(s\) de gelijkheid:
+\begin{equation}
+	T=\frac{1}{\sqrt{1-s^2}}\label{eq:Tconst}
+\end{equation}

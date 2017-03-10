@@ -1,0 +1,36 @@
+\chapter{De Hamiltoniaanstelling}
+Om de problemen die in dit verslag gesteld worden op te lossen wordt gebruikt gemaakt van de Hamiltoniaanstelling \cite{hamiltonian}. Deze stelling, opgesteld door W. R. Hamilton en uitgebreid naar het domein van optimale sturingstheorie door L. Pontryagin, is een uitbreiding van de multiplicatoren van Lagrange. De stelling luidt als volgt:\\
+Gegeven de statusvariabelen \(x_1(t),x_2(t)\) en stuurfuncties \(u_1(t),u_2(t)\) die gezamenlijk de integraal
+\begin{equation*}
+\int_0^T f(x_1(t),x_2(t),u_1(t),u_2(t))~dt
+\end{equation*}
+optimaliseren. Als \(x_1(t)\) en \(x_2(t)\) voldoen aan de differentiaalvergelijkingen
+\begin{align*}
+	x_1^\prime(t) &= g_1(x_1(t),x_2(t),u_1(t),u_2(t))\\
+	x_2^\prime(t) &= g_2(x_1(t),x_2(t),u_1(t),u_2(t))
+\end{align*}
+en aan de eisen: 
+\begin{align*}
+	x_1(0) = {x_1}_0 && x_1(T) = {x_1}_T\\
+	x_2(0) = {x_2}_0 && x_2(T) = {x_2}_T
+\end{align*}
+Dan is de hamiltoniaan \(H\) gedefini\"eerd door:
+\begin{equation*}
+H(x_1,x_2,\lambda_1,\lambda_2,u_1,u_2)= \lambda_1 g_1(x_1,x_2,u_1,u_2) +\lambda_2g_2(x_1,x_2,u_1,u_2)+ f(x_1,x_2,u_1,u_2)
+\end{equation*}
+en gelden de eigenschappen
+\begin{align}
+	x_1^\prime(t) = \frac{\partial H}{\partial\lambda_1} && x_2^\prime(t) = \frac{\partial H}{\partial\lambda_1}\\
+	\lambda_1^\prime(t) = -\frac{\partial H}{\partial x_1} && \lambda_2^\prime(t) = -\frac{\partial H}{\partial x_2}\\
+	\frac{\partial H}{\partial u_1} = 0 && \frac{\partial H}{\partial u_1} = 0
+\end{align}
+Ook stelt de Hamiltoniaanstelling dat
+\begin{equation*}
+	H(T) = 0
+\end{equation*}
+als de eindtijd niet vast ligt.
+Tot slot geldt dat: 
+\begin{align*}
+	\lambda_1(T) =0 && \lambda_2(T) = 0
+\end{align*}
+Als respectievelijk \(x_1(T)\) en \(x_2(T)\) niet vast liggen, maar ook vari\"eeren. 

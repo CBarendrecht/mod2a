@@ -1,0 +1,85 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[scale = 3.5, transform shape]
+	% Variables
+	\newcommand{\boatAngle}{25}
+	\newcommand{\vectorLength}{.25}
+	\newcommand{\textSize}{.15}
+
+	% River banks
+	\draw (0, 1) -- (0, -1);
+	\draw (1, 1) -- (1, -1);
+	
+	% Coordinate system
+	\draw[->, thick] (0, 0) -- (1, 0);
+	\draw[->, thick] (0, 0) -- (0, 1);
+	
+	% Coordinate system labels. The scope structures are used to make the text smaller.
+	\begin{scope}[shift={(1, 0)}]
+		\begin{scope}[scale=\textSize * 1.5, transform shape]
+			\node[anchor=north east, font=\fontsize{10}{3}] at (0, 0) {$ x_1 $};
+		\end{scope}
+	\end{scope}
+	\begin{scope}[shift={(0, 1)}]
+		\begin{scope}[scale=\textSize * 1.5, transform shape]
+			\node[anchor=north east, font=\fontsize{10}{3}] at (0, 0) {$ x_2 $};
+		\end{scope}
+	\end{scope}
+	
+	% Vector field
+	\newcommand{\xVectors}{5} % Number of vectors in the x_1 direction
+	\newcommand{\yVectors}{3} % Number of vectors in the x_2 direction
+	\FPeval\xVectorsr{\xVectors - .5} % Each x_1 vector lies exactly between two integers
+	\FPeval\yVectorsStart{1 - \yVectors} % The first y vector has to be one higher in order to have the lowest vectors inside the picture. 
+	\foreach \x in {.5, ..., \xVectorsr} {
+		\foreach \y in {\yVectorsStart, ..., \yVectors} {
+			\FPeval\vectorLength{sin(\x/\xVectors * pi) / \yVectors / 2} % The length of the vector at \x, \y, calculated with a sine function.
+			\draw[->, draw=gray!75!white, very thin] (\x/\xVectors, \y/\yVectors) -- (\x/\xVectors, \y/\yVectors - \vectorLength);
+		}
+	}
+	
+	% s(x_1) label
+	\begin{scope}[shift={(.5, .9)}]
+		\begin{scope}[scale=\textSize, transform shape]
+			\node[anchor=west, font=\fontsize{10}{3}] at (0, 0) {$ s(x_1) $};
+		\end{scope}
+	\end{scope}
+	
+	% Boat center coordinate
+	\coordinate (c) at (.3, .1);
+	
+	% Dashed boat path
+	\draw[draw=gray, dashed] (0, 0) .. controls (.15, .02) .. (c) .. controls (.65, .26) .. (1, 0);
+	
+	% A scope to rotate and shift the boat
+	\begin{scope}[rotate = \boatAngle, shift = {(c)}]
+		% Boat outline
+		\draw (.2, 0) .. controls (.15, -.05) .. (.1, -.05) -- (-.1, -.05) -- (-.1, .05) -- (.1, .05) .. controls (.15, .05) .. (.2, 0);
+		
+		% Boat direction vector
+		\draw[->] (0, 0) -- (\vectorLength, 0);
+		
+		% v label
+		\begin{scope}[shift={(\vectorLength/2, 0)}]
+			\begin{scope}[scale=\textSize, transform shape]
+				\node[anchor=south, font=\fontsize{10}{3}] at (0, 0) {$ v $};
+			\end{scope}
+		\end{scope}
+		
+		% Base line (for boat direction)
+		\draw (0, 0) -- (-\boatAngle:\vectorLength);
+		
+		% Boat direction arc
+		\draw (0:\vectorLength / 3 * 2) arc (0:-\boatAngle:\vectorLength / 3 * 2);
+		
+		% Boat center dot
+		\draw[fill] (0, 0) circle (.01);
+	\end{scope}
+	
+	% u label
+	\begin{scope}[shift={($ (c) + (\boatAngle/2:\vectorLength/3*2) $)}]
+		\begin{scope}[scale=\textSize, transform shape, rotate=\boatAngle/2]
+			\node[anchor=west, font=\fontsize{10}{3}] at (0, 0) {$ u $};
+		\end{scope}
+	\end{scope}
+	
+\end{tikzpicture}
