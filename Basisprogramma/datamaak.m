@@ -37,7 +37,7 @@ hist(moves,1:max(moves));
 figure;
 plot(g);
 figure;
-scatter(gen,moves,2,[0,1,0]);
+scatter(gen,moves,25,[0,0,1],'p','filled');
 
 for i = 1:max(gen)
     h(i) = sum(g(i,:))/(hh-tel);
