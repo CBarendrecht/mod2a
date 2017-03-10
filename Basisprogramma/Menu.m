@@ -12,7 +12,7 @@ function [n, types, lengte, breedte, happy, Vierkant, Radius, random, acrim] = M
               };
     dlg_title = 'Input';
     num_lines = 1;
-    defaultans = {'2' ,'8', '8', '1/3', '2', 'False','0'} ;
+    defaultans = {'2' ,'8', '8', '1/3', '2', 'false','0'} ;
     options.Resize ='on';
     answer = inputdlg(prompt,dlg_title,num_lines,defaultans,options);
     

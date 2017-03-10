@@ -16,15 +16,29 @@ for i = 1:hh
         disp([num2str(i)]);
     end
 end
+tel = 0;
+for i = 1:hh
+    if gen(i) > 10000
+        tel = tel + 1;
+        del(tel) = i;
+    end
+end
+gen(:,del) = [];
+g(:,del) = [];
+noeq = tel/hh;
+
 figure;
 hist(gen,1:max(gen));
 figure;
 hist(moves,1:max(moves));
 figure;
 plot(g);
+figure;
+plot([gen,moves]);
 
 for i = 1:max(gen)
-    h(i) = sum(g(i,:))/hh;
+    h(i) = sum(g(i,:))/(hh-tel);
 end
 figure;
 plot(h);
+
