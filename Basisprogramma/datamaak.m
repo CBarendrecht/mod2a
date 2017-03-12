@@ -47,9 +47,14 @@ while door
         g(:,del) = [];
         moves(:,del) = [];
     end
-    noeq = tel/hh;
-    gemgen = sum(gen)/(hh-tel);
-    gemmoves = sum(moves)/(hh-tel);
+    
+    DATA(datatel,17) = tel/hh;
+    DATA(datatel,18) = min(gen);
+    DATA(datatel,19) = sum(gen)/(hh-tel);
+    DATA(datatel,20) = max(gen);
+    DATA(datatel,21) = min(moves);
+    DATA(datatel,22) = sum(moves)/(hh-tel);
+    DATA(datatel,23) = max(moves);
 
     figure;
     hist(gen,1:max(gen));
@@ -84,10 +89,7 @@ while door
     disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
     
-    DATA(datatel,17) = noeq;
-    DATA(datatel,18) = gemgen;
-    DATA(datatel,19) = gemmoves;
-
+    
     prompt = {'Meer data verzamelen?'};
     dlg_title = 'Input';
     num_lines = 1;
@@ -96,3 +98,5 @@ while door
     door = str2num(answer{1});    
     datatel = datatel + 1;
 end %while
+
+
