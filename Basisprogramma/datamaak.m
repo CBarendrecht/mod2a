@@ -56,8 +56,8 @@ while door
     DATA(datatel,22) = sum(moves)/(hh-tel);
     DATA(datatel,23) = max(moves);
 
-    figure;
-    hist(gen,1:max(gen));
+    figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
+    hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
     xlabel('Aantal Generaties');
     ylabel('Aantal Keer');
     title(['Histogram Aantal Generaties']);
@@ -98,5 +98,9 @@ while door
     door = str2num(answer{1});    
     datatel = datatel + 1;
 end %while
+
+%hier kun je nog meer grafieken maken a.d.h.v. 
+%wat je veranderd hebt en wat je wil weten
+
 
 
