@@ -32,7 +32,7 @@ while door
             end
         end
         if mod(i,10) == 0
-            disp([num2str(i)]);
+            disp(num2str(i));
         end
     end
     tel = 0;
@@ -60,22 +60,22 @@ while door
     hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
     xlabel('Aantal Generaties');
     ylabel('Aantal Keer');
-    title(['Histogram Aantal Generaties']);
+    title('Histogram Aantal Generaties');
     figure;
     hist(moves,1:max(moves));
     xlabel('Totaal Aantal Moves');
     ylabel('Aantal Keer');
-    title(['Histogram Totaal Aantal Moves']);
+    title('Histogram Totaal Aantal Moves');
     figure;
     plot(g);
     xlabel('Generatie');
     ylabel('Aantal Moves in die Generatie');
-    title(['Verloop Moves per Generatie']);
+    title('Verloop Moves per Generatie');
     figure;
     scatter(gen,moves,25,[0,0,1],'p','filled');
     xlabel('Aantal Generaties');
     ylabel('Totaal Aantal Moves');
-    title(['Aantal Generaties vs. Totaal Aantal Moves']);
+    title('Aantal Generaties vs. Totaal Aantal Moves');
 
     for i = 1:max(gen)
         gem(i) = sum(g(i,:))/(hh-tel);
@@ -84,7 +84,7 @@ while door
     plot(gem);
     xlabel('Generatie');
     ylabel('Gemiddeld Aantal Moves');
-    title(['Gemiddeld Verloop Moves per Generatie']);
+    title('Gemiddeld Verloop Moves per Generatie');
     disp(['Kans op geen equilibrium: ', num2str(noeq)]);
     disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
