@@ -9,8 +9,10 @@ hh = str2num(answer{1});
 volg = randperm(sum(n),sum(n));
 for i = 1:hh
     [gen(i),v,moves(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
-    for k = 1:gen(i)
-        g(k,i) = v(k);
+    if gen(i) < 10001
+        for k = 1:gen(i)
+            g(k,i) = v(k);
+        end
     end
     if mod(i,10) == 0
         disp([num2str(i)]);
@@ -39,14 +41,17 @@ figure;
 hist(moves,1:max(moves));
 xlabel('Totaal Aantal Moves');
 ylabel('Aantal Keer');
+title(['Histogram Totaal Aantal Moves']);
 figure;
 plot(g);
 xlabel('Generatie');
 ylabel('Aantal Moves in die Generatie');
+title(['Verloop Moves per Generatie']);
 figure;
 scatter(gen,moves,25,[0,0,1],'p','filled');
 xlabel('Aantal Generaties');
 ylabel('Totaal Aantal Moves');
+title(['Aantal Generaties vs. Totaal Aantal Moves']);
 
 for i = 1:max(gen)
     h(i) = sum(g(i,:))/(hh-tel);
@@ -55,4 +60,5 @@ figure;
 plot(h);
 xlabel('Generatie');
 ylabel('Gemiddeld Aantal Moves');
+title(['Gemiddeld Verloop Moves per Generatie']);
 
