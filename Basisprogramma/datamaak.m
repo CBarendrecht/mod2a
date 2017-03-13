@@ -25,7 +25,7 @@ while door
         
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
+        [gen(i),v,moves(i),mxh,gmh,mnh] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);
@@ -48,48 +48,53 @@ while door
         moves(:,del) = [];
     end
     
-    DATA(datatel,17) = tel/hh;
-    DATA(datatel,18) = min(gen);
-    DATA(datatel,19) = sum(gen)/(hh-tel);
-    DATA(datatel,20) = max(gen);
-    DATA(datatel,21) = min(moves);
-    DATA(datatel,22) = sum(moves)/(hh-tel);
-    DATA(datatel,23) = max(moves);
+    noeq = tel/hh;
+    gemgen = mean(gen);
+    gemmoves = mean(moves);
+    DATA(datatel,17) = tel/hh; %kans op geen equilibrium
+    DATA(datatel,18) = min(gen); %min aantal generaties
+    DATA(datatel,19) = mean(gen); %gem aantal generaties
+    DATA(datatel,20) = max(gen); %max aantal generaties
+    DATA(datatel,21) = min(moves); %min aantal moves
+    DATA(datatel,22) = mean(moves); %gem aantal moves
+    DATA(datatel,23) = max(moves); %max aantal moves
 
-    figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
-    hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
-    xlabel('Aantal Generaties');
-    ylabel('Aantal Keer');
-    title('Histogram Aantal Generaties');
-    figure;
-    hist(moves,1:max(moves));
-    xlabel('Totaal Aantal Moves');
-    ylabel('Aantal Keer');
-    title('Histogram Totaal Aantal Moves');
-    figure;
-    plot(g);
-    xlabel('Generatie');
-    ylabel('Aantal Moves in die Generatie');
-    title('Verloop Moves per Generatie');
-    figure;
-    scatter(gen,moves,25,[0,0,1],'p','filled');
-    xlabel('Aantal Generaties');
-    ylabel('Totaal Aantal Moves');
-    title('Aantal Generaties vs. Totaal Aantal Moves');
+    %figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
+    %hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
+    %xlabel('Aantal Generaties');
+    %ylabel('Aantal Keer');
+    %title('Histogram Aantal Generaties');
+    %figure;
+    %hist(moves,1:max(moves));
+    %xlabel('Totaal Aantal Moves');
+    %ylabel('Aantal Keer');
+    %title('Histogram Totaal Aantal Moves');
+    %figure;
+    %plot(g);
+    %xlabel('Generatie');
+    %ylabel('Aantal Moves in die Generatie');
+    %title('Verloop Moves per Generatie');
+    %figure;
+    %scatter(gen,moves,25,[0,0,1],'p','filled');
+    %xlabel('Aantal Generaties');
+    %ylabel('Totaal Aantal Moves');
+    %title('Aantal Generaties vs. Totaal Aantal Moves');
 
     for i = 1:max(gen)
-        gem(i) = sum(g(i,:))/(hh-tel);
+        gem(i) = mean(g(i,:));
+        DATA(datatel,23+i) = gem(i);
+        GEM(i,datatel) = gem(i);
     end
-    figure;
-    plot(gem);
-    xlabel('Generatie');
-    ylabel('Gemiddeld Aantal Moves');
-    title('Gemiddeld Verloop Moves per Generatie');
-    disp(['Kans op geen equilibrium: ', num2str(noeq)]);
-    disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
-    disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
     
-    
+    %figure;
+    %plot(gem);
+    %xlabel('Generatie');
+    %ylabel('Gemiddeld Aantal Moves');
+    %title('Gemiddeld Verloop Moves per Generatie');
+    %disp(['Kans op geen equilibrium: ', num2str(noeq)]);
+    %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
+    %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
+        
     prompt = {'Meer data verzamelen?'};
     dlg_title = 'Input';
     num_lines = 1;
@@ -101,6 +106,20 @@ end %while
 
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
+figure;
+plot(DATA(:,13),DATA(:,18));
+hold on;
+plot(DATA(:,13),DATA(:,19));
+hold on;
+plot(DATA(:,13),DATA(:,20));
+figure;
+plot(DATA(:,13),DATA(:,21));
+hold on;
+plot(DATA(:,13),DATA(:,22));
+hold on;
+plot(DATA(:,13),DATA(:,23));
+figure;
+plot(GEM);
 
 
 
