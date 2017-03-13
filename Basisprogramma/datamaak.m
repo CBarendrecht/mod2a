@@ -7,9 +7,10 @@ answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 door = true;
 datatel = 0;
-while door
+[n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
+while h <= 1
     datatel = datatel + 1;
-    [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
+    
     for j = 1:10
         if j < t + 1
             DATA(datatel,j) = n(j);
@@ -112,13 +113,9 @@ while door
     %disp(['Kans op geen equilibrium: ', num2str(noeq)]);
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
-        
-    prompt = {'Meer data verzamelen?'};
-    dlg_title = 'Input';
-    num_lines = 1;
-    defaultans = {'true'} ;
-    answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
-    door = str2num(answer{1});    
+     
+    h = h + 0.01;
+    
 end %while
 
 for i = 1:datatel

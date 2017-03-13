@@ -7,9 +7,10 @@ answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 door = true;
 datatel = 0;
+[n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
 while door
     datatel = datatel + 1;
-    [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
+    
     for j = 1:10
         if j < t + 1
             DATA(datatel,j) = n(j);
@@ -117,8 +118,9 @@ while door
     dlg_title = 'Input';
     num_lines = 1;
     defaultans = {'true'} ;
-    answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
+    answer = inputdlg(prompt,dlg_title,num_lines,defaultans); 
     door = str2num(answer{1});    
+    
 end %while
 
 for i = 1:datatel
