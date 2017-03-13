@@ -6,8 +6,9 @@ defaultans = {'500'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 door = true;
-datatel = 1;
+datatel = 0;
 while door
+    datatel = datatel + 1;
     [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
     for j = 1:10
         if j < t + 1
@@ -86,7 +87,7 @@ while door
     %ylabel('Totaal Aantal Moves');
     %title('Aantal Generaties vs. Totaal Aantal Moves');
     
-    for i = 1:hh
+    for i = 1:(hh-tel)
         for j = gen(i)+1:max(gen)
             mxh(j,i) = mxh(gen(i),i);
             gmh(j,i) = gmh(gen(i),i);
@@ -118,8 +119,15 @@ while door
     defaultans = {'true'} ;
     answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
     door = str2num(answer{1});    
-    datatel = datatel + 1;
 end %while
+
+for i = 1:datatel
+    for j = DATA(i,20)+1:max(DATA(:,20))
+        GMMXH(j,i) = GMMXH(DATA(i,20),i);
+        GMGMH(j,i) = GMGMH(DATA(i,20),i);
+        GMMNH(j,i) = GMMNH(DATA(i,20),i);
+    end
+end
 
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
