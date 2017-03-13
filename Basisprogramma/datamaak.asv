@@ -137,27 +137,20 @@ hold on;
 plot(DATA(:,13),DATA(:,19));
 hold on;
 plot(DATA(:,13),DATA(:,20));
-xlabel('Happinessregel');
-ylabel('Aantal generaties');
+xlabel('');
 figure;
 plot(DATA(:,13),DATA(:,21));
 hold on;
 plot(DATA(:,13),DATA(:,22));
 hold on;
 plot(DATA(:,13),DATA(:,23));
-xlabel('Happinessregel');
-ylabel('Aantal moves');
 figure;
 plot(GEM);
-xlabel('Generatie');
-ylabel('Moves per Generatie');
 figure;
 plot(GMMXH);
 hold on;
 plot(GMGMH);
 hold on;
 plot(GMMNH);
-xlabel('Generatie');
-ylabel('Gemiddelde Happiness');
 
 
