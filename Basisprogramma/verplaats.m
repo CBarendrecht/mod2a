@@ -2,6 +2,7 @@ function [S,T,U,v] = verplaats(infom,grid,crbord,i,lengte,breedte,vk,r)
     v = false; %v checkt of er verplaatst is
     c = crbord(infom(2,i),infom(3,i));
     s = happiness(grid,crbord,infom(2,i),infom(3,i),infom(1,i),vk,r,c); %huidige happiness
+    h = 0;
     d = inf; %afstand beste kandidaat
     x = 0;% coordinaten beste kendidaat
     y = 0;
@@ -12,12 +13,22 @@ function [S,T,U,v] = verplaats(infom,grid,crbord,i,lengte,breedte,vk,r)
         for k = 1:breedte
             if grid(j,k) == 0 %lege plekken bepalen
                 if happiness(grid,crbord,j,k,infom(1,i),vk,r,c) > s
+                    h = happiness(grid,crbord,j,k,infom(1,i),vk,r,c);
                     afst = afstand(infom(2,i),infom(3,i),j,k);%afstand kandidaat
                     if afst < d
                         d = afst;
                         x = j;
                         y = k;
+                    else
+                        if afst == d
+                           %vergelijk happiness
+                           if happiness(grid,crbord,j,k,infom(1,i),vk,r,c) > h
+                               x = j;
+                               y = k;
+                           end
+                        end
                     end
+                    h = 0;
                 end
             end
         end
