@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.24)  12 MAR 2017 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.24)  13 MAR 2017 10:33
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
@@ -441,34 +441,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--45
 [1
 
 {C:/Users/guanyu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Package marginnote Info: Margin note 2.1 is on absolute page 2
+(marginnote)              on input line 48.
 Package marginnote Info: right page because not two side mode on input line 48.
 
-Package marginnote Info: xpos not known,
-(marginnote)             using \marginnoteleftadjust on input line 48.
+Package marginnote Info: xpos seems to be 72.26999pt,
+(marginnote)             \marginnoteleftadjust ignored on input line 48.
  [2]
-(mod2A_verslag.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(mod2A_verslag.aux) ) 
 Here is how much of TeX's memory you used:
- 1979 strings out of 493673
- 24167 string characters out of 3141527
+ 1978 strings out of 493673
+ 24156 string characters out of 3141527
  88572 words of memory out of 3000000
- 5319 multiletter control sequences out of 15000+200000
+ 5318 multiletter control sequences out of 15000+200000
  11542 words of font info for 45 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,6n,32p,896b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 Output written on mod2A_verslag.pdf (2 pages, 118676 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
