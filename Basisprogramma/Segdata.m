@@ -2,7 +2,7 @@ clear all;
 prompt = {'Hoe vaak herhalen?', 'Stapgrootte(%)'};
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'500','10'} ;
+defaultans = {'500','2.5'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 stapg = str2num(answer{2})/100;
@@ -124,6 +124,6 @@ while seg<=1
     disp(seg);
 end %while
 figure;
-plot(DATA(:,17),DATA(:,20));
+scatter(DATA(:,17),DATA(:,20),25,[0,0,1],'p','filled');
 
 
