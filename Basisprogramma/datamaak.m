@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
-while h <= 1
+while h <= 1.001
     datatel = datatel + 1;
     
     for j = 1:10
@@ -27,7 +27,7 @@ while h <= 1
         
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
+        [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling
@@ -59,6 +59,7 @@ while h <= 1
     noeq = tel/hh;
     gemgen = mean(gen);
     gemmoves = mean(moves);
+    gemsegr = mean(segr);
     DATA(datatel,17) = tel/hh; %kans op geen equilibrium
     DATA(datatel,18) = min(gen); %min aantal generaties
     DATA(datatel,19) = mean(gen); %gem aantal generaties
@@ -66,6 +67,9 @@ while h <= 1
     DATA(datatel,21) = min(moves); %min aantal moves
     DATA(datatel,22) = mean(moves); %gem aantal moves
     DATA(datatel,23) = max(moves); %max aantal moves
+    DATA(datatel,24) = min(segr); %min segregatie
+    DATA(datatel,25) = mean(segr); %gem segregatie
+    DATA(datatel,26) = max(segr); %max segregatie
 
     %figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
     %hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
@@ -98,7 +102,6 @@ while h <= 1
 
     for i = 1:max(gen)
         gem(i) = mean(g(i,:));
-        DATA(datatel,23+i) = gem(i);
         GEM(i,datatel) = gem(i);
         GMMXH(i,datatel) = mean(mxh(i,:));
         GMGMH(i,datatel) = mean(gmh(i,:));
@@ -129,25 +132,41 @@ end
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
 figure;
-plot(DATA(:,13),DATA(:,18));
+scatter(DATA(:,13),DATA(:,18),25,[1,0,0],'p','filled');
 hold on;
-plot(DATA(:,13),DATA(:,19));
+scatter(DATA(:,13),DATA(:,19),25,[0,0,1],'p','filled');
 hold on;
-plot(DATA(:,13),DATA(:,20));
+scatter(DATA(:,13),DATA(:,20),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Aantal generaties');
+title('Invloed Happinessregel op Aantal Generaties op Basisbord');
+
 figure;
-plot(DATA(:,13),DATA(:,21));
+scatter(DATA(:,13),DATA(:,21),25,[1,0,0],'p','filled');
 hold on;
-plot(DATA(:,13),DATA(:,22));
+scatter(DATA(:,13),DATA(:,22),25,[0,0,1],'p','filled');
 hold on;
-plot(DATA(:,13),DATA(:,23));
+scatter(DATA(:,13),DATA(:,23),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Aantal moves');
+title('Invloed Happinessregel op Aantal Moves op Basisbord');
+
+figure;
+scatter(DATA(:,13),DATA(:,24),25,[1,0,0],'p','filled');
+hold on;
+scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
+hold on;
+scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
+xlabel('Happinessregel');
+ylabel('Gemiddelde Segragatie');
+title('Invloed Happinessregel op Fractie Individuen in Homogene Buurt op Basisbord');
+
 figure;
 plot(GEM);
 xlabel('Generatie');
 ylabel('Moves per Generatie');
+title('Invloed Happinessregel op Verloop Moves per Generatie op Basisbord');
+
 figure;
 plot(GMMXH);
 hold on;
@@ -156,5 +175,16 @@ hold on;
 plot(GMMNH);
 xlabel('Generatie');
 ylabel('Gemiddelde Happiness');
+title('Invloed Happinessregel op Verloop Happiness op Basisbord');
+
+figure;
+scatter(DATA(:,13),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
+hold on;
+scatter(DATA(:,13),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
+hold on;
+scatter(DATA(:,13),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
+xlabel('Happinessregel');
+ylabel('Gemiddelde Happiness');
+title('Invloed Happinessregel op Gemiddelde Uiteindelijke Happiness op Basisbord');
 
 

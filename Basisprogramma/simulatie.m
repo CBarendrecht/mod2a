@@ -1,13 +1,10 @@
-function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac)
+function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
-<<<<<<< HEAD
     teller = 0;%generaties tellen
-=======
     segklaar = false; %voor aveseg truth check
     teller = 0;
->>>>>>> 2093477ee3f6e58ecfc0742f0280b2bffda45800
     totmoves = 0;
     nonmoves = 0;
     while klaar == false && segklaar == false
@@ -52,6 +49,7 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,
             klaar = true;
         end
     end
+    segr = sum(floor(A(6,:)))/sum(n);
     data = teller;  
 end
 
