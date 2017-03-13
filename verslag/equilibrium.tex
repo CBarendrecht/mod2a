@@ -33,14 +33,14 @@ The numbers stand for the turn order (1 is selected first, then 2, etc.). Red an
 \end{center}
 \caption{Counter example: 37 and 38 will move periodically.}\label{counterexample1}
 \end{figure}
-\\Next, it's 38's turn. 38 has a happiness of $\frac{2}{7}$. The closest spot with greater happiness is the nearby corner spot with happiness $\frac{1}{3}$. Now the board looks like this:
+\\Next, it's 38's turn. 38 has a happiness of $\frac{2}{7}$. The closest spot with greater happiness is the nearby corner spot with happiness $\frac{1}{3}$. Now the board looks like this:\\
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=0.25]{segregation_tegenvb_2.jpg}
 \end{center}
 \caption{Counter example: 37 and 38 will move periodically.}\label{counterexample2}
 \end{figure}
-\\The others will remain happy and will not move. When it's 37's turn again, 37 has happiness $\frac{1}{7} < \frac{1}{3}$. The closest empty spot has happiness $\frac{1}{6} > \frac{1}{7}$, so 37 will move to that spot. Now 37 and 38 have swapped position:
+\\The others will remain happy and will not move. When it's 37's turn again, 37 has happiness $\frac{1}{7} < \frac{1}{3}$. The closest empty spot has happiness $\frac{1}{6} > \frac{1}{7}$, so 37 will move to that spot. Now 37 and 38 have swapped position:\\
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=0.25]{segregation_tegenvb_3.jpg}
@@ -48,7 +48,12 @@ The numbers stand for the turn order (1 is selected first, then 2, etc.). Red an
 \caption{Counter example: 37 and 38 will move periodically.}\label{counterexample3}
 \end{figure}
 Since 37 and 38 are of the same type, those 3 moves will repeat: we have a periodic solution.\\
-\textbf{Now what went wrong?} After the first move, both 37 and 38 will gain happiness, but on the third move, 38 will lose all of her happiness and subsequently 37 will also lose happiness. We get an endless loop.\\
+\textbf{Now what went wrong?} After the first move, both 37 and 38 will gain happiness, but on the third move, 38 will lose all of her happiness. We get an endless loop.\\
+\newpage
 \subsection{random displacement}
-Now consider the situation that, when an individual is unhappy, she will move to a random empty spot.
+Now consider the situation that, when an individual is unhappy, she will move to a random empty spot (uniform distribution). In this situation, we always get an equilibrium, but we cannot say when.\\
+\textbf{Theorem.} If, for a certain configuration of board size, number of people of each type and number of types, there exists a
+\begin{proof}
+
+\end{proof}
 \end{document}
