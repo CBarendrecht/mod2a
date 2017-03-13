@@ -1,4 +1,4 @@
-function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac)
+function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
@@ -49,6 +49,7 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,
             klaar = true;
         end
     end
+    segr = sum(floor(A(6,:)))/sum(n);
     data = teller;  
 end
 
