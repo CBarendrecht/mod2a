@@ -1,15 +1,20 @@
-function [data,g,totmoves,maxhappy,gemhappy,minhappy] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim)
+function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
+    segklaar = false; %voor aveseg truth check
     teller = 0;
     totmoves = 0;
     nonmoves = 0;
-    while klaar == false 
+    while klaar == false && segklaar == false
         klaar = true;
         teller = teller+1;
         for i = 1:sum(n)
             A(6,i) = happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i));
+        end
+        
+        if sum(floor(A(6,:)))/sum(n) >= segfrac
+          segklaar =true;
         end
         maxhappy(teller) = max(A(6,:));
         gemhappy(teller) = mean(A(6,:));
