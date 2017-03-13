@@ -1,5 +1,7 @@
 clear all; %gebruik dit bestand enkel voor één simulatie
 [n,types,lengte,breedte,happy,vk,r,random,acrim] = Menu();
+%eqreached = true;
+%while eqreached
 A = info(n,lengte,breedte,types,acrim);
 [B, K] = bord(A,lengte,breedte,sum(n),acrim);
 [C, K1] = bord(A,lengte,breedte,sum(n),acrim);
@@ -37,9 +39,11 @@ while klaar == false
         g(teller) = totmoves;
     end
     if teller > 10000
+        %eqreached = false;
         klaar = true;
     end
 end
+%end
 if (teller <= 10000)
     display('equilibrium reached');
     disp(['aantal generaties = ', num2str(teller)]);
