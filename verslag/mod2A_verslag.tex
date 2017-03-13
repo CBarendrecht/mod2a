@@ -25,14 +25,14 @@
 \section{Abstract}
 An extended version of the 'Shelling Tipping Model' is built...
 \section{Introduction}
-In 1978, Thomas C Schelling developed his tipping model by placing pennies and dimes on a chess bord and moved them according to various rules. By viewing the pennies and dimes as two types of people, the rule of moving as a preference for the individuals, and the chess bord as a city, he soon discovered that segragation is formed on the bord, even when the preference of the individuals is very subtle.\\
+In 1978, Thomas C. Schelling developed his tipping model by placing pennies and dimes on a chess bord and moved them according to various rules. By viewing the pennies and dimes as two types of people, the rule of moving as a preference for the individuals, and the chess board as a city, he soon discovered that segregation is formed on the board, even when the preference of the individuals is very subtle.\\
 \\
-Based on this idea, we first built a basic model which consists of a 8x8 bord with 40 individuals that are divided in 2 types. The individuals are moved according to their 'Happiness' in the current place. For the basic model, an individual is considered happy if $\frac{1}{3}$ of his/her second order neighbours(for example a person not on the edge can have 8 neighbours) is of the same type. Otherwise, an individual is considered unhappy and will be moved to the nearest place such that his/her happiness is strictly higher, which we referred to as the 'Happiness Rule'. After that, we extended the basic model by changing the parameters such as the size of the population, bord and number of types. We also included an option for random displacement: an individual which is not happy will be moved to a empty location randomly.(Maybe more extension...)\\\\
+Based on this idea, we first built a basic model which consists of an \(8\times8\) board with 40 individuals that are divided in two types. The individuals are moved according to their 'Happiness' in the current place. For the basic model, an individual is considered happy if $\frac{1}{3}$ of his/her second order neighbours (a person has at most8 neighbours) is of the same type. Otherwise, an individual is considered unhappy and will be moved to the nearest place such that his/her happiness is strictly higher, which we referred to as the 'Happiness Rule'. After that, we extended the basic model by changing the parameters such as the size of the population, bord and number of types. We also included an option for random displacement: an individual which is not happy will be moved to a empty location randomly.(Maybe more extension...)\\\\
 For both the basic and the extended model, we ran 500 simulations several times and investigated how different values of the parameters affected the segregation pattern. In order to formulate our research goals precisely, the following definitions are important:\\
 \\
-1.\textbf{Generation}: A population is said to have entered a next generation if the happiness of every person has been checked once. \\
-2.\textbf{Equilibrium}: The population is said to have reached an equilibrium if zero individual is moved after a generation\\
-3.\textbf{Segregation time of n$\%$}: The segregation time of n$\%$ is defined as the number of generations such that n$\%$ of the population has all his/her neighbours of the same type.
+1. \textbf{Generation}: A population is said to have entered a next generation if the happiness of every person has been checked once. \\
+2. \textbf{Equilibrium}: The population is said to have reached an equilibrium if zero individual is moved after a generation\\
+3. \textbf{Segregation time at n$\%$}: The segregation time at n$\%$ is defined as the number of generations such that n$\%$ of the population has all his/her neighbours of the same type.
 \\
 \\
 For this project, we focussed on the following main questions:\\

@@ -1,0 +1,51 @@
+% verslag mod2A
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} %nodig voor blokje
+\usepackage{marginnote}
+\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
+\newcommand\header[1]{\framebox[\linewidth]{\textsc{Opgave #1}}\\}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\partial}
+
+\begin{document}
+
+\section{Average segregation time}
+	As mentioned earlier, the segregation time of \(n\%\) is defined as the number of generations until at least \(n\%\) of the population on a board lives in homogenous groups. 
+Where person \(i\) is said to live homogenous. If for any neighbour \(j\) of \(i\), we have \(\text{Type}(j)=\text{Type}(i)\).\\
+This gives immediate rise to questions concerning the relation between the choice of \(n\) and the average segregation time at \(n\%\). 
+Furthermore, it is unclear if segregation at \(n\%\) is guaranteed before a board reaches an equilibrium and what the effect is of the happiness boundary on the existence of a segregation time.\\
+
+To research any of the given questions, we will first have to formalise our choices of board as well as the questions proposed.
+
+\subsection{Formalisations}
+The boards that will be analysed are the Standard setup and an a larger 4-Type board specified below:
+\begin{table}[h!]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{l|l|l}
+  & Standard Board & 4-Type Board\\ \hline
+Number of types:& 2 & 4 \\ 
+ Length:& 8 & 10  \\
+ Width:& 8 & 10  \\
+ Happiness:& 1 & 1  \\
+Population per type: & 20 & 16  
+	\end{tabular}
+	\end{table}
+\\
+The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots. The choice of happiness is 1 unlike the usual \(\frac{1}{3}\). 
+This is to guarantee that for any \(n\leq 100\), segregation at \(n\%\) takes place prior to the board reaching equilibrium. Which leads to defining the research questions:
+
+\begin{enumerate}
+ \item ***What is the relation between the average segregation time and \(n\).***
+ \item What is the average segregated fraction of the population after a board reaches equilibrium for given choices of happiness.
+\end{enumerate}
+
+\end{document}
