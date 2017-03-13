@@ -25,10 +25,13 @@ while door
         
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),mxh,gmh,mnh] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
+        [gen(i),v,moves(i),x,y,z] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);
+                mxh(k,i) = x(k);
+                gmh(k,i) = y(k);
+                mnh(k,i) = z(k);
             end
         end
         if mod(i,10) == 0
@@ -45,6 +48,9 @@ while door
     if tel > 0
         gen(:,del) = [];
         g(:,del) = [];
+        mxh(:,del) = [];
+        gmh(:,del) = [];
+        mnh(:,del) = [];
         moves(:,del) = [];
     end
     
@@ -79,11 +85,22 @@ while door
     %xlabel('Aantal Generaties');
     %ylabel('Totaal Aantal Moves');
     %title('Aantal Generaties vs. Totaal Aantal Moves');
+    
+    for i = 1:hh
+        for j = gen(i)+1:max(gen)
+            mxh(j,i) = mxh(gen(i),i);
+            gmh(j,i) = gmh(gen(i),i);
+            mnh(j,i) = mnh(gen(i),i);
+        end
+    end
 
     for i = 1:max(gen)
         gem(i) = mean(g(i,:));
         DATA(datatel,23+i) = gem(i);
         GEM(i,datatel) = gem(i);
+        GMMXH(i,datatel) = mean(mxh(i,:));
+        GMGMH(i,datatel) = mean(gmh(i,:));
+        GMMNH(i,datatel) = mean(mnh(i,:));
     end
     
     %figure;
@@ -120,6 +137,11 @@ hold on;
 plot(DATA(:,13),DATA(:,23));
 figure;
 plot(GEM);
-
+figure;
+plot(GMMXH);
+hold on;
+plot(GMGMH);
+hold on;
+plot(GMMNH);
 
 
