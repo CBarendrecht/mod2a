@@ -1,0 +1,20 @@
+\select@language {dutch}
+\contentsline {chapter}{\numberline {1}Inleiding}{4}
+\contentsline {chapter}{\numberline {2}Situatieschets}{5}
+\contentsline {chapter}{\numberline {3}Het eerste probleem: Tijdsoptimalisatie}{6}
+\contentsline {section}{\numberline {3.1}De Hamiltoniaan}{6}
+\contentsline {section}{\numberline {3.2}Eliminatie van stuurfunctie \(u\)}{7}
+\contentsline {section}{\numberline {3.3}Constante stroming}{8}
+\contentsline {chapter}{\numberline {4}Niet triviale stromingsprofielen}{9}
+\contentsline {section}{\numberline {4.1}Met een speedboot over de Nijl}{9}
+\contentsline {chapter}{\numberline {5}Minimaliseren van kosten}{16}
+\contentsline {section}{\numberline {5.1}Enkele eisen}{16}
+\contentsline {section}{\numberline {5.2}Schrijven als integraal}{17}
+\contentsline {section}{\numberline {5.3}Nieuwe hamiltoniaan opstellen}{18}
+\contentsline {section}{\numberline {5.4}Hamiltoniaanstelling gebruiken}{19}
+\contentsline {section}{\numberline {5.5}Eliminatie en vereenvoudigen van de afgeleiden}{19}
+\contentsline {subsection}{\numberline {5.5.1}Eliminatie van Sinus en Cosinus en \(u\)}{19}
+\contentsline {subsection}{\numberline {5.5.2}Eliminatie van \(F, F_w(v),\lambda _3\) en \(v\)}{20}
+\contentsline {subsection}{\numberline {5.5.3}Invullen van de gelijkheden}{21}
+\contentsline {chapter}{\numberline {6}Discussie}{22}
+\contentsline {chapter}{\numberline {7}Conclusie}{23}
