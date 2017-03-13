@@ -2,8 +2,12 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
+<<<<<<< HEAD
+    teller = 0;%generaties tellen
+=======
     segklaar = false; %voor aveseg truth check
     teller = 0;
+>>>>>>> 2093477ee3f6e58ecfc0742f0280b2bffda45800
     totmoves = 0;
     nonmoves = 0;
     while klaar == false && segklaar == false
@@ -33,14 +37,14 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar] = simulatie(volg,
             if v 
                 klaar = false;
                 totmoves = totmoves + 1;
-                A(4,i) = A(4,i) + 1;
+                A(4,i) = A(4,i) + 1;%aantal moves van het individu zelf
             else
                 nonmoves = nonmoves + 1;
             end
         end
         
         if teller > 1
-            g(teller) = totmoves  - sum(g);
+            g(teller) = totmoves  - sum(g);%tellen totale moves per generatie
         else
             g(teller) = totmoves;
         end
