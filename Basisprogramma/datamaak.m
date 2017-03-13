@@ -26,7 +26,7 @@ while door
         
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
+        [gen(i),v,moves(i),x,y,z,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);

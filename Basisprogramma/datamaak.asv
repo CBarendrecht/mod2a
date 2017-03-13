@@ -26,7 +26,7 @@ while door
         
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
+        [gen(i),v,moves(i),x,y,z,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);
@@ -137,20 +137,27 @@ hold on;
 plot(DATA(:,13),DATA(:,19));
 hold on;
 plot(DATA(:,13),DATA(:,20));
-xlabel('');
+xlabel('Happinessregel');
+ylabel('Aantal generaties');
 figure;
 plot(DATA(:,13),DATA(:,21));
 hold on;
 plot(DATA(:,13),DATA(:,22));
 hold on;
 plot(DATA(:,13),DATA(:,23));
+xlabel('Happinessregel');
+ylabel('Aantal moves');
 figure;
 plot(GEM);
+xlabel('Generatie');
+ylabel('Moves per Generatie');
 figure;
 plot(GMMXH);
 hold on;
 plot(GMGMH);
 hold on;
 plot(GMMNH);
+xlabel('Generatie');
+ylabel('Gemiddelde Happiness');
 
 
