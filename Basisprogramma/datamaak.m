@@ -28,10 +28,10 @@ while door
         [gen(i),v,moves(i),x,y,z] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim);
         if gen(i) < 10001
             for k = 1:gen(i)
-                g(k,i) = v(k);
-                mxh(k,i) = x(k);
-                gmh(k,i) = y(k);
-                mnh(k,i) = z(k);
+                g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling
+                mxh(k,i) = x(k);%maximum happiness per generatie bij i-de herhaling
+                gmh(k,i) = y(k);%gem happiness  ""
+                mnh(k,i) = z(k);%minimum happiness ""
             end
         end
         if mod(i,10) == 0
@@ -45,7 +45,7 @@ while door
             del(tel) = i;
         end
     end
-    if tel > 0
+    if tel > 0 %de kolommen leegmaken voor de herhalingen waarbij geen eq bereikt is
         gen(:,del) = [];
         g(:,del) = [];
         mxh(:,del) = [];
