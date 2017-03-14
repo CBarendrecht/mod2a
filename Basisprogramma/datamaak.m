@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
-while rv <= 1
+while acrim <= sum(n)
     datatel = datatel + 1;
     
     for j = 1:10
@@ -24,7 +24,12 @@ while rv <= 1
     DATA(datatel,14) = borde;
     DATA(datatel,15) = rv;
     DATA(datatel,16) = acrim;
-        
+    
+    g = zeros(hh);
+    mxh = zeros(hh);
+    gmh = zeros(hh);
+    mnh = zeros(hh);
+            
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
         [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
@@ -117,7 +122,7 @@ while rv <= 1
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
      
-    rv = rv + 1;
+    acrim = acrim + 1;
     
     clear mnh;
     clear mxh;
@@ -129,6 +134,7 @@ while rv <= 1
     clear gemgen;
     clear gemmoves;
     clear gemsegr;
+    clear del;
 end %while
 
 for i = 1:datatel
@@ -142,41 +148,47 @@ end
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
 figure;
-scatter(DATA(:,15),DATA(:,18),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),DATA(:,17),25,[1,0,0],'p','filled');
+xlabel('Aantal Criminelen');
+ylabel('Fractie Geen Equilibrium');
+title('Invloed Aantal Criminelen op Fractie Geen Equilibrium');
+
+figure;
+scatter(DATA(:,16),DATA(:,18),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,15),DATA(:,19),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),DATA(:,19),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,15),DATA(:,20),25,[0,1,0],'p','filled');
-xlabel('Random Verplaatsen');
+scatter(DATA(:,16),DATA(:,20),25,[0,1,0],'p','filled');
+xlabel('Aantal Criminelen');
 ylabel('Aantal generaties');
-title('Invloed Random Verplaatsen op Aantal Generaties op Basisbord');
+title('Invloed Aantal Criminelen op Aantal Generaties op Basisbord');
 
 figure;
-scatter(DATA(:,15),DATA(:,21),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),DATA(:,21),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,15),DATA(:,22),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),DATA(:,22),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,15),DATA(:,23),25,[0,1,0],'p','filled');
-xlabel('Random Verplaatsen');
+scatter(DATA(:,16),DATA(:,23),25,[0,1,0],'p','filled');
+xlabel('Aantal Criminelen');
 ylabel('Aantal moves');
-title('Invloed Random Verplaatsen op Aantal Moves op Basisbord');
+title('Invloed Aantal Criminelen op Aantal Moves op Basisbord');
 
 figure;
-scatter(DATA(:,15),DATA(:,24),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),DATA(:,24),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,15),DATA(:,25),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,15),DATA(:,26),25,[0,1,0],'p','filled');
-xlabel('Random Move');
+scatter(DATA(:,16),DATA(:,26),25,[0,1,0],'p','filled');
+xlabel('Amount of Criminals');
 ylabel('Average segregated fraction');
-title('The effect of random move on the average segregated fraction at equilibrium');
+title('The effect of criminals on the average segregated fraction at equilibrium');
 legend('Min','Average','Max')
 
 figure;
 plot(GEM);
 xlabel('Generatie');
 ylabel('Moves per Generatie');
-title('Invloed Random Verplaatsen op Verloop Moves per Generatie op Basisbord');
+title('Invloed Aantal Criminelen op Verloop Moves per Generatie op Basisbord');
 
 figure;
 plot(GMMXH);
@@ -186,16 +198,16 @@ hold on;
 plot(GMMNH);
 xlabel('Generatie');
 ylabel('Gemiddelde Happiness');
-title('Invloed Random Verplaatsen op Verloop Happiness op Basisbord');
+title('Invloed Aantal Criminelen op Verloop Happiness op Basisbord');
 
 figure;
-scatter(DATA(:,15),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,15),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,15),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
-xlabel('Random Verplaatsen');
+scatter(DATA(:,16),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
+xlabel('Aantal Criminelen');
 ylabel('Gemiddelde Happiness');
-title('Invloed Random Verplaatsen op Gemiddelde Uiteindelijke Happiness op Basisbord');
+title('Invloed Aantal Criminelen op Gemiddelde Uiteindelijke Happiness op Basisbord');
 
 
