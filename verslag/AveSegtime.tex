@@ -24,8 +24,22 @@ Furthermore, it is unclear if segregation at \(n\%\) is guaranteed before a boar
 
 To research any of the given questions, we will first have to formalise our choices of board as well as the questions proposed.
 
+\subsection{Background Theory}
+Prior to starting any test or properly formalising our research questions, we note that segratation at \(n\%\) does not necessarily have to happen: 
+If we consider \(n=100\) on the standard board with happiness \(1/3\). We will nearly never have complete segregation before the board reaches an equilibrium.
+Therefore one might instead consider the average fraction of segregation at equilibrium,for any given happiness fraction. \\
+
+Furthermore, the average segregation time as function of the segregation fraction should theoretically be a strictly increasing function since for any given board we have:
+\begin{align*}
+n\% \text{ lives in homogenous groups after } k \text{generations } \Rightarrow\\
+ n-1\% \text{ lives in homogenous groups after } k \text{ generations }
+\end{align*} 
+Having noted these facts, we can now properly formalise the research questions.
+
+
+
 \subsection{Formalisations}
-The boards that will be analysed are the Standard setup and an a larger 4-Type board specified below:
+The boards that will be analysed are the standard setup and an a larger 4-Type board specified below:
 \begin{table}[h!]
 \centering
 \caption{My caption}
@@ -41,11 +55,18 @@ Population per type: & 20 & 16
 	\end{table}
 \\
 The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots. The choice of happiness is 1 unlike the usual \(\frac{1}{3}\). 
-This is to guarantee that for any \(n\leq 100\), segregation at \(n\%\) takes place prior to the board reaching equilibrium. Which leads to defining the research questions:
+This guarantees that for any \(n\leq 100\), segregation at \(n\%\) takes place prior to the board reaching an equilibrium. Which leads to defining the research questions:
 
 \begin{enumerate}
  \item ***What is the relation between the average segregation time and \(n\).***
  \item What is the average segregated fraction of the population after a board reaches equilibrium for given choices of happiness.
 \end{enumerate}
+To establish results regarding the first question, we consider different setups in testing.(NOG TOEVOEGEN).
+
+
+
+
+
+
 
 \end{document}
