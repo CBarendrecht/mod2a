@@ -125,5 +125,7 @@ while seg<=1
 end %while
 figure;
 scatter(DATA(:,17),DATA(:,20),25,[0,0,1],'p','filled');
-
+xlabel('Segregated fraction');
+ylabel('Average segregation time');
+title('Average segregation time per segregated fraction');
 
