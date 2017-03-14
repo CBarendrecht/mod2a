@@ -116,8 +116,6 @@ while rv <= 1
     %disp(['Kans op geen equilibrium: ', num2str(noeq)]);
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
-<<<<<<< HEAD
-=======
      
     rv = rv + 1;
     
@@ -131,20 +129,6 @@ while rv <= 1
     clear gemgen;
     clear gemmoves;
     clear gemsegr;
-    
->>>>>>> 494d7e3c4caa89675b991fce9af78ebe53fa0e3d
-    
-    h = h + 0.01;
-    clear mnh;
-    clear gmh;
-    clear mxh;
-    clear gen;
-    clear moves;
-    clear noeq;
-    clear gemgen;
-    clear gemmoves;
-    clear gemsegr;
-    clear g;
 end %while
 
 for i = 1:datatel
