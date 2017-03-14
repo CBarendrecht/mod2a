@@ -157,9 +157,10 @@ hold on;
 scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
 scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
-xlabel('Happinessregel');
-ylabel('Gemiddelde Segragatie');
-title('Invloed Happinessregel op Fractie Individuen in Homogene Buurt op Basisbord');
+xlabel('Happiness rule');
+ylabel('Average segregated fraction');
+title('The effect of the happiness rule on the average segregated fraction at equilibrium');
+legend('Min','Average','Max')
 
 figure;
 plot(GEM);
