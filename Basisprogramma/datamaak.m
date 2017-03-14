@@ -8,13 +8,8 @@ hh = str2num(answer{1});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
-while borde <= 8
+while rv <= 1
     datatel = datatel + 1;
-    
-    Z = [1,1,2,2,2,3,3,3;
-        1,2,4,5,8,9,10,13];
-    vk = Z(1,borde);
-    r = Z(2,borde); %alle buren met afst < r horen in buurt orde i
     
     for j = 1:10
         if j < t + 1
@@ -122,7 +117,7 @@ while borde <= 8
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
      
-    borde = borde + 1;
+    rv = rv + 1;
     
     clear mnh;
     clear mxh;
@@ -149,41 +144,41 @@ end
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
 figure;
-scatter(DATA(:,14),DATA(:,18),25,[1,0,0],'p','filled');
+scatter(DATA(:,15),DATA(:,18),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,14),DATA(:,19),25,[0,0,1],'p','filled');
+scatter(DATA(:,15),DATA(:,19),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,14),DATA(:,20),25,[0,1,0],'p','filled');
-xlabel('Buurtorde');
+scatter(DATA(:,15),DATA(:,20),25,[0,1,0],'p','filled');
+xlabel('Random Verplaatsen');
 ylabel('Aantal generaties');
-title('Invloed Buurtorde op Aantal Generaties op Basisbord');
+title('Invloed Random Verplaatsen op Aantal Generaties op Basisbord');
 
 figure;
-scatter(DATA(:,14),DATA(:,21),25,[1,0,0],'p','filled');
+scatter(DATA(:,15),DATA(:,21),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,14),DATA(:,22),25,[0,0,1],'p','filled');
+scatter(DATA(:,15),DATA(:,22),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,14),DATA(:,23),25,[0,1,0],'p','filled');
-xlabel('Buurtorde');
+scatter(DATA(:,15),DATA(:,23),25,[0,1,0],'p','filled');
+xlabel('Random Verplaatsen');
 ylabel('Aantal moves');
-title('Invloed Buurtorde op Aantal Moves op Basisbord');
+title('Invloed Random Verplaatsen op Aantal Moves op Basisbord');
 
 figure;
-scatter(DATA(:,14),DATA(:,24),25,[1,0,0],'p','filled');
+scatter(DATA(:,15),DATA(:,24),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,14),DATA(:,25),25,[0,0,1],'p','filled');
+scatter(DATA(:,15),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,14),DATA(:,26),25,[0,1,0],'p','filled');
-xlabel('Neighbourhoodorder');
+scatter(DATA(:,15),DATA(:,26),25,[0,1,0],'p','filled');
+xlabel('Random Move');
 ylabel('Average segregated fraction');
-title('The effect of the neighbourhoodorder on the average segregated fraction at equilibrium');
+title('The effect of random move on the average segregated fraction at equilibrium');
 legend('Min','Average','Max')
 
 figure;
 plot(GEM);
 xlabel('Generatie');
 ylabel('Moves per Generatie');
-title('Invloed Buurtorde op Verloop Moves per Generatie op Basisbord');
+title('Invloed Random Verplaatsen op Verloop Moves per Generatie op Basisbord');
 
 figure;
 plot(GMMXH);
@@ -193,16 +188,16 @@ hold on;
 plot(GMMNH);
 xlabel('Generatie');
 ylabel('Gemiddelde Happiness');
-title('Invloed Buurtorde op Verloop Happiness op Basisbord');
+title('Invloed Random Verplaatsen op Verloop Happiness op Basisbord');
 
 figure;
-scatter(DATA(:,14),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
+scatter(DATA(:,15),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,14),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
+scatter(DATA(:,15),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,14),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
-xlabel('Buurtorde');
+scatter(DATA(:,15),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
+xlabel('Random Verplaatsen');
 ylabel('Gemiddelde Happiness');
-title('Invloed Buurtorde op Gemiddelde Uiteindelijke Happiness op Basisbord');
+title('Invloed Random Verplaatsen op Gemiddelde Uiteindelijke Happiness op Basisbord');
 
 
