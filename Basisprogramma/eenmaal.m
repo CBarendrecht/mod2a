@@ -43,6 +43,8 @@ while klaar == false
         klaar = true;
     end
 end
+
+
 %end
 if (teller <= 10000)
     display('equilibrium reached');
