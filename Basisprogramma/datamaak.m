@@ -1,14 +1,20 @@
 clear all;
-prompt = {'Hoe vaak herhalen?'};
+prompt = {'Hoe vaak herhalen?', 'Stapgrootte'};
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'500'} ;
+defaultans = {'500', '0.01'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
+stapg = str2num(answer{2});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
+<<<<<<< HEAD
 while h <= 1.001
+=======
+
+while h <= 1
+>>>>>>> 67ad265f286d83322377d6097a95546f71ffd3bb
     datatel = datatel + 1;
     
     for j = 1:10
@@ -41,7 +47,7 @@ while h <= 1.001
                 mnh(k,i) = z(k);%minimum happiness ""
             end
         end
-        if mod(i,10) == 0
+        if mod(i,(hh/10)) == 0
             disp(num2str(i));
         end
     end
@@ -122,7 +128,12 @@ while h <= 1.001
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
      
+<<<<<<< HEAD
     h = h + 0.01;
+=======
+    h= h + stapg;
+    disp(h);
+>>>>>>> 67ad265f286d83322377d6097a95546f71ffd3bb
     
     clear mnh;
     clear mxh;
@@ -147,6 +158,8 @@ end
 
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
+
+
 figure;
 scatter(DATA(:,13),DATA(:,17),25,[1,0,0],'p','filled');
 xlabel('Happinessregel');
@@ -179,9 +192,15 @@ hold on;
 scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
 scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
+<<<<<<< HEAD
 xlabel('Happinessrule');
 ylabel('Average segregated fraction');
 title('The effect of the happinessrule on the average segregated fraction at equilibrium');
+=======
+xlabel('Happiness rule');
+ylabel('Average segregated fraction');
+title('The effect of the happiness rule on the average segregated fraction at equilibrium');
+>>>>>>> 67ad265f286d83322377d6097a95546f71ffd3bb
 legend('Min','Average','Max')
 
 figure;
