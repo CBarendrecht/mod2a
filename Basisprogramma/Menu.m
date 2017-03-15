@@ -33,7 +33,7 @@ function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acr
 
     n = zeros(1,types); %vector van aantal mensen per type
     
-    %specificeer aantalmensen per type
+    %specificeer aantal mensen per type
     for k=1:types
         A(k)= cellstr(['Aantal mensen van type ',num2str(k)]);
         B(k)= cellstr('20');

@@ -21,7 +21,7 @@
 
 \section{Average segregation time}
 	As mentioned earlier, the segregation time of \(n\%\) is defined as the number of generations until at least \(n\%\) of the population on a board lives in homogenous groups. 
-Where person \(i\) is said to live homogenous. If for any neighbour \(j\) of \(i\), we have \(\text{Type}(j)=\text{Type}(i)\).\\
+Where person \(i\) is said to live homogenous if for any neighbour \(j\) of \(i\), we have \(\text{Type}(j)=\text{Type}(i)\).\\
 This gives immediate rise to questions concerning the relation between the choice of \(n\) and the average segregation time at \(n\%\). 
 Furthermore, it is unclear if segregation at \(n\%\) is guaranteed before a board reaches an equilibrium and what the effect is of the happiness boundary on the existence of a segregation time.\\
 \\
@@ -35,8 +35,8 @@ Therefore one might instead consider the average fraction of segregation at equi
 \\
 Furthermore, the average segregation time as function of the segregation fraction should theoretically be a strictly increasing function since for any given board we have:
 \begin{align*}
-n\% \text{ lives in homogenous groups after } k \text{ generations } \Rightarrow\\
- (n-1)\% \text{ lives in homogenous groups after } k \text{ generations }
+&n\% \text{ lives in homogenous groups after } k \text{ generations } \Rightarrow\\
+& m\% \text{ lives in homogenous groups after } k \text{ generations, for any } 0 \leq m \leq n
 \end{align*} 
 Having noted these facts, we can now properly formalise the research questions.\\
 The following two questions are proposed:
@@ -77,8 +77,15 @@ The results regarding the first question are shown below:\\
     \label{fig:avesegsb}
 \end{figure}
 
-Most notable of figure \ref{fig:avesegsb} is that it is neither linear nor exponential, which is what one might expect. Instead, it appears to be partially exponential and partially lineair. From the figure, we note that the average segregation time increases fastest between 0.4 and 0.5. 
-Which is to say that the time it takes three times longer for 50\% of the populations to live in homogenous groups than for 40\%.
+Most notable of figure \ref{fig:avesegsb} is that it is neither linear nor exponential, which is what one might initially expect. Instead, it appears to be partially exponential and partially lineair. From the figure, we note that the average segregation time increases fastest between 0.4 and 0.5. 
+Which is to say that it takes three times longer for 50\% of the population to live in homogenous groups than for 40\%.\\
+Also note that the 'lift off' is approximately at $\frac{1}{3}$, but it is unlikely that this has anything to do with the standard happiness rule of $\frac{1}{3}$.\\
+\textbf{Partial explanation.} The first part of the graph is easy to understand. Because of the initial random placement of the individuals, the odds are quite good that few individuals are already homogenous.\\
+For the second part between 0.4 and 0.5, it appears to take a relatively long time to transform from the initial chaos to $50\%$ segregation. A 'boundary' has to be taken, comparable with the activation energy for chemical reactions.\\
+If 50$\%$ segregation has been reached, it becomes more easy to segregate even further, because individuals can easily move from one homogenous group (of the other type) to another (of their own type), which explains the part between $50\%$ and $70\%$. One'd expect this to continue and it'd be done in another one or two generations, but with $70\%$ segregation, it gets harder for individuals to move to a location that is homogenous.\\
+\\
+Next, we consider the same question but this time for the 4-Type board, and we get the following result.
+
 
  \begin{figure}[H]
     \centering
@@ -87,11 +94,21 @@ Which is to say that the time it takes three times longer for 50\% of the popula
     \label{fig:aveseg4b}
 \end{figure}
 
-There is one major differences between the standard board and the 4-type board. 
-Namely the fact that there are twices as many types of people in the second model than in the first. Other minor differences include the boardsize.
-However the people/boardspace ratio is the same in both models and thus should not have too much of an impact on the results.
+The most notable difference between this figure and the figure \ref{fig:avesegsb} is that the 'lift off' lies much earlier than in figure \ref{fig:avesegsb}. Now based on the number of types, you'd expect this to be around half as soon.\\\\
+\textbf{Now why is the fraction at which figure \ref{fig:aveseg4b} lifts off not exactly half, but sooner than the lift off of figure \ref{fig:avesegsb}?}
+Although this difference feels intuitive, we will give a formal explanation. Consider the probability that any individual $i$ has $a$ neighbours of the same type, and no neighbours of another type, given $k-a$ empty spots, where $k$ is the maximum number of possible neighbours for the location of $i$. In the basic model, this probability equals
+\[
+p_b = \frac{19}{39}\frac{18}{38}...\frac{19-a}{39-a} = \frac{\frac{19!}{(19-a)!}}{\frac{39!}{(39-a)!}} = \frac{19!(39-a)!}{39!(19-a)!}
+\]
+In the 4-Type model, this probability is
+\[
+p_4 = \frac{15!(63-a)!}{63!(15-a)!}
+\]
+which is less than half of $p_b$.\\
+Also note that an individual is more likely to be homogenous if it is placed at a corner or edge. This is because a corner or edge spot has less possible neighbours than an interior spot, thus increasing the probability of only having neighbours of your own type. The 4-Type board has relatively fewer edge positions in comparison to the standard board. This effect also decreases the fraction of segregation prior to displacement of individuals.
+However the people/boardspace ratio is almost the same in both models and thus should not have too much of an impact on the results.
 The number of types however results in two key differences. The first being the increased number of generations. 
-The second (and more interesting) difference is that this graph lifts of earlier. 
+The second (and more interesting) difference is that this graph lifts of earlier, which is explained above. 
 This along with the first difference, results in a smoother curve which appears to resemble a cubic relation.
 
 \begin{figure}[H]

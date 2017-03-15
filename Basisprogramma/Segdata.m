@@ -14,7 +14,7 @@ datatel = 1;
     volg = randperm(sum(n),sum(n));
 
   seg=0;  
-while seg<=1
+%while seg<=1
     for j = 1:10
         if j < t + 1
             DATA(datatel,j) = n(j);
@@ -122,7 +122,7 @@ while seg<=1
     seg= seg + stapg;
     datatel = datatel + 1;
     disp(seg);
-end %while
+%end %while
 figure;
 scatter(DATA(:,17),DATA(:,20),25,[0,0,1],'p','filled');
 xlabel('Segregated fraction');
