@@ -9,12 +9,8 @@ stapg = str2num(answer{2});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
-<<<<<<< HEAD
-while h <= 1.001
-=======
 
-while h <= 1
->>>>>>> 67ad265f286d83322377d6097a95546f71ffd3bb
+while h <= 1.001
     datatel = datatel + 1;
     
     for j = 1:10
@@ -127,13 +123,9 @@ while h <= 1
     %disp(['Kans op geen equilibrium: ', num2str(noeq)]);
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
-     
-<<<<<<< HEAD
-    h = h + 0.01;
-=======
+
     h= h + stapg;
     disp(h);
->>>>>>> 67ad265f286d83322377d6097a95546f71ffd3bb
     
     clear mnh;
     clear mxh;
@@ -192,15 +184,9 @@ hold on;
 scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
 scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
-<<<<<<< HEAD
 xlabel('Happinessrule');
 ylabel('Average segregated fraction');
 title('The effect of the happinessrule on the average segregated fraction at equilibrium');
-=======
-xlabel('Happiness rule');
-ylabel('Average segregated fraction');
-title('The effect of the happiness rule on the average segregated fraction at equilibrium');
->>>>>>> 67ad265f286d83322377d6097a95546f71ffd3bb
 legend('Min','Average','Max')
 
 figure;
