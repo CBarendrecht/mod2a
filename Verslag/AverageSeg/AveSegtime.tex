@@ -1,16 +1,3 @@
-% verslag mod2A
-%\documentclass{article}
-%\usepackage[utf8]{inputenc}
-%\usepackage{float}
-%\usepackage{graphicx}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{amsthm} %nodig voor blokje
-%\usepackage{marginnote}
-%\usepackage[outdir=./]{epstopdf}
-%\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
-
-%\begin{document}
 
 \section{Average segregation time}
 	As mentioned earlier, the segregation time of \(n\%\) is defined as the number of generations until at least \(n\%\) of the population on a board lives in homogenous groups. 
@@ -113,4 +100,11 @@ This along with the first difference, results in a smoother curve which appears 
 
 Figure \ref{fig:happysegsb} displays three scattered values. The red and green dots represent the minimum and maximum segregrated fraction of 500 boards for the given happiness. Notable in this picture is that the average segregated value is greater than the happiness. 
 Another thing worth noting is that the segregated fractions tend to appear in different groups seperated by relatively large percentages.
-%\end{document}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{habysegfrac_4b_2}
+    \caption{Average segregated fraction as a result of happiness on the 4-Type board}
+    \label{fig:happyseg4b}
+\end{figure}
+Figure \ref{fig:happyseg4b} shows that contrast to the standard board, this board does not respect the property that the average segregated fraction is always greater than or equal to the happiness. 
+A thing of interest however, is that the averages of both figure \ref{fig:happysegsb} and \ref{fig:happyseg4b} seem to cluster.
