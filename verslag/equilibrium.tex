@@ -1,22 +1,6 @@
-%\documentclass{article}
-%\usepackage[utf8]{inputenc}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{amsthm} %nodig voor blokje
-%\usepackage{marginnote}
-%\usepackage{graphicx}
-%\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
-%\newcommand\header[1]{\framebox[\linewidth]{\textsc{Opgave #1}}\\}
-%\newcommand{\Z}{\mathbb{Z}}
-%\newcommand{\R}{\mathbb{R}}
-%\newcommand{\Q}{\mathbb{Q}}
-%\newcommand{\C}{\mathbb{C}}
-%\newcommand{\N}{\mathbb{N}}
-%\newcommand{\D}{\partial}
-%\begin{document}
-%\reversemarginpar
+
 \section{Equilibrium}
-\marginnote{Definition} A board has reached \underline{equilibrium after $g$ generations} if, in the $g+1$-th generation, no one has moved.\\
+ A board has reached quilibrium after $g$ generations if, in the $g+1$-th generation, no one has moved.\\
 One of the research questions was: will the board reach an equilibrium (that is, no more moves)? Based on intuition, you'd expect this to be true. An individual who moves, does this to a place where there are relatively more neighbours of her type, so most of the time there are more individuals that gain happiness than those who lose happiness. In the basic model however, this is almost always true, but sometimes we get a periodic solution.\\
 \textbf{Counterexample.} Consider the following board.
 \begin{figure}[h!]
@@ -50,4 +34,3 @@ The others will remain happy and will not move. When it's 37's turn again, 37 ha
 Since 37 and 38 are of the same type, those 3 moves will repeat: we have a periodic solution.\\
 \textbf{Now what went wrong?} After the first move, both 37 and 38 will gain happiness, but on the third move, 38 will lose all of her happiness. We get an endless loop.\\
 Note that, for larger boards, this periodic solution can still appear, because we can keep the individuals near the periodic solution the same, or even put everything in the upper left corner.
-%\end{document}

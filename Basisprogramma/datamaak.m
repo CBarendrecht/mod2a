@@ -1,14 +1,16 @@
 clear all;
-prompt = {'Hoe vaak herhalen?'};
+prompt = {'Hoe vaak herhalen?', 'Stapgrootte'};
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'500'} ;
+defaultans = {'500', '0.01'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
+stapg = str2num(answer{2});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
-while acrim <= sum(n)
+
+while h <= 1
     datatel = datatel + 1;
     
     for j = 1:10
@@ -41,7 +43,7 @@ while acrim <= sum(n)
                 mnh(k,i) = z(k);%minimum happiness ""
             end
         end
-        if mod(i,10) == 0
+        if mod(i,(hh/10)) == 0
             disp(num2str(i));
         end
     end
@@ -122,7 +124,8 @@ while acrim <= sum(n)
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
      
-    acrim = acrim + 1;
+    h= h + stapg;
+    disp(h);
     
     clear mnh;
     clear mxh;
@@ -147,6 +150,8 @@ end
 
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
+
+
 figure;
 scatter(DATA(:,16),DATA(:,17),25,[1,0,0],'p','filled');
 xlabel('Aantal Criminelen');
@@ -174,14 +179,14 @@ ylabel('Aantal moves');
 title('Invloed Aantal Criminelen op Aantal Moves op Basisbord');
 
 figure;
-scatter(DATA(:,16),DATA(:,24),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,24),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,16),DATA(:,25),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,16),DATA(:,26),25,[0,1,0],'p','filled');
-xlabel('Amount of Criminals');
+scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
+xlabel('Happiness rule');
 ylabel('Average segregated fraction');
-title('The effect of criminals on the average segregated fraction at equilibrium');
+title('The effect of the happiness rule on the average segregated fraction at equilibrium');
 legend('Min','Average','Max')
 
 figure;

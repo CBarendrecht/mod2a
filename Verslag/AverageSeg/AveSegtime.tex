@@ -1,23 +1,16 @@
 % verslag mod2A
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm} %nodig voor blokje
-\usepackage{marginnote}
-\usepackage[outdir=./]{epstopdf}
-\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
-\newcommand\header[1]{\framebox[\linewidth]{\textsc{Opgave #1}}\\}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\D}{\partial}
+%\documentclass{article}
+%\usepackage[utf8]{inputenc}
+%\usepackage{float}
+%\usepackage{graphicx}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{amsthm} %nodig voor blokje
+%\usepackage{marginnote}
+%\usepackage[outdir=./]{epstopdf}
+%\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
 
-\begin{document}
+%\begin{document}
 
 \section{Average segregation time}
 	As mentioned earlier, the segregation time of \(n\%\) is defined as the number of generations until at least \(n\%\) of the population on a board lives in homogenous groups. 
@@ -72,7 +65,7 @@ The results regarding the first question are shown below:\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{aveseg_sb_1}
+    \includegraphics[width=0.8\textwidth]{aveseg_sb_2}
     \caption{Average segregation time on the standard board}
     \label{fig:avesegsb}
 \end{figure}
@@ -89,7 +82,7 @@ Next, we consider the same question but this time for the 4-Type board, and we g
 
  \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{aveseg_4b_1}
+    \includegraphics[width=0.8\textwidth]{aveseg_4b_2}
     \caption{Average segregation time on the 4-Type board}
     \label{fig:aveseg4b}
 \end{figure}
@@ -113,12 +106,11 @@ This along with the first difference, results in a smoother curve which appears 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{habysegfrac_sb_1}
+    \includegraphics[width=0.8\textwidth]{habysegfrac_sb_2}
     \caption{Average segregated fraction as a result of happiness on the standard board}
     \label{fig:happysegsb}
 \end{figure}
 
 Figure \ref{fig:happysegsb} displays three scattered values. The red and green dots represent the minimum and maximum segregrated fraction of 500 boards for the given happiness. Notable in this picture is that the average segregated value is greater than the happiness. 
 Another thing worth noting is that the segregated fractions tend to appear in different groups seperated by relatively large percentages.
-\section{conclusion?}
-\end{document}
+%\end{document}
