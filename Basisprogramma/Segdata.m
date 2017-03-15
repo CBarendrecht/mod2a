@@ -94,7 +94,7 @@ while seg<=1
     %ylabel('Totaal Aantal Moves');
     %title('Aantal Generaties vs. Totaal Aantal Moves');
     
-    for i = 1:hh
+    for i = 1:hh-tel
         for j = gen(i)+1:max(gen)
             mxh(j,i) = mxh(gen(i),i);
             gmh(j,i) = gmh(gen(i),i);
@@ -125,5 +125,7 @@ while seg<=1
 end %while
 figure;
 scatter(DATA(:,17),DATA(:,20),25,[0,0,1],'p','filled');
-
+xlabel('Segregated fraction');
+ylabel('Average segregation time');
+title('Average segregation time per segregated fraction');
 

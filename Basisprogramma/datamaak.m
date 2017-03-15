@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 door = true;
 datatel = 0;
 [n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
-while h <= 1.001
+while acrim <= sum(n)
     datatel = datatel + 1;
     
     for j = 1:10
@@ -24,7 +24,12 @@ while h <= 1.001
     DATA(datatel,14) = borde;
     DATA(datatel,15) = rv;
     DATA(datatel,16) = acrim;
-        
+    
+    g = zeros(hh);
+    mxh = zeros(hh);
+    gmh = zeros(hh);
+    mnh = zeros(hh);
+            
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
         [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
@@ -117,8 +122,19 @@ while h <= 1.001
     %disp(['Gemiddeld aantal generaties: ', num2str(gemgen)]);
     %disp(['Gemiddeld aantal moves: ', num2str(gemmoves)]);
      
-    h = h + 0.01;
+    acrim = acrim + 1;
     
+    clear mnh;
+    clear mxh;
+    clear gmh;
+    clear g;
+    clear gen;
+    clear moves;
+    clear noeq;
+    clear gemgen;
+    clear gemmoves;
+    clear gemsegr;
+    clear del;
 end %while
 
 for i = 1:datatel
@@ -132,40 +148,47 @@ end
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
 figure;
-scatter(DATA(:,13),DATA(:,18),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),DATA(:,17),25,[1,0,0],'p','filled');
+xlabel('Aantal Criminelen');
+ylabel('Fractie Geen Equilibrium');
+title('Invloed Aantal Criminelen op Fractie Geen Equilibrium');
+
+figure;
+scatter(DATA(:,16),DATA(:,18),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,19),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),DATA(:,19),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,20),25,[0,1,0],'p','filled');
-xlabel('Happinessregel');
+scatter(DATA(:,16),DATA(:,20),25,[0,1,0],'p','filled');
+xlabel('Aantal Criminelen');
 ylabel('Aantal generaties');
-title('Invloed Happinessregel op Aantal Generaties op Basisbord');
+title('Invloed Aantal Criminelen op Aantal Generaties op Basisbord');
 
 figure;
-scatter(DATA(:,13),DATA(:,21),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),DATA(:,21),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,22),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),DATA(:,22),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,23),25,[0,1,0],'p','filled');
-xlabel('Happinessregel');
+scatter(DATA(:,16),DATA(:,23),25,[0,1,0],'p','filled');
+xlabel('Aantal Criminelen');
 ylabel('Aantal moves');
-title('Invloed Happinessregel op Aantal Moves op Basisbord');
+title('Invloed Aantal Criminelen op Aantal Moves op Basisbord');
 
 figure;
-scatter(DATA(:,13),DATA(:,24),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),DATA(:,24),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),DATA(:,25),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
-xlabel('Happinessregel');
-ylabel('Gemiddelde Segragatie');
-title('Invloed Happinessregel op Fractie Individuen in Homogene Buurt op Basisbord');
+scatter(DATA(:,16),DATA(:,26),25,[0,1,0],'p','filled');
+xlabel('Amount of Criminals');
+ylabel('Average segregated fraction');
+title('The effect of criminals on the average segregated fraction at equilibrium');
+legend('Min','Average','Max')
 
 figure;
 plot(GEM);
 xlabel('Generatie');
 ylabel('Moves per Generatie');
-title('Invloed Happinessregel op Verloop Moves per Generatie op Basisbord');
+title('Invloed Aantal Criminelen op Verloop Moves per Generatie op Basisbord');
 
 figure;
 plot(GMMXH);
@@ -175,16 +198,16 @@ hold on;
 plot(GMMNH);
 xlabel('Generatie');
 ylabel('Gemiddelde Happiness');
-title('Invloed Happinessregel op Verloop Happiness op Basisbord');
+title('Invloed Aantal Criminelen op Verloop Happiness op Basisbord');
 
 figure;
-scatter(DATA(:,13),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
+scatter(DATA(:,16),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
+scatter(DATA(:,16),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
-xlabel('Happinessregel');
+scatter(DATA(:,16),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
+xlabel('Aantal Criminelen');
 ylabel('Gemiddelde Happiness');
-title('Invloed Happinessregel op Gemiddelde Uiteindelijke Happiness op Basisbord');
+title('Invloed Aantal Criminelen op Gemiddelde Uiteindelijke Happiness op Basisbord');
 
 

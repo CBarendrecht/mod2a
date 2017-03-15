@@ -1,10 +1,13 @@
 % verslag mod2A
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm} %nodig voor blokje
 \usepackage{marginnote}
+\usepackage[outdir=./]{epstopdf}
 \usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
 \newcommand\header[1]{\framebox[\linewidth]{\textsc{Opgave #1}}\\}
 \newcommand{\Z}{\mathbb{Z}}
@@ -61,12 +64,44 @@ Population per type: & 20 & 16
 \\
 The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots as the standard board. The choice of happiness on these boards is 1 unlike the usual \(\frac{1}{3}\). 
 This guarantees that for any \(n\leq 100\), segregation at \(n\%\) takes place prior to the board reaching an equilibrium. 
-To observe the average segregation time \(n\%\) for any\(n\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(n\%\).
+To observe the average segregation time \(n\%\) for any \(n\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(n\%\).
 Likewise the average segregated fraction will be estimate by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
 \newpage
 \subsection{Results}
-The results regarding the first question are shown below.
+The results regarding the first question are shown below:\\
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{aveseg_sb_1}
+    \caption{Average segregation time on the standard board}
+    \label{fig:avesegsb}
+\end{figure}
 
+Most notable of figure \ref{fig:avesegsb} is that it is neither linear nor exponential, which is what one might expect. Instead, it appears to be partially exponential and partially lineair. From the figure, we note that the average segregation time increases fastest between 0.4 and 0.5. 
+Which is to say that the time it takes three times longer for 50\% of the populations to live in homogenous groups than for 40\%.
 
+ \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{aveseg_4b_1}
+    \caption{Average segregation time on the 4-Type board}
+    \label{fig:aveseg4b}
+\end{figure}
+
+There is one major differences between the standard board and the 4-type board. 
+Namely the fact that there are twices as many types of people in the second model than in the first. Other minor differences include the boardsize.
+However the people/boardspace ratio is the same in both models and thus should not have too much of an impact on the results.
+The number of types however results in two key differences. The first being the increased number of generations. 
+The second (and more interesting) difference is that this graph lifts of earlier. 
+This along with the first difference, results in a smoother curve which appears to resemble a cubic relation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{habysegfrac_sb_1}
+    \caption{Average segregated fraction as a result of happiness on the standard board}
+    \label{fig:happysegsb}
+\end{figure}
+
+Figure \ref{fig:happysegsb} displays three scattered values. The red and green dots represent the minimum and maximum segregrated fraction of 500 boards for the given happiness. Notable in this picture is that the average segregated value is greater than the happiness. 
+Another thing worth noting is that the segregated fractions tend to appear in different groups seperated by relatively large percentages.
+\section{conclusion?}
 \end{document}
