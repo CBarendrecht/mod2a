@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} %nodig voor blokje
+\usepackage{marginnote}
+\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\newcommand\header[1]{\framebox[\linewidth]{\textsc{Opgave #1}}\\}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\partial}
+\begin{document}
+\section{Is every individual happy after equilibrium?}
+As it is shown in the previous section, equilibrium is not always reached within 10000 generations. But when it does, it is natural to question whether every individual is happy and how happy they are. To answer this question, we ran 500 simulations for each happiness rule ranging from 0 to 1 with increments of 0.01 and we calculated what the average, maximal and minimal happiness of the population is for each happiness rule. The simulations is ran for an 8x8 bord and 40 individuals and 20 per types. The result is shown in figure 1.\\
+\\
+In figure 1, we observed that the minimal happiness is mostly equal to the happiness rule, which means that every individual is happy after the equilibrium. We also saw that maximal happiness is always 1, which means there is always one invididual who has all his/her neighbours of the same type. Furthermore, we see that the average happiness is always closer to the maximal happiness than to the minimal happiness and that at around a happiness rule of 0.8, we have that every individual has happiness 1.\\
+\\
+It is not very surprising that every individual is happy after the equilibrium, since it would otherwise mean that one individual is unable to find a place that better meets his/her desire. On a board with 24 empty spaces. This does not seems very possible. Another remarkable result is that figure 1 shows the minimal happiness is higher than the happiness rule and that the average happiness is closer to 1 if the happiness rule higher than around 0.8. At the first glance this might seems impossible because the heavy requirement of being happy, but on the other hand, it shows that the strong 'need' for segregation actually leads to higher happiness.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{happinessregel-gemhappinesseind-2}
+    \caption{Influence of happiness rule on the happiness of the individuals. The green graph shows the maximal happiness, the blue graph shows the average happiness and the red graph shows the minimal happiness}
+\end{figure}
+\\
+Just to illustrate that the variance of every above calculated average happiness is practically zero, we only selected three happiness rules as an example and made a histogram in figure 2. In figure 2, we see that the probability of every individual is happy is practically 1.
+\newpage
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{histogram_min_happiness_een_derde}
+        \caption{histogram minimal happiness with happiness rule 1/3}
+        \label{fig:gull}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[t]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{histogram_min_happiness_half}
+        \caption{histogram minimal happiness with happiness rule 1/2}
+        \label{fig:tiger}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[t]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{histogram_min_happiness_een}
+        \caption{histogram minimal happiness with happiness rule 1}
+        \label{minimal happiness 1}
+    \end{subfigure}
+    \caption{Histogram for minimal happiness after 500 simulations. The applied happiness rules are 1/3, 1/2, 1 }
+\end{figure}
+\end{document}
