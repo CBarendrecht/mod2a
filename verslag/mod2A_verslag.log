@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  17 MAR 2017 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  17 MAR 2017 19:53
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
@@ -714,10 +714,22 @@ File: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg Graphic file (type jpg
 Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg use
 d on input line 40.
 (pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
- [7 <./VerslagdeelAantgen/happinessregel_aantgen_2.jpg>]) [8 <./VerslagdeelAant
-gen/GenormHistogramAantalgen4.jpg> <./VerslagdeelAantgen/GenormHistogramAantalg
-en.jpg> <./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg> <./VerslagdeelAant
-gen/GenormHistogramAantalgen1.jpg>] (happiness_01/VerslagHappinessgedeelte.tex
+ [7 <./VerslagdeelAantgen/happinessregel_aantgen_2.jpg>])
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+[8 <./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg> <./VerslagdeelAantgen/G
+enormHistogramAantalgen.jpg> <./VerslagdeelAantgen/GenormHistogramAantalgen2.jp
+g> <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg>]
+(happiness_01/VerslagHappinessgedeelte.tex
+
+LaTeX Warning: Reference `happyhappy' on page 9 undefined on input line 3.
+
+
+LaTeX Warning: Reference `happyhappy' on page 9 undefined on input line 7.
+
+
 <./happiness_01/happinessregel-gemhappinesseind-2.jpg, id=50, 1355.0625pt x 654
 .445pt>
 File: ./happiness_01/happinessregel-gemhappinesseind-2.jpg Graphic file (type j
@@ -727,12 +739,19 @@ Package pdftex.def Info: ./happiness_01/happinessregel-gemhappinesseind-2.jpg u
 sed on input line 10.
 (pdftex.def)             Requested size: 422.77664pt x 204.18402pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+LaTeX Warning: Reference `minhappy' on page 9 undefined on input line 15.
+
+
+LaTeX Warning: Reference `minhappy' on page 9 undefined on input line 15.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
  []
 
@@ -743,19 +762,23 @@ File: ./happiness_01/histogram_min_happiness_een_derde.jpg Graphic file (type j
 pg)
  <use ./happiness_01/histogram_min_happiness_een_derde.jpg>
 Package pdftex.def Info: ./happiness_01/histogram_min_happiness_een_derde.jpg u
-sed on input line 19.
+sed on input line 20.
 (pdftex.def)             Requested size: 150.32504pt x 112.73964pt.
+
+Underfull \hbox (badness 1596) in paragraph at lines 21--21
+[]\OT1/cmr/m/n/9 (a) |his-togram min-i-mum hap-pi-ness
+ []
 
 <./happiness_01/histogram_min_happiness_half.jpg, id=55, 562.1pt x 421.575pt>
 File: ./happiness_01/histogram_min_happiness_half.jpg Graphic file (type jpg)
 
 <use ./happiness_01/histogram_min_happiness_half.jpg>
 Package pdftex.def Info: ./happiness_01/histogram_min_happiness_half.jpg used o
-n input line 26.
+n input line 27.
 (pdftex.def)             Requested size: 150.32504pt x 112.73964pt.
 
-Underfull \hbox (badness 4556) in paragraph at lines 27--27
-[]\OT1/cmr/m/n/9 (b) |his-togram min-i-mal hap-pi-ness
+Underfull \hbox (badness 1394) in paragraph at lines 28--28
+[]\OT1/cmr/m/n/9 (b) |his-togram min-i-mum hap-pi-ness
  []
 
 <./happiness_01/histogram_min_happiness_een.jpg, id=56, 562.1pt x 421.575pt>
@@ -763,12 +786,16 @@ File: ./happiness_01/histogram_min_happiness_een.jpg Graphic file (type jpg)
 
 <use ./happiness_01/histogram_min_happiness_een.jpg>
 Package pdftex.def Info: ./happiness_01/histogram_min_happiness_een.jpg used on
- input line 33.
+ input line 34.
 (pdftex.def)             Requested size: 150.32504pt x 112.73964pt.
+
+Underfull \hbox (badness 1817) in paragraph at lines 35--35
+[]\OT1/cmr/m/n/9 (c) |his-togram min-i-mum hap-pi-ness
+ []
+
 ) [10 <./happiness_01/histogram_min_happiness_een_derde.jpg> <./happiness_01/hi
 stogram_min_happiness_half.jpg> <./happiness_01/histogram_min_happiness_een.jpg
->]
-(AverageSeg/AveSegtime.tex
+>] (AverageSeg/AveSegtime.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -810,12 +837,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--94
+
+ []
+
 <./AverageSeg/habysegfrac_sb_2.pdf, id=77, 550.055pt x 370.38374pt>
 File: ./AverageSeg/habysegfrac_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_sb_2.pdf>
 Package pdftex.def Info: ./AverageSeg/habysegfrac_sb_2.pdf used on input line 9
-6.
+7.
 (pdftex.def)             Requested size: 375.80544pt x 253.06139pt.
  [13 <./AverageSeg/aveseg_4b_2.pdf>]
 <./AverageSeg/habysegfrac_4b_2.pdf, id=91, 558.085pt x 348.30125pt>
@@ -823,19 +860,22 @@ File: ./AverageSeg/habysegfrac_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_4b_2.pdf>
 Package pdftex.def Info: ./AverageSeg/habysegfrac_4b_2.pdf used on input line 1
-05.
+06.
 (pdftex.def)             Requested size: 375.80544pt x 234.54579pt.
 ) [14 <./AverageSeg/habysegfrac_sb_2.pdf> <./AverageSeg/habysegfrac_4b_2.pdf>] 
-(mod2A_verslag.aux)
+[15] (mod2A_verslag.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4942 strings out of 493673
- 72226 string characters out of 3141533
+ 4946 strings out of 493673
+ 72294 string characters out of 3141533
  144507 words of memory out of 3000000
- 8172 multiletter control sequences out of 15000+200000
+ 8176 multiletter control sequences out of 15000+200000
  8710 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  37i,14n,46p,961b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -851,9 +891,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on mod2A_verslag.pdf (15 pages, 851401 bytes).
+Output written on mod2A_verslag.pdf (16 pages, 853293 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 148 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
