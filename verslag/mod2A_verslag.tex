@@ -1,19 +1,28 @@
 % verslag mod2A
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{float}
+\usepackage[utf8]{inputenc}%???
+
+%meer ams meer beter
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm} %nodig voor blokje
+
 \usepackage{marginnote}
+\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
+
+%Plaatjes
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}
 
-\usepackage[margin=1in,footskip=0.25in]{geometry} %heb wat meer ruimte
-\usepackage{graphicx}
 \usepackage{import} % handig bij importeren van dingen uit andere mapjes
-\usepackage{Wallpaper}
+\usepackage{Wallpaper} %voorblad
 
+\newcommand*{\blankpage}{%
+\vspace*{\fill}
+{\centering This page is left intentionally blank.\par}
+\vspace{\fill}}
 
 
 \begin{document}
@@ -21,7 +30,9 @@
 \newpage
 
 \section*{Abstract}
-An extended version of the 'Shelling Tipping Model' is built...
+An extended version of the 'Shelling Tipping Model' is built...\\
+This report is written by Casper Barendrecht, Guanyu Jin, Stijn Moerman and Nand Snijder. We are second year theoretical math students at Leiden University. We studied segregation of different groups of people in any discrete area, such as a city, corridor or even a flat. This study is strongly based on the 'Shelling Tipping Model' of 1978, which we later extended to include height. In this study, we are supervised by Dr P.Cirillo, and we'd like to thank him for his useful tips.\\
+\textit{Casper Barendrecht, Guanyu Jin, Stijn Moerman en Nand Snijder. Delft, April 2017}
 \newpage
 
 \tableofcontents
