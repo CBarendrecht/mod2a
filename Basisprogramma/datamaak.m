@@ -26,6 +26,7 @@ while h <= 1.001
     DATA(datatel,14) = borde;
     DATA(datatel,15) = rv;
     DATA(datatel,16) = acrim;
+    DATA(datatel,17) = kans;
     
     g = zeros(hh);
     mxh = zeros(hh);
@@ -34,7 +35,7 @@ while h <= 1.001
             
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
+        [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling
@@ -67,16 +68,16 @@ while h <= 1.001
     gemgen = mean(gen);
     gemmoves = mean(moves);
     gemsegr = mean(segr);
-    DATA(datatel,17) = tel/hh; %kans op geen equilibrium
-    DATA(datatel,18) = min(gen); %min aantal generaties
-    DATA(datatel,19) = mean(gen); %gem aantal generaties
-    DATA(datatel,20) = max(gen); %max aantal generaties
-    DATA(datatel,21) = min(moves); %min aantal moves
-    DATA(datatel,22) = mean(moves); %gem aantal moves
-    DATA(datatel,23) = max(moves); %max aantal moves
-    DATA(datatel,24) = min(segr); %min segregatie
-    DATA(datatel,25) = mean(segr); %gem segregatie
-    DATA(datatel,26) = max(segr); %max segregatie
+    DATA(datatel,18) = tel/hh; %kans op geen equilibrium
+    DATA(datatel,19) = min(gen); %min aantal generaties
+    DATA(datatel,20) = mean(gen); %gem aantal generaties
+    DATA(datatel,21) = max(gen); %max aantal generaties
+    DATA(datatel,22) = min(moves); %min aantal moves
+    DATA(datatel,23) = mean(moves); %gem aantal moves
+    DATA(datatel,24) = max(moves); %max aantal moves
+    DATA(datatel,25) = min(segr); %min segregatie
+    DATA(datatel,26) = mean(segr); %gem segregatie
+    DATA(datatel,27) = max(segr); %max segregatie
 
     %figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
     %hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
@@ -141,10 +142,10 @@ while h <= 1.001
 end %while
 
 for i = 1:datatel
-    for j = DATA(i,20)+1:max(DATA(:,20))
-        GMMXH(j,i) = GMMXH(DATA(i,20),i);
-        GMGMH(j,i) = GMGMH(DATA(i,20),i);
-        GMMNH(j,i) = GMMNH(DATA(i,20),i);
+    for j = DATA(i,21)+1:max(DATA(:,21))
+        GMMXH(j,i) = GMMXH(DATA(i,21),i);
+        GMGMH(j,i) = GMGMH(DATA(i,21),i);
+        GMMNH(j,i) = GMMNH(DATA(i,21),i);
     end
 end
 
@@ -153,37 +154,37 @@ end
 
 
 figure;
-scatter(DATA(:,13),DATA(:,17),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,18),25,[1,0,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Fractie Geen Equilibrium');
 title('Invloed Happinessregel op Fractie Geen Equilibrium');
 
 figure;
-scatter(DATA(:,13),DATA(:,18),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,19),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,19),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,20),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,20),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,21),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Aantal generaties');
 title('Invloed Happinessregel op Aantal Generaties op Basisbord');
 
 figure;
-scatter(DATA(:,13),DATA(:,21),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,22),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,22),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,23),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,23),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,24),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Aantal moves');
 title('Invloed Happinessregel op Aantal Moves op Basisbord');
 
 figure;
-scatter(DATA(:,13),DATA(:,24),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,25),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,25),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,26),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,26),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,27),25,[0,1,0],'p','filled');
 xlabel('Happinessrule');
 ylabel('Average segregated fraction');
 title('The effect of the happinessrule on the average segregated fraction at equilibrium');
@@ -206,11 +207,11 @@ ylabel('Gemiddelde Happiness');
 title('Invloed Happinessregel op Verloop Happiness op Basisbord');
 
 figure;
-scatter(DATA(:,13),GMMNH(max(DATA(:,20)),:),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),GMMNH(max(DATA(:,21)),:),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),GMGMH(max(DATA(:,20)),:),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),GMGMH(max(DATA(:,21)),:),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),GMMXH(max(DATA(:,20)),:),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),GMMXH(max(DATA(:,21)),:),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Gemiddelde Happiness');
 title('Invloed Happinessregel op Gemiddelde Uiteindelijke Happiness op Basisbord');

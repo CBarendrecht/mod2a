@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim,kans] = Menu();
 volg = randperm(sum(n),sum(n));
 for i = 1:hh
-    [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
+    [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
     if gen(i) < 10001
         for k = 1:gen(i)
             g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling

@@ -1,7 +1,7 @@
-%Infomatrix maakt een 6 x sum(n) matrix waarin het type, de locatie van persoon
+%Infomatrix maakt een 7 x sum(n) matrix waarin het type, de locatie van persoon
 %i en geeft aan of de persoon crimineel is
 function infomatrix = info(n, lengte, breedte, types, acrim)
-    infomatrix = zeros(6,sum(n)); %sum(n) is totaal aantal mensen
+    infomatrix = zeros(7,sum(n)); %sum(n) is totaal aantal mensen
 
     %onderstaande forloop vult de eerste kolom van info met het type
     %volgorde :111 222 333 444..

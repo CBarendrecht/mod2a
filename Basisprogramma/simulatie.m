@@ -1,15 +1,16 @@
-function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac,kans)
+function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac,kans)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
     teller = 0;%generaties tellen
     segklaar = false; %voor aveseg truth check
-    teller = 0;
     totmoves = 0;
     nonmoves = 0;
+    telswitch = 0;
+    telnosw = 0;
     while klaar == false && segklaar == false
         klaar = true;
-        teller = teller+1;
+        teller = teller + 1;
         for i = 1:sum(n)
             A(6,i) = happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i));
         end
@@ -25,6 +26,10 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr] = simulatie(
             Y = binornd(1,kans);
             if Y == 1
                 A(1,i) = 3 - A(1,i); % Alleen voor twee types
+                telswitch = telswitch + 1;
+                A(7,i) = A(7,i) + 1;
+            else
+                telnosw = telnosw + 1;
             end
             if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
                 if (~rv)
@@ -54,6 +59,6 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr] = simulatie(
         end
     end
     segr = sum(floor(A(6,:)))/sum(n);
-    data = teller;  
+    data = teller;
 end
 

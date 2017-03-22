@@ -9,6 +9,8 @@ klaar = false;
 teller = 0;
 totmoves = 0;
 nonmoves = 0;
+telswitch = 0;
+telnosw = 0;
 volg = randperm(sum(n),sum(n));
 %pd=makedist('Binomial','N',1,'p',kans);
 
@@ -20,6 +22,9 @@ while klaar == false
         Y = binornd(1,kans);
         if Y == 1
             A(1,i) = 3 - A(1,i); % Alleen voor twee types
+            telswitch = telswitch + 1;
+        else
+            telnosw = telnosw + 1;
         end
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             if (~random)
@@ -63,6 +68,8 @@ if (teller <= 10000)
     for i = 1:sum(n)
         disp(['moves van nr.', num2str(i), ' = ', num2str(A(4,i))]);
     end
+    disp(['totaal aantal switch = ', num2str(telswitch)]);
+    disp(['totaal aantal niet-switch = ', num2str(telnosw)]);
 end
 display('klaar');
 
