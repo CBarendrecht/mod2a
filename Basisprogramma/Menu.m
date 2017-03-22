@@ -1,4 +1,4 @@
-function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acrim] = Menu()
+function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acrim, transkans] = Menu()
     %Onderstaande code, is initialisatie voor inputdlg,
     %inputdlg geeft een menu met vragen aan de gebruiker voor initialisatie
     %van de simulatie
@@ -8,11 +8,12 @@ function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acr
               'Blijheidseis:', 
               'Buurtorde:',
               'Random verplaatsen?',
-              'Aantal criminelen in de populatie:'
+              'Aantal criminelen in de populatie:',
+              'Kans om van type te wisselen (2 types)';
               };
     dlg_title = 'Input';
     num_lines = 1;
-    defaultans = {'2' ,'8', '8', '1/3', '2', 'false','0'} ;
+    defaultans = {'2' ,'8', '8', '1/3', '2', 'false','0', '0'} ;
     options.Resize ='on';
     answer = inputdlg(prompt,dlg_title,num_lines,defaultans,options);
     
@@ -24,6 +25,7 @@ function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acr
     borde = str2num(answer{5});
     random = str2num(answer{6});
     acrim = str2num(answer{7});  
+    transkans=str2num(answer{8});
     
     %Z bevat gegevens mbt de buurtordes 
     Z = [1,1,2,2,2,3,3,3;

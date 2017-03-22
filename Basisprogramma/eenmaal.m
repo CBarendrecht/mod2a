@@ -1,5 +1,5 @@
 clear all; %gebruik dit bestand enkel voor één simulatie
-[n,types,lengte,breedte,happy,borde,vk,r,random,acrim] = Menu();
+[n,types,lengte,breedte,happy,borde,vk,r,random,acrim, kans] = Menu();
 %eqreached = true;
 %while eqreached
 A = info(n,lengte,breedte,types,acrim);
@@ -10,11 +10,17 @@ teller = 0;
 totmoves = 0;
 nonmoves = 0;
 volg = randperm(sum(n),sum(n));
+%pd=makedist('Binomial','N',1,'p',kans);
 
 while klaar == false 
     klaar = true;
     for j = 1:sum(n)
         i = volg(j);
+        %Wisselkans bij twee types
+        Y = binornd(1,kans);
+        if Y == 1
+            A(1,i) = 3 - A(1,i); % Alleen voor twee types
+        end
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             if (~random)
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
@@ -89,10 +95,10 @@ map = [1, 1, 1
        ];
 Eindbord = B + ones(lengte,breedte) + 10*K;%+10*K voor de criminelen
 Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
-figure;
+figure('Name', 'Eindbord');
 image(Eindbord);
 colormap(map);
-figure;
+figure'Name', 'Beginbord';
 image(Beginbord);
 colormap(map); %kleurtjes!!!
 %colorbar;
