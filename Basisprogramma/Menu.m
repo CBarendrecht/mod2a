@@ -34,9 +34,9 @@ function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acr
     n = zeros(1,types); %vector van aantal mensen per type
     
     %specificeer aantal mensen per type
-    for k=1:types
-        A(k)= cellstr(['Aantal mensen van type ',num2str(k)]);
-        B(k)= cellstr('20');
+    for k = 1:types
+        A(k) = cellstr(['Aantal mensen van type ',num2str(k)]);
+        B(k) = cellstr('20');
     end
     prompt = transpose(A);
     dlg_title = 'Specificaties';
@@ -44,7 +44,7 @@ function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acr
     options.Resize ='on';
     answer = inputdlg(prompt,dlg_title,num_lines,defaultans,options);
     
-    for k=1:types
+    for k = 1:types
         n(k) = str2num(answer{k});
     end
 
