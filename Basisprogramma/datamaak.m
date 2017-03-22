@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 stapg = str2num(answer{2});
 door = true;
 datatel = 0;
-[n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
+[n,t,l,b,h,borde,vk,r,rv,acrim,kans] = Menu();
 
 while h <= 1.001
     datatel = datatel + 1;
@@ -34,7 +34,7 @@ while h <= 1.001
             
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1);
+        [gen(i),v,moves(i),x,y,z,segklaar,segr(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling
