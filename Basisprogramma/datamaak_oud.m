@@ -5,10 +5,10 @@ num_lines = 1;
 defaultans = {'500'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
-[n,t,l,b,h,vk,r,rv,acrim,kans] = Menu();
+[n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 volg = randperm(sum(n),sum(n));
 for i = 1:hh
-    [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
+    [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans,wis);
     if gen(i) < 10001
         for k = 1:gen(i)
             g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling

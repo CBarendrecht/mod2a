@@ -30,7 +30,7 @@ while klaar == false
         end
         
         %wisselkans bij meerdere types afhankelijk van happiness
-        if wisselen == true
+        if wisselen == true && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             for k = 1:types
                 Happy(k) = happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
             end

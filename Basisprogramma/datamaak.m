@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 stapg = str2num(answer{2});
 door = true;
 datatel = 0;
-[n,t,l,b,h,borde,vk,r,rv,acrim,kans] = Menu();
+[n,t,l,b,h,borde,vk,r,rv,acrim,kans,wis] = Menu();
 
 while h <= 1.001
     datatel = datatel + 1;
@@ -35,7 +35,7 @@ while h <= 1.001
             
     volg = randperm(sum(n),sum(n));
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans);
+        [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans,wis);
         if gen(i) < 10001
             for k = 1:gen(i)
                 g(k,i) = v(k);%aantal totale moves per generatie bij i-de herhaling
@@ -62,6 +62,7 @@ while h <= 1.001
         gmh(:,del) = [];
         mnh(:,del) = [];
         moves(:,del) = [];
+        totsw(:,del) = [];
     end
     
     noeq = tel/hh;
@@ -78,7 +79,9 @@ while h <= 1.001
     DATA(datatel,25) = min(segr); %min segregatie
     DATA(datatel,26) = mean(segr); %gem segregatie
     DATA(datatel,27) = max(segr); %max segregatie
-
+    DATA(datatel,28) = min(totsw); %min switches
+    DATA(datatel,29) = mean(totsw); %gem switches
+    DATA(datatel,30) = max(totsw); %max switches
     %figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
     %hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
     %xlabel('Aantal Generaties');
@@ -188,6 +191,18 @@ scatter(DATA(:,13),DATA(:,27),25,[0,1,0],'p','filled');
 xlabel('Happinessrule');
 ylabel('Average segregated fraction');
 title('The effect of the happinessrule on the average segregated fraction at equilibrium');
+legend('Min','Average','Max')
+
+
+figure;
+scatter(DATA(:,13),DATA(:,28),25,[1,0,0],'p','filled');
+hold on;
+scatter(DATA(:,13),DATA(:,29),25,[0,0,1],'p','filled');
+hold on;
+scatter(DATA(:,13),DATA(:,30),25,[0,1,0],'p','filled');
+xlabel('Happinessrule');
+ylabel('Average number of switches');
+title('The effect of the happinessrule on the total number of switches');
 legend('Min','Average','Max')
 
 figure;

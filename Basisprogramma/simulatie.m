@@ -1,4 +1,4 @@
-function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac,kans)
+function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim, segfrac,kans,wisselen)
     A = info(n,l,b,t,acrim);
     [B,K] = bord(A,l,b,n,acrim);
     klaar = false;
@@ -33,8 +33,8 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
             end
             
             %wisselkans bij meerdere types afhankelijk van happiness
-            if wisselen == true
-                for k = 1:types
+            if wisselen == true && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
+                for k = 1:t
                     Happy(k) = happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
                 end
                 if sum(Happy) == 1 %som=0 als geen buren
