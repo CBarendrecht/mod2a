@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.24)  15 MAR 2017 22:27
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  17 MAR 2017 19:53
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  22 MAR 2017 14:46
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
@@ -242,17 +238,6 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-<<<<<<< HEAD
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count87
-\float@exts=\toks16
-\float@box=\box26
-\@float@everytoks=\toks17
-\@floatcapt=\box27
-)
-=======
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
@@ -334,42 +319,16 @@ Package: amsthm 2015/03/04 v2.20.2
 \dth@everypar=\toks26
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\marginnote\marginnote.sty"
-<<<<<<< HEAD
-Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
-\c@mn@abspage=\count100
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
-=======
 Package: marginnote 2012/03/29 v1.1i non floating margin notes for LaTeX
 \c@mn@abspage=\count99
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks27
 )
-<<<<<<< HEAD
-\c@ContinuedFloat=\count101
-Package caption Info: float package is loaded.
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
-\c@subfigure=\count102
-\c@subtable=\count103
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
-
-=======
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -381,20 +340,6 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-<<<<<<< HEAD
-\Gm@cnth=\count104
-\Gm@cntv=\count105
-\c@Gm@tempcnt=\count106
-\Gm@bindingoffset=\dimen119
-\Gm@wd@mp=\dimen120
-\Gm@odd@mp=\dimen121
-\Gm@even@mp=\dimen122
-\Gm@layoutwidth=\dimen123
-\Gm@layoutheight=\dimen124
-\Gm@layouthoffset=\dimen125
-\Gm@layoutvoffset=\dimen126
-\Gm@dimlist=\toks30
-=======
 \Gm@cnth=\count100
 \Gm@cntv=\count101
 \c@Gm@tempcnt=\count102
@@ -407,7 +352,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
 \Gm@dimlist=\toks28
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
@@ -446,8 +390,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box29
 )
-<<<<<<< HEAD
-=======
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
@@ -470,7 +412,6 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count106
 \c@subtable=\count107
 )
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\import\import.sty"
 Package: import 2009/03/23  v 5.1
 )
@@ -529,12 +470,6 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \tileY=\skip59
 )
 (mod2A_verslag.aux
-
-LaTeX Warning: Label `minimal happiness 1' multiply defined.
-
-
-LaTeX Warning: Label `sub@minimal happiness 1' multiply defined.
-
 
 LaTeX Warning: Label `fig:gull' multiply defined.
 
@@ -635,35 +570,22 @@ Overfull \hbox (614.36256pt too wide) has occurred while \output is active
 
 [1
 
-<<<<<<< HEAD
-{C:/Users/guanyu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad
-/Segregation_voorblad.jpg>]) [1]
-No file mod2A_verslag.toc.
-\tf@toc=\write3
-[2] (Introduction.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
-=======
 {C:/Users/Nand/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad/S
 egregation_voorblad.jpg>]) [1] [2] (mod2A_verslag.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 2--31
-=======
 \tf@toc=\write3
  [3]
 (Introduction.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 2--42
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
 
  []
 
@@ -722,14 +644,14 @@ Package pdftex.def Info: Tegenvoorbeeld/segregation_tegenvb_3.jpg used on input
 (pdftex.def)             Requested size: 100.31201pt x 100.31201pt.
 ) [6 <./Tegenvoorbeeld/segregation_tegenvb_3.jpg>] (VerslagdeelAantgen/Verslagd
 eelAantgen.tex
-<./VerslagdeelAantgen/happinessregel_aantgen_2.jpg, id=38, 1071.00125pt x 529.9
-8pt>
+<./VerslagdeelAantgen/happinessregel_aantgen_2.jpg, id=38, 1371.1225pt x 653.44
+125pt>
 File: ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg Graphic file (type jpg)
 
  <use ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg>
 Package pdftex.def Info: ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg used
  on input line 9.
-(pdftex.def)             Requested size: 422.77664pt x 209.21445pt.
+(pdftex.def)             Requested size: 422.77664pt x 201.48785pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
@@ -795,13 +717,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 enormHistogramAantalgen.jpg> <./VerslagdeelAantgen/GenormHistogramAantalgen2.jp
 g> <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg>]
 (happiness_01/VerslagHappinessgedeelte.tex
-
-LaTeX Warning: Reference `happyhappy' on page 9 undefined on input line 3.
-
-
-LaTeX Warning: Reference `happyhappy' on page 9 undefined on input line 7.
-
-
 <./happiness_01/happinessregel-gemhappinesseind-2.jpg, id=50, 1355.0625pt x 654
 .445pt>
 File: ./happiness_01/happinessregel-gemhappinesseind-2.jpg Graphic file (type j
@@ -810,13 +725,6 @@ pg)
 Package pdftex.def Info: ./happiness_01/happinessregel-gemhappinesseind-2.jpg u
 sed on input line 10.
 (pdftex.def)             Requested size: 422.77664pt x 204.18402pt.
-
-
-LaTeX Warning: Reference `minhappy' on page 9 undefined on input line 15.
-
-
-LaTeX Warning: Reference `minhappy' on page 9 undefined on input line 15.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
@@ -937,30 +845,17 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_4b_2.pdf used on input line 1
 ) [14 <./AverageSeg/habysegfrac_sb_2.pdf> <./AverageSeg/habysegfrac_4b_2.pdf>] 
 [15] (mod2A_verslag.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 4928 strings out of 493673
- 71869 string characters out of 3141527
- 141308 words of memory out of 3000000
- 8162 multiletter control sequences out of 15000+200000
- 8364 words of font info for 32 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 37i,14n,46p,1032b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
-=======
  4946 strings out of 493673
  72294 string characters out of 3141533
- 144507 words of memory out of 3000000
+ 144541 words of memory out of 3000000
  8176 multiletter control sequences out of 15000+200000
  8710 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 37i,14n,46p,961b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
+ 37i,14n,46p,967b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
@@ -971,14 +866,9 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
-<<<<<<< HEAD
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on mod2A_verslag.pdf (14 pages, 815150 bytes).
-=======
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on mod2A_verslag.pdf (16 pages, 853293 bytes).
->>>>>>> 3108b36778fa1e1fa901033179c3084cd761545a
+Output written on mod2A_verslag.pdf (16 pages, 857244 bytes).
 PDF statistics:
  148 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
