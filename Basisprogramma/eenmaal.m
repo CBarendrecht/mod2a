@@ -98,7 +98,7 @@ Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
 figure('Name', 'Eindbord');
 image(Eindbord);
 colormap(map);
-figure'Name', 'Beginbord';
+figure('Name', 'Beginbord');
 image(Beginbord);
 colormap(map); %kleurtjes!!!
 %colorbar;
