@@ -1,5 +1,5 @@
 clear all; %gebruik dit bestand enkel voor één simulatie
-[n,types,lengte,breedte,happy,borde,vk,r,random,acrim, kans] = Menu();
+[n,types,lengte,breedte,happy,borde,vk,r,random,acrim, kans, wisselen] = Menu();
 %eqreached = true;
 %while eqreached
 A = info(n,lengte,breedte,types,acrim);
@@ -10,24 +10,39 @@ teller = 0;
 totmoves = 0;
 nonmoves = 0;
 volg = randperm(sum(n),sum(n));
-%pd=makedist('Binomial','N',1,'p',kans);
+
 
 while klaar == false 
     klaar = true;
+    
     for j = 1:sum(n)
-        i = volg(j);
+        i = volg(j); % de j-de persoon van de volgorde wordt nu nagegaan
+        
         %Wisselkans bij twee types
         Y = binornd(1,kans);
         if Y == 1
             A(1,i) = 3 - A(1,i); % Alleen voor twee types
         end
+        
+        %wisselkans bij meerdere types afhankelijk van happiness
+        if wisselen == true
+            for k=1:types
+                Happy(k)=happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
+            end
+            if sum(Happy) == 1 %som=0 als geen buren
+                pd = makedist('Multinomial','probabilities',Happy);
+                A(1,i)=random(pd);
+            end
+            
+        end
+        %verplaatsen aan de hand van de blijheidseis
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
-            if (~random)
+            if (~random) 
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
-            else
+            else %randomverplaatsen
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
             end
-        else
+        else %kijken of er verplaatst is
             v = false;
         end
         if v 
@@ -45,7 +60,6 @@ while klaar == false
         g(teller) = totmoves;
     end
     if teller > 10000
-        %eqreached = false;
         klaar = true;
     end
 end
@@ -98,7 +112,7 @@ Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
 figure('Name', 'Eindbord');
 image(Eindbord);
 colormap(map);
-figure'Name', 'Beginbord';
+figure('Name', 'Beginbord');
 image(Beginbord);
 colormap(map); %kleurtjes!!!
 %colorbar;
