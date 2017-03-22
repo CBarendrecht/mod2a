@@ -1,5 +1,5 @@
 clear all; %gebruik dit bestand enkel voor één simulatie
-[n,types,lengte,breedte,happy,borde,vk,r,random,acrim, kans, wisselen] = Menu();
+[n,types,lengte,breedte,happy,borde,vk,r,randvp,acrim, kans, wisselen] = Menu();
 %eqreached = true;
 %while eqreached
 A = info(n,lengte,breedte,types,acrim);
@@ -31,18 +31,24 @@ while klaar == false
         
         %wisselkans bij meerdere types afhankelijk van happiness
         if wisselen == true
-            for k=1:types
-                Happy(k)=happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
+            for k = 1:types
+                Happy(k) = happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
             end
             if sum(Happy) == 1 %som=0 als geen buren
-                pd = makedist('Multinomial','probabilities',Happy);
-                A(1,i)=random(pd);
+                pd = makedist('Multinomial','Probabilities',Happy);
+                Y = random(pd);
+                if Y ~= A(1,i)
+                    telswitch = telswitch + 1;
+                    A(7,i) = A(7,i) + 1;
+                else
+                    telnosw = telnosw + 1;
+                end
+                A(1,i) = Y;
             end
-            
         end
         %verplaatsen aan de hand van de blijheidseis
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
-            if (~random) 
+            if (~randvp) 
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
             else %randomverplaatsen
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
