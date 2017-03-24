@@ -33,7 +33,7 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
             end
             
             %wisselkans bij meerdere types afhankelijk van happiness
-            if wisselen == true && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
+            if wisselen && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
                 for k = 1:t
                     Happy(k) = happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
                 end
