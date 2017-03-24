@@ -8,9 +8,9 @@ hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 volg = randperm(sum(n),sum(n));
 
-Happy=[1/4,1/3,1/2,1];
+Happy=[1/4,1/3];
 
-for j=1:4
+for j=1:2
     clear gen;
 for i = 1:hh
     [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,Happy(j),vk,r,rv,acrim,1,kans,wis);
@@ -34,21 +34,20 @@ noeq = tel/hh;
 
 end
 
-x = (1:0.01:max(gen));
-y = lognpdf(x,log(6.1),0.19);
-z = gampdf(x,30,0.22);
-
-figure;
-hist(gen,1:max(gen));
-hold on;
-plot(x,hh*y);
-hold on;
-plot(x,hh*z);
-xlabel('Aantal Generaties');
-ylabel('Aantal Keer');
-title('Histogram Aantal Generaties');
+% x = (1:0.01:max(gen));
+% y = lognpdf(x,log(6.1),0.19);
+% z = gampdf(x,30,0.22);
+% 
+% figure;
+% hist(gen,1:max(gen));
+% hold on;
+% plot(x,hh*y);
+% hold on;
+% plot(x,hh*z);
+% xlabel('Aantal Generaties');
+% ylabel('Aantal Keer');
+% title('Histogram Aantal Generaties');
 
 figure;
 qqplot(GEN(1,:),GEN(2,:));
-figure;
-qqplot(gen,z);
+title('QQ-plot aantgen 1/4 vs 1/3');
