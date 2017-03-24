@@ -43,6 +43,7 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
                     if Y ~= A(1,i)
                         telswitch = telswitch + 1;
                         A(7,i) = A(7,i) + 1;
+                        klaar = false;
                     else
                         telnosw = telnosw + 1;
                     end
