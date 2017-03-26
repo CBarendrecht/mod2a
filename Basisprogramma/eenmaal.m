@@ -35,9 +35,10 @@ while klaar == false
                 Happy(k) = happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
             end
             if sum(Happy) == 1 %som=0 als geen buren
+                %dit is het switchen
                 pd = makedist('Multinomial','Probabilities',Happy);
                 Y = random(pd);
-                if Y ~= A(1,i)
+                if Y ~= A(1,i) %er heeft'n typewissel plaatsgevonden
                     telswitch = telswitch + 1;
                     A(7,i) = A(7,i) + 1;
                 else

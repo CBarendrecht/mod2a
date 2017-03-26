@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 stapg = str2num(answer{2})/100;
 door = true;
 datatel = 1;
-[n,t,l,b,h,borde,vk,r,rv,acrim] = Menu();
+[n,t,l,b,h,borde,vk,r,rv,acrim,kans,wisselen] = Menu();
     
     
     volg = randperm(sum(n),sum(n));
@@ -28,11 +28,13 @@ datatel = 1;
     DATA(datatel,14) = borde;
     DATA(datatel,15) = rv;
     DATA(datatel,16) = acrim;
-    DATA(datatel,17) = seg; %percentage for segretatie  
+    DATA(datatel,17) = kans;
+    DATA(datatel,18) = wisselen;
+    DATA(datatel,19) = seg; %percentage for segretatie  
         
         for i = 1:hh
-            [gen(i),v,moves(i),x,y,z,segklaar] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,seg);
-            if gen(i) < 10001
+            [gen(i),v,moves(i),x,y,z,segklaar,segr,telswitch] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,seg,kans,wisselen);
+            if gen(i) < 10001 %remove non-equilibrium data
                 for k = 1:gen(i)
                     g(k,i) = v(k);
                     mxh(k,i) = x(k);
@@ -65,13 +67,13 @@ datatel = 1;
     
     noeq = tel/hh; % percentage dat geen equi bereikt
     gemmoves = mean(moves);
-    DATA(datatel,18) = tel/hh; %kans op geen equilibrium
-    DATA(datatel,19) = min(gen); %min aantal generaties
-    DATA(datatel,20) = mean(gen); %gem aantal generaties
-    DATA(datatel,21) = max(gen); %max aantal generaties
-    DATA(datatel,22) = min(moves); %min aantal moves
-    DATA(datatel,23) = mean(moves); %gem aantal moves
-    DATA(datatel,24) = max(moves); %max aantal moves
+    DATA(datatel,20) = tel/hh; %kans op geen equilibrium
+    DATA(datatel,21) = min(gen); %min aantal generaties
+    DATA(datatel,22) = mean(gen); %gem aantal generaties
+    DATA(datatel,23) = max(gen); %max aantal generaties
+    DATA(datatel,24) = min(moves); %min aantal moves
+    DATA(datatel,25) = mean(moves); %gem aantal moves
+    DATA(datatel,26) = max(moves); %max aantal moves
   
     %figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
     %hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
@@ -124,7 +126,7 @@ datatel = 1;
     disp(seg);
 %end %while
 figure;
-scatter(DATA(:,17),DATA(:,20),25,[0,0,1],'p','filled');
+scatter(DATA(:,19),DATA(:,22),25,[0,0,1],'p','filled');
 xlabel('Segregated fraction');
 ylabel('Average segregation time');
 title('Average segregation time per segregated fraction');
