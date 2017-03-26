@@ -19,10 +19,12 @@ Furthermore, the average segregation time as function of the segregation fractio
 & m\% \text{ lives in homogenous groups after } k \text{ generations, for any } 0 \leq m \leq n
 \end{align*} 
 Having noted these facts, we can now properly formalise the research questions.\\
-The following two questions are proposed:
+The following questions are proposed:
 \begin{enumerate}
- \item ***What is the relation between the average segregation time and \(n\).***
+ \item What is the relation between the average segregation time and \(n\).
  \item What is the average segregated fraction of the population after a board reaches equilibrium for given choices of happiness.
+ \item For any Happiness Rule from 0 to 1, how often do we reach at least $60\%$, at least $80\%$ or even full ($100\%$) segregation?
+ \item For $60\%$ and $80\%$ segregation, what distribution do we get for the segregation time, if $HR = 1$? Are these comparable?
 \end{enumerate}
 
 To establish results regarding these questions, we consider different setups in testings. We will be testing two different boards.
@@ -30,7 +32,7 @@ The first board to be analysed is the standard board. The second board is a larg
 "4-Type" board. The details are specified below:
 \begin{table}[h!]
 \centering
-\caption{My caption}
+\caption{Specs of the two considered boards}
 \label{my-label}
 \begin{tabular}{l|l|l}
   & Standard Board & 4-Type Board\\ \hline
@@ -48,8 +50,8 @@ To observe the average segregation time \(n\%\) for any \(n\), 500 simulations w
 Likewise the average segregated fraction will be estimate by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
 \newpage
 \subsection{Results}
+\subsubsection{Question 1}
 The results regarding the first question are shown below:\\
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{aveseg_sb_2}
@@ -91,7 +93,7 @@ However the people/boardspace ratio is almost the same in both models and thus s
 Another effect is the rise of the number of generations, that is, the time it takes before the board reaches full segregation. However, this effect is less strong than one might initially expect. On the standard board, it takes on average 5.5 generations to reach full segregation. On the 4-Type board however, it takes 8.5.\\
 \\
 The remaining part of figure \ref{fig:aveseg4b} is quite similar to figure \ref{fig:avesegsb}: quick rise, followed by a slightly decreasing ascending relation. The explanation is similar to that of the basic model.
-
+\subsubsection{Question 2}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{habysegfrac_sb_2}
@@ -108,4 +110,6 @@ Another thing worth noting is that the segregated fractions tend to appear in di
     \label{fig:happyseg4b}
 \end{figure}
 Figure \ref{fig:happyseg4b} shows that contrast to the standard board, this board does not respect the property that the average segregated fraction is always greater than or equal to the happiness. 
-A thing of interest however, is that the averages of both figure \ref{fig:happysegsb} and \ref{fig:happyseg4b} seem to cluster.
+A thing of interest however, is that the averages of both figure \ref{fig:happysegsb} and \ref{fig:happyseg4b} seem to cluster. This is because, as mentioned earlier, the effect of the Happiness Rule is quite discrete when using second order neighbourhood.
+\subsubsection{Question 3}
+In order to answer the third question, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025, and for each segregation $\%$, 60, 80 and 100. The results are shown below.
