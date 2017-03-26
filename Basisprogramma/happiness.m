@@ -25,7 +25,7 @@ function fractietype = happiness(grid,crbord,x,y,type,vk,r,crim)
         end
     end
     if telburen == 0 %avoid deviding by zero
-        fractietype = 0;
+        fractietype = 0.5;
     else
         fractietype = teltype / telburen;
     end
