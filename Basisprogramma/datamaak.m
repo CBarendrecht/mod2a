@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 stapg = str2num(answer{2});
 door = true;
 datatel = 0;
-[n,t,l,b,h,borde,vk,r,rv,acrim,kans,wis] = Menu();
+[n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 
 while h <= 1.001
     datatel = datatel + 1;
@@ -23,11 +23,10 @@ while h <= 1.001
     DATA(datatel,11) = l;
     DATA(datatel,12) = b;
     DATA(datatel,13) = h;
-    DATA(datatel,14) = borde;
-    DATA(datatel,15) = rv;
-    DATA(datatel,16) = acrim;
-    DATA(datatel,17) = kans;
-    DATA(datatel,18) = wis;
+    DATA(datatel,14) = rv;
+    DATA(datatel,15) = acrim;
+    DATA(datatel,16) = kans;
+    DATA(datatel,17) = wis;
     g = zeros(hh);
     mxh = zeros(hh);
     gmh = zeros(hh);
@@ -69,19 +68,19 @@ while h <= 1.001
     gemgen = mean(gen);
     gemmoves = mean(moves);
     gemsegr = mean(segr);
-    DATA(datatel,19) = tel/hh; %kans op geen equilibrium
-    DATA(datatel,20) = min(gen); %min aantal generaties
-    DATA(datatel,21) = mean(gen); %gem aantal generaties
-    DATA(datatel,22) = max(gen); %max aantal generaties
-    DATA(datatel,23) = min(moves); %min aantal moves
-    DATA(datatel,24) = mean(moves); %gem aantal moves
-    DATA(datatel,25) = max(moves); %max aantal moves
-    DATA(datatel,26) = min(segr); %min segregatie
-    DATA(datatel,27) = mean(segr); %gem segregatie
-    DATA(datatel,28) = max(segr); %max segregatie
-    DATA(datatel,29) = min(totsw); %min switches
-    DATA(datatel,30) = mean(totsw); %gem switches
-    DATA(datatel,31) = max(totsw); %max switches
+    DATA(datatel,18) = tel/hh; %kans op geen equilibrium
+    DATA(datatel,19) = min(gen); %min aantal generaties
+    DATA(datatel,20) = mean(gen); %gem aantal generaties
+    DATA(datatel,21) = max(gen); %max aantal generaties
+    DATA(datatel,22) = min(moves); %min aantal moves
+    DATA(datatel,23) = mean(moves); %gem aantal moves
+    DATA(datatel,24) = max(moves); %max aantal moves
+    DATA(datatel,25) = min(segr); %min segregatie
+    DATA(datatel,26) = mean(segr); %gem segregatie
+    DATA(datatel,27) = max(segr); %max segregatie
+    DATA(datatel,28) = min(totsw); %min switches
+    DATA(datatel,29) = mean(totsw); %gem switches
+    DATA(datatel,30) = max(totsw); %max switches
     %figure; %tip: doe dit alleen als je slechts eenmaal de whileloop doorloopt
     %hist(gen,1:max(gen)); %anders krijg je heel veel grafieken
     %xlabel('Aantal Generaties');
@@ -145,10 +144,10 @@ while h <= 1.001
 end %while
 
 for i = 1:datatel
-    for j = DATA(i,22)+1:max(DATA(:,22))
-        GMMXH(j,i) = GMMXH(DATA(i,22),i);
-        GMGMH(j,i) = GMGMH(DATA(i,22),i);
-        GMMNH(j,i) = GMMNH(DATA(i,22),i);
+    for j = DATA(i,21)+1:max(DATA(:,21))
+        GMMXH(j,i) = GMMXH(DATA(i,21),i);
+        GMGMH(j,i) = GMGMH(DATA(i,21),i);
+        GMMNH(j,i) = GMMNH(DATA(i,21),i);
     end
 end
 
@@ -156,37 +155,37 @@ end
 %wat je veranderd hebt en wat je wil weten
 
 figure;
-scatter(DATA(:,13),DATA(:,19),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,18),25,[1,0,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Fractie Geen Equilibrium');
 title('Invloed Happinessregel met Switch op Fractie Geen Equilibrium');
 
 figure;
-scatter(DATA(:,13),DATA(:,20),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,19),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,21),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,20),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,22),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,21),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Aantal generaties');
 title('Invloed Happinessregel met Switch op Aantal Generaties op Basisbord');
 
 figure;
-scatter(DATA(:,13),DATA(:,23),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,22),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,24),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,23),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,25),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,24),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Aantal moves');
 title('Invloed Happinessregel met Switch op Aantal Moves op Basisbord');
 
 figure;
-scatter(DATA(:,13),DATA(:,26),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,25),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,27),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,26),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,28),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,27),25,[0,1,0],'p','filled');
 xlabel('Happinessrule');
 ylabel('Average segregated fraction');
 title('The effect of happinessrule with switch on the average segregated fraction at equilibrium');
@@ -194,11 +193,11 @@ legend('Min','Average','Max')
 
 
 figure;
-scatter(DATA(:,13),DATA(:,29),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),DATA(:,28),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,30),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),DATA(:,29),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),DATA(:,31),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),DATA(:,30),25,[0,1,0],'p','filled');
 xlabel('Happinessrule');
 ylabel('Average number of switches');
 title('The effect of happinessrule with switch on the total number of switches');
@@ -221,11 +220,11 @@ ylabel('Gemiddelde Happiness');
 title('Invloed Happinessregel met Switch op Verloop Happiness op Basisbord');
 
 figure;
-scatter(DATA(:,13),GMMNH(max(DATA(:,22)),:),25,[1,0,0],'p','filled');
+scatter(DATA(:,13),GMMNH(max(DATA(:,21)),:),25,[1,0,0],'p','filled');
 hold on;
-scatter(DATA(:,13),GMGMH(max(DATA(:,22)),:),25,[0,0,1],'p','filled');
+scatter(DATA(:,13),GMGMH(max(DATA(:,21)),:),25,[0,0,1],'p','filled');
 hold on;
-scatter(DATA(:,13),GMMXH(max(DATA(:,22)),:),25,[0,1,0],'p','filled');
+scatter(DATA(:,13),GMMXH(max(DATA(:,21)),:),25,[0,1,0],'p','filled');
 xlabel('Happinessregel');
 ylabel('Gemiddelde Happiness');
 title('Invloed Happinessregel met Switch op Gemiddelde Uiteindelijke Happiness op Basisbord');

@@ -23,6 +23,7 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
         minhappy(teller) = min(A(6,:));
         for j = 1:sum(n)
             i = volg(j);
+            
             Y = binornd(1,kans);
             if Y == 1
                 A(1,i) = 3 - A(1,i); % Alleen voor twee types

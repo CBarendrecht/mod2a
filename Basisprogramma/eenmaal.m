@@ -1,5 +1,5 @@
 clear all; %gebruik dit bestand enkel voor één simulatie
-[n,types,lengte,breedte,happy,borde,vk,r,randvp,acrim, kans, wisselen] = Menu();
+[n,types,lengte,breedte,happy,vk,r,randvp,acrim, kans, wisselen] = Menu();
 %eqreached = true;
 %while eqreached
 A = info(n,lengte,breedte,types,acrim);

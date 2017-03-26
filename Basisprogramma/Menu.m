@@ -1,4 +1,4 @@
-function [n, types, lengte, breedte, happy, borde, Vierkant, Radius, random, acrim, transkans,wisselen] = Menu()
+function [n, types, lengte, breedte, happy, Vierkant, Radius, random, acrim, transkans,wisselen] = Menu()
     %Onderstaande code, is initialisatie voor inputdlg,
     %inputdlg geeft een menu met vragen aan de gebruiker voor initialisatie
     %van de simulatie

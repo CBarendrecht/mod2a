@@ -8,29 +8,29 @@ hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 volg = randperm(sum(n),sum(n));
 
-Happy=[1/4,1/3];
+Happy=[1/4,1/3,1];
 
-for j=1:2
+for j=1:length(Happy)
     clear gen;
-for i = 1:hh
-    [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,Happy(j),vk,r,rv,acrim,1,kans,wis);
-    
-    GEN(j,i)=gen(i);
-    if mod(i,10) == 0
-        disp([num2str(i)]);
+    for i = 1:hh
+        [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,Happy(j),vk,r,rv,acrim,1,kans,wis);
+
+        GEN(j,i)=gen(i);
+        if mod(i,10) == 0
+            disp([num2str(i)]);
+        end
     end
-end
-tel = 0;
-for i = 1:hh
-    if gen(i) > 10000
-        tel = tel + 1;
-        del(tel) = i;
+    tel = 0;
+    for i = 1:hh
+        if gen(i) > 10000
+            tel = tel + 1;
+            del(tel) = i;
+        end
     end
-end
-if tel > 0
-    gen(:,del) = [];
-end
-noeq = tel/hh;
+    if tel > 0
+        gen(:,del) = [];
+    end
+    noeq = tel/hh;
 
 end
 

@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 stapg = str2num(answer{2})/100;
 door = true;
 datatel = 1;
-[n,t,l,b,h,borde,vk,r,rv,acrim,kans,wisselen] = Menu();
+[n,t,l,b,h,vk,r,rv,acrim,kans,wisselen] = Menu();
     
     
     volg = randperm(sum(n),sum(n));
@@ -25,7 +25,6 @@ datatel = 1;
     DATA(datatel,11) = l;
     DATA(datatel,12) = b;
     DATA(datatel,13) = h;
-    DATA(datatel,14) = borde;
     DATA(datatel,15) = rv;
     DATA(datatel,16) = acrim;
     DATA(datatel,17) = kans;
