@@ -8,7 +8,7 @@ hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 volg = randperm(sum(n),sum(n));
 
-Happy=[1/4,1/3,1];
+Happy=[1/2,1/3];
 
 for j=1:length(Happy)
     clear gen;
@@ -22,13 +22,13 @@ for j=1:length(Happy)
     end
     tel = 0;
     for i = 1:hh
-        if gen(i) > 10000
+        if GEN(j,i) > 10000
             tel = tel + 1;
             del(tel) = i;
         end
     end
     if tel > 0
-        gen(:,del) = [];
+        GEN(:,del) = [];
     end
     noeq = tel/hh;
 
