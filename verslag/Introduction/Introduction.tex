@@ -6,31 +6,31 @@ Based on this idea, we first built a basic model which consists of an $8\times8$
 The individuals are moved according to their 'Happiness' in the current place. 
 For the basic model, an individual is considered happy if $\frac{1}{3}$ of his/her second order neighbours (a person has at most 8 neighbours) is of the same type. 
 Otherwise, an individual is considered unhappy and will be moved to the nearest place such that his/her happiness is strictly higher, which will be referred to as the 'Happiness Rule'. 
-For example, we can see that not all individuals in figure \ref{fig:ebmb} are happy and after segregation they are located like figure \ref{fig:ebme}.
+After that, we extended the basic model by changing the parameters such as the size of the population, board and number of types. 
+We also included an option for random displacement: an individual which is not happy will be moved to a empty location randomly. 
+(That is to say, that individual will be placed to any empty spot with equal probability.)\\
+
 
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{vb1beginbord.jpg}
         \caption{Situation before segragation}
-        \label{fig:ebmb}
+        \label{fig:movement1}
     \end{subfigure}\hspace{0cm}
     ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
       %(or a blank line to force the subfigure onto a new line)
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{vb1eindbord.jpg}
         \caption{Situation after segregation}
-        \label{fig:ebme}
+        \label{fig:movement2}
     \end{subfigure}
     ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
     %(or a blank line to force the subfigure onto a new line)
     \caption{An example of segregation in our basic model: type 1 is orange and type 2 is pink}
-    \label{fig:example basic model}
+    \label{fig:equilibrium counterexample}
 \end{figure}
 
-After that, we extended the basic model by changing the parameters such as the size of the population, board and number of types. 
-We also included an option for random displacement: an individual which is not happy will be moved to a empty location randomly. 
-(That is to say, that individual will be placed to any empty spot with equal probability.)
 
 For both the basic and the extended model, we ran 500 simulations several times and investigated how different values of the parameters affected the segregation pattern. 
 In order to formulate our research goals precisely, the following definitions are important:\\
