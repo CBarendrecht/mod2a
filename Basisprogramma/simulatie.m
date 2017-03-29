@@ -23,17 +23,19 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
         minhappy(teller) = min(A(6,:));
         for j = 1:sum(n)
             i = volg(j);
-            
-            Y = binornd(1,kans);
-            if Y == 1
-                A(1,i) = 3 - A(1,i); % Alleen voor twee types
-                telswitch = telswitch + 1;
-                A(7,i) = A(7,i) + 1;
-            else
-                telnosw = telnosw + 1;
+            if kans > 0
+                Y = binornd(1,kans);
+                if Y == 1
+                    A(1,i) = 3 - A(1,i); % Alleen voor twee types
+                    telswitch = telswitch + 1;
+                    A(7,i) = A(7,i) + 1;
+                else
+                    telnosw = telnosw + 1;
+                end
             end
             
             %wisselkans bij meerdere types afhankelijk van happiness
+            
             if wisselen && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < h
                 for k = 1:t
                     Happy(k) = happiness(B,K,A(2,i),A(3,i),k,vk,r,A(5,i));
@@ -49,6 +51,7 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
                         telnosw = telnosw + 1;
                     end
                     A(1,i) = Y;
+                    B(A(2,i),A(3,i)) = A(1,i);
                 end
             end
             
