@@ -12,6 +12,7 @@ Secondly, we can also change the number of different types on the board.
 For instance, we can look at a $12\times 12$ board with $10$ types of individuals and $10$ individuals per type: see figure \ref{fig:example big board}.
 As one can see, far more individuals have been moved to another place on the board and they form groups.
 
+
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.45\textwidth}
@@ -29,6 +30,55 @@ As one can see, far more individuals have been moved to another place on the boa
     \caption{An example of segregation in a model on a $12\times 12$ board with $100$ individual of $10$ different types}
     \label{fig:example big board}
 \end{figure}
+
+Subsesquently, we can vary our 'happinessrule': the minimum fraction of neighbours of an individuals own type to be happy.
+Our expectation is that it takes longer to reach equilibrium if the happinessrule is higher.
+This seems logic, since all individuals want to be surrounded by relatively more neighbours of their own type.
+In consequence, larger homogenous groups will be formed after segregation with a higher happinessrule.
+In figure \ref{fig:example hap 1/3} and \ref{fig:example hap 1} we can see what the effect is of a happiness rule of respectively $\frac{1}{3}$ and $1$ on the board after segregation.
+
+\begin{figure}[H]
+	\centering
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{vb3beginbord.jpg}
+        \caption{Situation before segregation}
+        \label{fig:example hap 1/3 begin}
+    \end{subfigure}\hspace{0cm}
+    ~ 
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{vb3eindbord.jpg}
+        \caption{Situation after segregation}
+        \label{fig:example hap 1/3 end}
+    \end{subfigure}
+    ~ 
+    \caption{An example of segregation in a model with happinessrule $\frac{1}{3}$}
+    \label{fig:example hap 1/3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{vb4beginbord.jpg}
+        \caption{Situation before segregation}
+        \label{fig:example hap 1 begin}
+    \end{subfigure}\hspace{0cm}
+    ~ 
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{vb4eindbord.jpg}
+        \caption{Situation after segregation}
+        \label{fig:example hap 1 end}
+    \end{subfigure}
+    ~ 
+    \caption{An example of segregation in a model with happinessrule $1$}
+    \label{fig:example hap 1}
+\end{figure}
+
+In addition, we are able to change the type of neighbourhood.
+The standardtype of neighbourhood is the second: in this 
+
+
+
+
 
 
 
