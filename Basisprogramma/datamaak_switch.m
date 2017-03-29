@@ -84,10 +84,6 @@ if tel > 0
 end
 noeq = tel/hh;
 
-
-
-
-
 figure;
 aa = histogram(gen,0.5:1:max(gen)+0.5);
 hold on;
