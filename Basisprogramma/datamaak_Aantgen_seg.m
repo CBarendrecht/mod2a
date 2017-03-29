@@ -1,15 +1,18 @@
 clear all;
-prompt = {'Hoe vaak herhalen?','Segregatie %'};
+prompt = {'Hoe vaak herhalen?','Segregatie % (1)', 'Segregatie % (2)'};
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'500', '60'} ;
+defaultans = {'10000', '60', '80'} ;
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 volg = randperm(sum(n),sum(n));
-seg = str2double(answer{2})/100;
+seg1 = str2double(answer{2})/100;
+seg2 = str2double(answer{3})/100;
+seg = seg1;
+if seg == seg1
     for i = 1:hh
-        [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,1,vk,r,rv,acrim,seg,kans,wis);
+        [gen1(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,1,vk,r,rv,acrim,seg,kans,wis);
         if mod(i,10) == 0
             disp([num2str(i)]);
         end
@@ -39,11 +42,28 @@ seg = str2double(answer{2})/100;
 % xlabel('Aantal Generaties');
 % ylabel('Aantal Keer');
 % title('Histogram Aantal Generaties');
-
+seg = seg2;
+end
+if seg == seg2
+    for i = 1:hh
+            [gen2(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,1,vk,r,rv,acrim,seg,kans,wis);
+            if mod(i,10) == 0
+                disp([num2str(i)]);
+            end
+    end
+end
 figure;
 %qqplot(GEN(1,:),GEN(2,:));
 %title('QQ-plot aantgen 1/4 vs 1/3');
-hist(gen,0:1:max(gen));
-title('Aantal generaties voor 60% segregatie en Happiness Rule = 1')
-xlabel('Aantal generaties');
-ylabel('Frequentie');
+hist(gen1,0:1:max(gen1));
+title('Number of Generations for 60% Segregation with Happiness Rule 1')
+xlabel('Number of Generations');
+ylabel('Frequency');
+figure;
+hist(gen2,0:1:max(gen2));
+title('Number of Generations for 80% Segregation with Happiness Rule 1')
+xlabel('Number of Generations');
+ylabel('Frequency');
+figure;
+qqplot(gen1,gen2);
+title('QQ-plot aantgen segregation 60% vs 80%');
