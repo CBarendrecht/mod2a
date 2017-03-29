@@ -36,10 +36,12 @@ function [n, types, lengte, breedte, happy, Vierkant, Radius, random, acrim, tra
 
     n = zeros(1,types); %vector van aantal mensen per type
     
+    %mensen/bord ratio = 5/8
+    avg=floor((5*lengte*breedte)/(8*types));
     %specificeer aantal mensen per type
     for k = 1:types
         A(k) = cellstr(['Aantal mensen van type ',num2str(k)]);
-        B(k) = cellstr('20');
+        B(k) = cellstr(num2str(avg));
     end
     prompt = transpose(A);
     dlg_title = 'Specificaties';

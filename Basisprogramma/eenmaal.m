@@ -21,14 +21,15 @@ while klaar == false
         i = volg(j); % de j-de persoon van de volgorde wordt nu nagegaan
         
         %Wisselkans bij twee types
-        Y = binornd(1,kans);
-        if Y == 1
-            A(1,i) = 3 - A(1,i); % Alleen voor twee types
-            telswitch = telswitch + 1;
-        else
-            telnosw = telnosw + 1;
+        if kans > 0
+            Y = binornd(1,kans);
+            if Y == 1
+                A(1,i) = 3 - A(1,i); % Alleen voor twee types
+                telswitch = telswitch + 1;
+            else
+                telnosw = telnosw + 1;
+            end
         end
-        
         %wisselkans bij meerdere types afhankelijk van happiness
         if wisselen == true && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             for k = 1:types
@@ -41,10 +42,12 @@ while klaar == false
                 if Y ~= A(1,i) %er heeft'n typewissel plaatsgevonden
                     telswitch = telswitch + 1;
                     A(7,i) = A(7,i) + 1;
+                    klaar = false;%Van type wisselen heeft invloed op equilibrium
                 else
                     telnosw = telnosw + 1;
                 end
                 A(1,i) = Y;
+                B(A(2,i),A(3,i))=A(1,i);
             end
         end
         %verplaatsen aan de hand van de blijheidseis

@@ -1,5 +1,5 @@
 function mydialog
-    d = dialog('Position',[300 500 250 500],'Name','My Dialog');
+    d = dialog('Position',[300 200 250 500],'Name','My Dialog');
     Text = {'Aantal mensen:',
           'Aantal mensen types:',
           'Lengte:', 
