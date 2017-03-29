@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.23)  29 MAR 2017 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.23)  29 MAR 2017 23:01
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
@@ -318,6 +318,13 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
+(C:\Users\Stijn\Documents\STUDEREN\MikTex\tex\latex\bbm\bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
 (C:\Users\Stijn\Documents\STUDEREN\MikTex\tex\latex\marginnote\marginnote.sty
 Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
 \c@mn@abspage=\count99
@@ -489,18 +496,18 @@ LaTeX Warning: Label `minimal happiness 1' multiply defined.
 LaTeX Warning: Label `sub@minimal happiness 1' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 Package marginnote Info: \pdfoutput not 0 or unimportant and
 (marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
@@ -573,7 +580,7 @@ Overfull \hbox (614.36256pt too wide) has occurred while \output is active
 
 {C:/Users/Stijn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad/
 Segregation_voorblad.jpg>]) [1]
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
@@ -615,18 +622,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--43
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 44--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 [4 <./Introduction/vb1beginbord.jpg> <./Introduction/vb1eindbord.jpg>] [5]
 (Model/Model.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--10
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
 
@@ -634,47 +641,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 File: ./Model/vb2beginbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb2beginbord.jpg>
-Package pdftex.def Info: ./Model/vb2beginbord.jpg used on input line 19.
+Package pdftex.def Info: ./Model/vb2beginbord.jpg used on input line 17.
 (pdftex.def)             Requested size: 211.38832pt x 158.0184pt.
 
 <./Model/vb2eindbord.jpg, id=33, 1037.8775pt x 780.9175pt>
 File: ./Model/vb2eindbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb2eindbord.jpg>
-Package pdftex.def Info: ./Model/vb2eindbord.jpg used on input line 25.
+Package pdftex.def Info: ./Model/vb2eindbord.jpg used on input line 23.
 (pdftex.def)             Requested size: 211.38832pt x 159.05244pt.
 
 <./Model/vb3beginbord.jpg, id=34, 843.15pt x 632.3625pt>
 File: ./Model/vb3beginbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb3beginbord.jpg>
-Package pdftex.def Info: ./Model/vb3beginbord.jpg used on input line 43.
+Package pdftex.def Info: ./Model/vb3beginbord.jpg used on input line 41.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
 
 <./Model/vb3eindbord.jpg, id=35, 843.15pt x 632.3625pt>
 File: ./Model/vb3eindbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb3eindbord.jpg>
-Package pdftex.def Info: ./Model/vb3eindbord.jpg used on input line 49.
+Package pdftex.def Info: ./Model/vb3eindbord.jpg used on input line 47.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
 
 <./Model/vb4beginbord.jpg, id=36, 843.15pt x 632.3625pt>
 File: ./Model/vb4beginbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb4beginbord.jpg>
-Package pdftex.def Info: ./Model/vb4beginbord.jpg used on input line 61.
+Package pdftex.def Info: ./Model/vb4beginbord.jpg used on input line 59.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
 
 <./Model/vb4eindbord.jpg, id=37, 843.15pt x 632.3625pt>
 File: ./Model/vb4eindbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb4eindbord.jpg>
-Package pdftex.def Info: ./Model/vb4eindbord.jpg used on input line 67.
+Package pdftex.def Info: ./Model/vb4eindbord.jpg used on input line 65.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
  [6 <./Model/vb2beginbord.jpg> <./Model/vb2eindbord.jpg> <./Model/vb3beginbord.
-jpg> <./Model/vb3eindbord.jpg>]) [7 <./Model/vb4beginbord.jpg> <./Model/vb4eind
-bord.jpg>] (Equilibrium.tex
-<Tegenvoorbeeld/segregation_tegenvb.jpg, id=45, 401.24907pt x 401.24907pt>
+jpg> <./Model/vb3eindbord.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+
+ []
+
+<./Model/buurtorde.jpg, id=42, 121.45375pt x 88.83188pt>
+File: ./Model/buurtorde.jpg Graphic file (type jpg)
+
+<use ./Model/buurtorde.jpg>
+Package pdftex.def Info: ./Model/buurtorde.jpg used on input line 87.
+(pdftex.def)             Requested size: 72.87279pt x 53.29953pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+ []
+
+) [7 <./Model/vb4beginbord.jpg> <./Model/vb4eindbord.jpg> <./Model/buurtorde.jp
+g>] (Equilibrium.tex
+<Tegenvoorbeeld/segregation_tegenvb.jpg, id=47, 401.24907pt x 401.24907pt>
 File: Tegenvoorbeeld/segregation_tegenvb.jpg Graphic file (type jpg)
 
 <use Tegenvoorbeeld/segregation_tegenvb.jpg>
@@ -682,7 +705,7 @@ Package pdftex.def Info: Tegenvoorbeeld/segregation_tegenvb.jpg used on input l
 ine 9.
 (pdftex.def)             Requested size: 140.92793pt x 140.92908pt.
 
-<Tegenvoorbeeld/segregation_tegenvb_1.jpg, id=46, 401.24907pt x 401.24907pt>
+<Tegenvoorbeeld/segregation_tegenvb_1.jpg, id=48, 401.24907pt x 401.24907pt>
 File: Tegenvoorbeeld/segregation_tegenvb_1.jpg Graphic file (type jpg)
 
 <use Tegenvoorbeeld/segregation_tegenvb_1.jpg>
@@ -690,7 +713,7 @@ Package pdftex.def Info: Tegenvoorbeeld/segregation_tegenvb_1.jpg used on input
  line 16.
 (pdftex.def)             Requested size: 140.92793pt x 140.92908pt.
 
-<Tegenvoorbeeld/segregation_tegenvb_2.jpg, id=47, 401.24907pt x 401.24907pt>
+<Tegenvoorbeeld/segregation_tegenvb_2.jpg, id=49, 401.24907pt x 401.24907pt>
 File: Tegenvoorbeeld/segregation_tegenvb_2.jpg Graphic file (type jpg)
 
 <use Tegenvoorbeeld/segregation_tegenvb_2.jpg>
@@ -698,7 +721,7 @@ Package pdftex.def Info: Tegenvoorbeeld/segregation_tegenvb_2.jpg used on input
  line 23.
 (pdftex.def)             Requested size: 140.92793pt x 140.92908pt.
 
-<Tegenvoorbeeld/segregation_tegenvb_3.jpg, id=48, 401.24907pt x 401.24907pt>
+<Tegenvoorbeeld/segregation_tegenvb_3.jpg, id=50, 401.24907pt x 401.24907pt>
 File: Tegenvoorbeeld/segregation_tegenvb_3.jpg Graphic file (type jpg)
 
 <use Tegenvoorbeeld/segregation_tegenvb_3.jpg>
@@ -713,7 +736,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--34
 ) [8 <./Tegenvoorbeeld/segregation_tegenvb.jpg> <./Tegenvoorbeeld/segregation_t
 egenvb_1.jpg> <./Tegenvoorbeeld/segregation_tegenvb_2.jpg> <./Tegenvoorbeeld/se
 gregation_tegenvb_3.jpg>] [9] (VerslagdeelAantgen/VerslagdeelAantgen.tex
-<./VerslagdeelAantgen/happinessregel_aantgen_2.jpg, id=56, 1371.1225pt x 653.44
+<./VerslagdeelAantgen/happinessregel_aantgen_2.jpg, id=57, 1371.1225pt x 653.44
 125pt>
 File: ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg Graphic file (type jpg)
 
@@ -742,7 +765,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--16
  []
 
 
-<./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg, id=57, 737.75626pt x 538.0
+<./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg, id=58, 737.75626pt x 538.0
 1pt>
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg Graphic file (type jpg
 )
@@ -751,7 +774,7 @@ Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg use
 d on input line 21.
 (pdftex.def)             Requested size: 187.89914pt x 137.02243pt.
 
-<./VerslagdeelAantgen/GenormHistogramAantalgen.jpg, id=58, 690.58pt x 488.82625
+<./VerslagdeelAantgen/GenormHistogramAantalgen.jpg, id=59, 690.58pt x 488.82625
 pt>
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen.jpg Graphic file (type jpg)
 
@@ -760,7 +783,7 @@ Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen.jpg used
  on input line 28.
 (pdftex.def)             Requested size: 187.89914pt x 132.99925pt.
 
-<./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg, id=59, 562.1pt x 421.575pt
+<./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg, id=60, 562.1pt x 421.575pt
 >
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg Graphic file (type jpg
 )
@@ -769,7 +792,7 @@ Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg use
 d on input line 35.
 (pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
 
-<./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg, id=60, 562.1pt x 421.575pt
+<./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg, id=61, 562.1pt x 421.575pt
 >
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg Graphic file (type jpg
 )
@@ -778,7 +801,7 @@ Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg use
 d on input line 40.
 (pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
  [10 <./VerslagdeelAantgen/happinessregel_aantgen_2.jpg>])
-Underfull \hbox (badness 10000) in paragraph at lines 47--52
+Underfull \hbox (badness 10000) in paragraph at lines 47--54
 
  []
 
@@ -786,7 +809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--52
 GenormHistogramAantalgen.jpg> <./VerslagdeelAantgen/GenormHistogramAantalgen2.j
 pg> <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg>]
 (happiness_01/VerslagHappinessgedeelte.tex
-<./happiness_01/happinessregel-gemhappinesseind-2.jpg, id=67, 1355.0625pt x 654
+<./happiness_01/happinessregel-gemhappinesseind-2.jpg, id=68, 1355.0625pt x 654
 .445pt>
 File: ./happiness_01/happinessregel-gemhappinesseind-2.jpg Graphic file (type j
 pg)
@@ -805,7 +828,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--27
  []
 
 [12 <./happiness_01/happinessregel-gemhappinesseind-2.jpg>]
-<./happiness_01/histogram_min_happiness_een_derde.jpg, id=72, 562.1pt x 421.575
+<./happiness_01/histogram_min_happiness_een_derde.jpg, id=73, 562.1pt x 421.575
 pt>
 File: ./happiness_01/histogram_min_happiness_een_derde.jpg Graphic file (type j
 pg)
@@ -818,7 +841,7 @@ Underfull \hbox (badness 1596) in paragraph at lines 32--32
 []\OT1/cmr/m/n/9 (a) |his-togram min-i-mum hap-pi-ness
  []
 
-<./happiness_01/histogram_min_happiness_half.jpg, id=73, 562.1pt x 421.575pt>
+<./happiness_01/histogram_min_happiness_half.jpg, id=74, 562.1pt x 421.575pt>
 File: ./happiness_01/histogram_min_happiness_half.jpg Graphic file (type jpg)
 
 <use ./happiness_01/histogram_min_happiness_half.jpg>
@@ -830,7 +853,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 39--39
 []\OT1/cmr/m/n/9 (b) |his-togram min-i-mum hap-pi-ness
  []
 
-<./happiness_01/histogram_min_happiness_een.jpg, id=74, 562.1pt x 421.575pt>
+<./happiness_01/histogram_min_happiness_een.jpg, id=75, 562.1pt x 421.575pt>
 File: ./happiness_01/histogram_min_happiness_een.jpg Graphic file (type jpg)
 
 <use ./happiness_01/histogram_min_happiness_een.jpg>
@@ -859,7 +882,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-[14] [15] <./AverageSeg/aveseg_sb_2.pdf, id=84, 409.53pt x 323.2075pt>
+[14] [15] <./AverageSeg/aveseg_sb_2.pdf, id=85, 409.53pt x 323.2075pt>
 File: ./AverageSeg/aveseg_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/aveseg_sb_2.pdf>
@@ -875,7 +898,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--70
 
  []
 
-<./AverageSeg/aveseg_4b_2.pdf, id=85, 421.575pt x 316.18124pt>
+<./AverageSeg/aveseg_4b_2.pdf, id=86, 421.575pt x 316.18124pt>
 File: ./AverageSeg/aveseg_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/aveseg_4b_2.pdf>
@@ -897,7 +920,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--96
  []
 
 [17 <./AverageSeg/aveseg_4b_2.pdf>]
-<./AverageSeg/habysegfrac_sb_2.pdf, id=110, 550.055pt x 370.38374pt>
+<./AverageSeg/habysegfrac_sb_2.pdf, id=111, 550.055pt x 370.38374pt>
 File: ./AverageSeg/habysegfrac_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_sb_2.pdf>
@@ -905,7 +928,7 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_sb_2.pdf used on input line 9
 9.
 (pdftex.def)             Requested size: 375.80544pt x 253.06139pt.
 
-<./AverageSeg/habysegfrac_4b_2.pdf, id=111, 558.085pt x 348.30125pt>
+<./AverageSeg/habysegfrac_4b_2.pdf, id=112, 558.085pt x 348.30125pt>
 File: ./AverageSeg/habysegfrac_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_4b_2.pdf>
@@ -914,19 +937,27 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_4b_2.pdf used on input line 1
 (pdftex.def)             Requested size: 375.80544pt x 234.54579pt.
  [18 <./AverageSeg/habysegfrac_sb_2.pdf>]) [19 <./AverageSeg/habysegfrac_4b_2.p
 df>] (Switch/Switch.tex
-<./Switch/Voorbeeld12_12_begin.pdf, id=131, 421.575pt x 316.18124pt>
+Underfull \hbox (badness 10000) in paragraph at lines 2--11
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+bbm on input line 13.
+(C:\Users\Stijn\Documents\STUDEREN\MikTex\tex\latex\bbm\ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
+<./Switch/Voorbeeld12_12_begin.pdf, id=132, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_begin.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_begin.pdf>
-Package pdftex.def Info: ./Switch/Voorbeeld12_12_begin.pdf used on input line 6
-.
+Package pdftex.def Info: ./Switch/Voorbeeld12_12_begin.pdf used on input line 1
+9.
 (pdftex.def)             Requested size: 211.38832pt x 158.54373pt.
 
-<./Switch/Voorbeeld12_12_eind.pdf, id=132, 421.575pt x 316.18124pt>
+<./Switch/Voorbeeld12_12_eind.pdf, id=133, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_eind.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_eind.pdf>
-Package pdftex.def Info: ./Switch/Voorbeeld12_12_eind.pdf used on input line 12
+Package pdftex.def Info: ./Switch/Voorbeeld12_12_eind.pdf used on input line 25
 .
 (pdftex.def)             Requested size: 211.38832pt x 158.54373pt.
 ) [20 <./Switch/Voorbeeld12_12_begin.pdf> <./Switch/Voorbeeld12_12_eind.pdf>] (
@@ -937,29 +968,32 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5045 strings out of 493673
- 75291 string characters out of 3138721
- 145931 words of memory out of 3000000
- 8249 multiletter control sequences out of 15000+200000
- 8710 words of font info for 33 fonts, out of 3000000 for 9000
+ 5090 strings out of 493673
+ 76358 string characters out of 3138721
+ 146114 words of memory out of 3000000
+ 8283 multiletter control sequences out of 15000+200000
+ 9105 words of font info for 36 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  37i,14n,46p,967b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfon
-ts/cm/cmcsc10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex
-/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Stijn/Documents/STUDEREN/Mik
-Tex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Stijn/Documents/STUDERE
-N/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Stijn/Documents/STU
-DEREN/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on mod2A_verslag.pdf (22 pages, 1138334 bytes).
+ <C:\Users\Stijn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\b
+bm10.pk><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/
+amsfonts/cm/cmcsc10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Stijn/Documents/STUDEREN/Mi
+kTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Stijn/Documents/STUDERE
+N/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Stijn/Documents/STUD
+EREN/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Stijn/Documents/S
+TUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Stijn/Docume
+nts/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Stijn/Do
+cuments/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Sti
+jn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mod2A_verslag.pdf (22 pages, 1170519 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 205 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
