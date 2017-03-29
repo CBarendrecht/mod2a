@@ -39,6 +39,17 @@ if tel > 0
 end
 noeq = tel/hh;
 
+clear mnh;
+clear mxh;
+clear gmh;
+clear g;
+clear moves;
+clear noeq;
+clear gemgen;
+clear gemmoves;
+clear gemsegr;
+clear del;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 wis = true;
 
