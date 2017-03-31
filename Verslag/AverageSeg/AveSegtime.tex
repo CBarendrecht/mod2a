@@ -48,7 +48,6 @@ The 4-Type board is constructed to maintain the same ratio of inhabited and unin
 This guarantees that for any \(n\leq 100\), segregation at \(n\%\) takes place prior to the board reaching an equilibrium. 
 To observe the average segregation time \(n\%\) for any \(n\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(n\%\).
 Likewise the average segregated fraction will be estimate by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
-\newpage
 \subsection{Results}
 \subsubsection{Question 1}
 The results regarding the first question are shown below:\\
@@ -113,3 +112,10 @@ Figure \ref{fig:happyseg4b} shows that contrast to the standard board, this boar
 A thing of interest however, is that the averages of both figure \ref{fig:happysegsb} and \ref{fig:happyseg4b} seem to cluster. This is because, as mentioned earlier, the effect of the Happiness Rule is quite discrete when using second order neighbourhood.
 \subsubsection{Question 3}
 In order to answer the third question, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025, and for each segregation $\%$, 60, 80 and 100. The results are shown below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{happy_segr_60_80_100.pdf}
+    \caption{For each $HR = 0,0.025,...,1$, the fraction of the simulations in which 60$\%$,80$\%$ and 100$\%$ is reached.}
+    \label{fig:happyseg4b}
+\end{figure}

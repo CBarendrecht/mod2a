@@ -51,6 +51,7 @@ while klaar == false
             end
         end
         %verplaatsen aan de hand van de blijheidseis
+        A(6,i) = happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)); 
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             if (~randvp) 
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
