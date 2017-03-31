@@ -12,7 +12,7 @@ For any person \(k\), prior to moving to a new location \(k\) has a multinomial 
  \frac{\#\text{Neighbours of type }t}{\text{Total number of neighbours}}	&\mbox{if } \text{total number of neighbours}>0 \\ 
 \mathbbm{1}_{\{t=\text{Type}(k)\}}   &\mbox{if } \text{total number of neighbours}=0
 \end{cases}\]
-Note that this is well defined, since for total number of neighbours > 0, we have \( \mathbb{P}(\text{NewType}(k)=t) \geq 0\) and \(\sum_{i=0}^{\text{types}}\mathbb{P}(\text{NewType}(k)=t)=1\). An example of how this may effect the equilibrium, is illustrated below:
+Note that this is well defined, since for total number of neighbours \(> 0\), we have \( \mathbb{P}(\text{NewType}(k)=t) \geq 0\) and \(\sum_{i=0}^{\text{types}}\mathbb{P}(\text{NewType}(k)=t)=1\). An example of how this may effect the equilibrium, is illustrated below:
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.45\textwidth}
@@ -32,5 +32,5 @@ Note that this is well defined, since for total number of neighbours > 0, we hav
 \end{figure}
 A crucial difference between equilibrium with and without switching, is that if switching is allowed, the concentration of the types may differ between the starting board and the equilibrium status. 
 This can be seen in figure \ref{fig:wissel 12} as the number of people of the green type decreased from 10 to 8, the yellow type even decreased from 10 to 6. 
-As a matter of fact, allowing might lead to the extinction of several types. 
-This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being extrodinary interesting, the extinction of types is not included in this report.
+As a matter of fact, allowing switching might lead to the extinction of several types. 
+This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being extraodinarily interesting, the extinction of types is not included in this report.
