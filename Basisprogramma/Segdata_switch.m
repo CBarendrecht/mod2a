@@ -137,7 +137,7 @@ clear gemsegr;
 clear del;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-wisselen = true;
+rv = true; %bij onderzoek random verplaatsen: vervang wisselen door rv
 door = true;
 datatel = 1;
 

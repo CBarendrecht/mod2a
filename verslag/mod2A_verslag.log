@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.23)  31 MAR 2017 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.23)  31 MAR 2017 13:09
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
@@ -757,14 +757,14 @@ Package pdftex.def Info: Tegenvoorbeeld/segregation_tegenvb_3.jpg used on input
 egenvb_1.jpg> <./Tegenvoorbeeld/segregation_tegenvb_2.jpg> <./Tegenvoorbeeld/se
 gregation_tegenvb_3.jpg>]
 [10] (VerslagdeelAantgen/VerslagdeelAantgen.tex
-<./VerslagdeelAantgen/happinessregel_aantgen_2.jpg, id=62, 1371.1225pt x 653.44
-125pt>
-File: ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg Graphic file (type jpg)
+<./VerslagdeelAantgen/happinessregel_aantgen_2.pdf, id=62, 791.95876pt x 386.44
+376pt>
+File: ./VerslagdeelAantgen/happinessregel_aantgen_2.pdf Graphic file (type pdf)
 
- <use ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg>
-Package pdftex.def Info: ./VerslagdeelAantgen/happinessregel_aantgen_2.jpg used
+ <use ./VerslagdeelAantgen/happinessregel_aantgen_2.pdf>
+Package pdftex.def Info: ./VerslagdeelAantgen/happinessregel_aantgen_2.pdf used
  on input line 9.
-(pdftex.def)             Requested size: 422.77664pt x 201.48785pt.
+(pdftex.def)             Requested size: 422.77664pt x 206.30017pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
@@ -821,7 +821,7 @@ File: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg Graphic file (type jpg
 Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg use
 d on input line 40.
 (pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
- [11 <./VerslagdeelAantgen/happinessregel_aantgen_2.jpg>])
+ [11 <./VerslagdeelAantgen/happinessregel_aantgen_2.pdf>])
 Underfull \hbox (badness 10000) in paragraph at lines 47--56
 
  []
@@ -830,14 +830,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--56
 GenormHistogramAantalgen.jpg> <./VerslagdeelAantgen/GenormHistogramAantalgen2.j
 pg> <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg>]
 (happiness_01/VerslagHappinessgedeelte.tex
-<./happiness_01/happinessregel-gemhappinesseind-2.jpg, id=74, 1355.0625pt x 654
-.445pt>
-File: ./happiness_01/happinessregel-gemhappinesseind-2.jpg Graphic file (type j
-pg)
- <use ./happiness_01/happinessregel-gemhappinesseind-2.jpg>
-Package pdftex.def Info: ./happiness_01/happinessregel-gemhappinesseind-2.jpg u
+<./happiness_01/happinessregel-gemhappinesseind-2.pdf, id=78, 791.95876pt x 386
+.44376pt>
+File: ./happiness_01/happinessregel-gemhappinesseind-2.pdf Graphic file (type p
+df)
+ <use ./happiness_01/happinessregel-gemhappinesseind-2.pdf>
+Package pdftex.def Info: ./happiness_01/happinessregel-gemhappinesseind-2.pdf u
 sed on input line 20.
-(pdftex.def)             Requested size: 422.77664pt x 204.18402pt.
+(pdftex.def)             Requested size: 422.77664pt x 206.30017pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--27
 
@@ -848,8 +848,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--27
 
  []
 
-[13 <./happiness_01/happinessregel-gemhappinesseind-2.jpg>]
-<./happiness_01/histogram_min_happiness_een_derde.jpg, id=78, 562.1pt x 421.575
+[13 <./happiness_01/happinessregel-gemhappinesseind-2.pdf>]
+<./happiness_01/histogram_min_happiness_een_derde.jpg, id=86, 562.1pt x 421.575
 pt>
 File: ./happiness_01/histogram_min_happiness_een_derde.jpg Graphic file (type j
 pg)
@@ -862,7 +862,7 @@ Underfull \hbox (badness 1596) in paragraph at lines 32--32
 []\OT1/cmr/m/n/9 (a) |his-togram min-i-mum hap-pi-ness
  []
 
-<./happiness_01/histogram_min_happiness_half.jpg, id=79, 562.1pt x 421.575pt>
+<./happiness_01/histogram_min_happiness_half.jpg, id=87, 562.1pt x 421.575pt>
 File: ./happiness_01/histogram_min_happiness_half.jpg Graphic file (type jpg)
 
 <use ./happiness_01/histogram_min_happiness_half.jpg>
@@ -874,7 +874,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 39--39
 []\OT1/cmr/m/n/9 (b) |his-togram min-i-mum hap-pi-ness
  []
 
-<./happiness_01/histogram_min_happiness_een.jpg, id=80, 562.1pt x 421.575pt>
+<./happiness_01/histogram_min_happiness_een.jpg, id=88, 562.1pt x 421.575pt>
 File: ./happiness_01/histogram_min_happiness_een.jpg Graphic file (type jpg)
 
 <use ./happiness_01/histogram_min_happiness_een.jpg>
@@ -903,7 +903,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-[15] <./AverageSeg/aveseg_sb_2.pdf, id=87, 409.53pt x 323.2075pt>
+[15] <./AverageSeg/aveseg_sb_2.pdf, id=95, 409.53pt x 323.2075pt>
 File: ./AverageSeg/aveseg_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/aveseg_sb_2.pdf>
@@ -919,7 +919,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--69
 
  []
 
-<./AverageSeg/aveseg_4b_2.pdf, id=88, 421.575pt x 316.18124pt>
+<./AverageSeg/aveseg_4b_2.pdf, id=96, 421.575pt x 316.18124pt>
 File: ./AverageSeg/aveseg_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/aveseg_4b_2.pdf>
@@ -941,7 +941,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--95
  []
 
 [17 <./AverageSeg/aveseg_4b_2.pdf>]
-<./AverageSeg/habysegfrac_sb_2.pdf, id=113, 550.055pt x 370.38374pt>
+<./AverageSeg/habysegfrac_sb_2.pdf, id=121, 550.055pt x 370.38374pt>
 File: ./AverageSeg/habysegfrac_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_sb_2.pdf>
@@ -949,7 +949,7 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_sb_2.pdf used on input line 9
 8.
 (pdftex.def)             Requested size: 375.80544pt x 253.06139pt.
 
-<./AverageSeg/habysegfrac_4b_2.pdf, id=114, 558.085pt x 348.30125pt>
+<./AverageSeg/habysegfrac_4b_2.pdf, id=122, 558.085pt x 348.30125pt>
 File: ./AverageSeg/habysegfrac_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_4b_2.pdf>
@@ -957,7 +957,7 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_4b_2.pdf used on input line 1
 07.
 (pdftex.def)             Requested size: 375.80544pt x 234.54579pt.
  [18 <./AverageSeg/habysegfrac_sb_2.pdf>] <./AverageSeg/happy_segr_60_80_100.pd
-f, id=127, 597.23125pt x 845.1575pt>
+f, id=135, 597.23125pt x 845.1575pt>
 File: ./AverageSeg/happy_segr_60_80_100.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/happy_segr_60_80_100.pdf>
@@ -974,7 +974,7 @@ LaTeX Font Info:    Try loading font information for U+bbm on input line 14.
 (C:\Users\Stijn\Documents\STUDEREN\MikTex\tex\latex\bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-<./Switch/Voorbeeld12_12_begin.pdf, id=141, 421.575pt x 316.18124pt>
+<./Switch/Voorbeeld12_12_begin.pdf, id=149, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_begin.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_begin.pdf>
@@ -982,7 +982,7 @@ Package pdftex.def Info: ./Switch/Voorbeeld12_12_begin.pdf used on input line 2
 0.
 (pdftex.def)             Requested size: 211.38832pt x 158.54373pt.
 
-<./Switch/Voorbeeld12_12_eind.pdf, id=142, 421.575pt x 316.18124pt>
+<./Switch/Voorbeeld12_12_eind.pdf, id=150, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_eind.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_eind.pdf>
@@ -1020,9 +1020,9 @@ TUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Stijn/Docume
 nts/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Stijn/Do
 cuments/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Sti
 jn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mod2A_verslag.pdf (23 pages, 1223480 bytes).
+Output written on mod2A_verslag.pdf (23 pages, 1169005 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
+ 222 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

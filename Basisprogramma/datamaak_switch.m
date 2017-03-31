@@ -51,7 +51,7 @@ clear gemsegr;
 clear del;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-wis = true;
+wis = true; %bij onderzoek random verplaats: vervang wis door rv
 
 for i = 1:hh
     [gens(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans,wis);
@@ -85,9 +85,9 @@ end
 noeq = tel/hh;
 
 figure;
-aa = histogram(gen,0.5:1:max(gen)+0.5);
+aa = histogram(gen,0.5:1:max(gen)+0.5,'Normalization','Probability');
 hold on;
-ab = histogram(gens,0.5:1:max(gen)+0.5);
+ab = histogram(gens,0.5:1:max(gen)+0.5,'Normalization','Probability');
 xlabel('Aantal Generaties');
 ylabel('Aantal Keer');
 title('Histogram Aantal Generaties met en zonder Switch');
