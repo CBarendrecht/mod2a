@@ -21,11 +21,11 @@ function [S,T,U,v] = verplaats(infom,grid,crbord,i,lengte,breedte,vk,r)
                         y = k;
                     else
                         if afst == d
-                           %vergelijk happiness
-                           if happiness(grid,crbord,j,k,infom(1,i),vk,r,c) > h
-                               x = j;
-                               y = k;
-                           end
+                            %vergelijk happiness
+                            if happiness(grid,crbord,j,k,infom(1,i),vk,r,c) > h
+                                x = j;
+                                y = k;
+                            end
                         end
                     end
                     h = 0;

@@ -72,6 +72,74 @@ In figure \ref{fig:examplehap2/3} and \ref{fig:examplehap1} we can see what the 
 
 %We can see that in figure \ref{fig:example hap 1 end} every individual has only neighbours of their own type due to the happinessrule of $1$.
 %We will elaborate on the influence of the happinessrule on the model in section $4$ and $5$.\\
+<<<<<<< HEAD
+=======
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+\vspace{-20pt}
+\centering
+\includegraphics[scale=0.5]{buurtorde.jpg}
+\caption{Neighbourhoodorder}
+\vspace{-15pt}
+\label{fig:neighbourhood}
+\end{wrapfigure}
+
+In addition, we are able to change the type of neighbourhood.
+The standardtype of neighbourhood is the second: in this case every individual can have up to eight neighbours.
+There exists one smaller type of neighbourhoods: the first type of neighbourhood, where everybody has up to four neighbours.
+The best way to show how the bigger types of neighbourhood are formed is figure \ref{fig:neighbourhood}.
+Here is the $0$ an individual and for every other place is the number the smaller order of neighbourhood of that individual that contains that place.
+We will not research the influence of the type of neighbourhood on the segregation in our model in our report.
+However, we added some interesting graphs in our appendix.\\
+
+Moreover, we included the possibility for individuals to a random place on the board if he/she is not happy.
+In the basic model he/she will move to the nearest place where he/she will become happier, so we expect that with the random move it takes longer to reach an equilibrium.
+Again, we will not discuss the impact of the random move in our report, but added some nice results in our appendix.\\
+
+Furthermore, we expanded the model with the so-called 'criminals'.
+It is possible to call $c$ of the $n$ individuals a criminal.
+Everybody who is not a criminal does not like criminals, so their happiness is $0$ if a criminal is in their neighbourhood.
+As a result, all criminals should end up together after segregation.
+In figure \ref{fig:examplecrim}, one can see an example of the basic model with $10$ criminals among the $40$ individuals.
+It is visible that our expactation is not always true.
+In this case, equilibrium is reached, because every unhappy individual could not move to another place as a consequence of the fact that every empty place in a neighbourhood of a criminal.
+So the unhappy individuals will not become happier on these places.
+
+\begin{figure}[H]
+	\centering
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{vb5beginbord.jpg}
+        \caption{Situation before segregation}
+        \label{fig:example crim begin}
+    \end{subfigure}\hspace{0cm}
+    ~ 
+    \begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{vb5eindbord.jpg}
+        \caption{Situation after segregation}
+        \label{fig:example crim end}
+    \end{subfigure}
+    ~ 
+    \caption{An example of segregation in the basic model with $10$ criminals (the slightly darker places)}
+    \label{fig:examplecrim}
+\end{figure}
+
+Last but not least, we made it possible for individuals to switch to another type.
+In our model there are two types of switching.
+The first is only possible if there are only individuals of type $1$ and type $2$.
+In this version of switching, every person has in every generation a chance $p$ to become of the other type.
+In the other version, every unhappy individual will change type under influence of his/her neighbours.
+This means that the chance to become of type $t$ is the fraction of neighbours of type $t$.
+This is a correct probability distribution, because this sums up to $1$.
+Individuals without neighbours will not switch type, because they have no neighbours who influence them.
+We will investigate the influence of the second type of switching further in section $7$.
+
+
+
+
+
+ 
+
+>>>>>>> a32d9cdd1d2dd5f4849de449ddafc3898a6f8358
 
 \begin{wrapfigure}{r}{0.3\textwidth}
 \vspace{-20pt}
