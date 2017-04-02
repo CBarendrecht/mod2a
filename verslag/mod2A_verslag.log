@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.23)  31 MAR 2017 13:09
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.15)  31 MAR 2017 12:32
->>>>>>> 0cb6cf99d2ea0e6d2392a800ee71f7cf80f50400
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  2 APR 2017 20:06
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+(D:\Programmas\Latex\MikTex\tex\latex\base\article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+(D:\Programmas\Latex\MikTex\tex\latex\base\size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -25,19 +21,19 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\base\inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+(D:\Programmas\Latex\MikTex\tex\latex\base\utf8.def
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(D:\Programmas\Latex\MikTex\tex\latex\base\t1enc.dfu
 File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -187,7 +183,7 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(D:\Programmas\Latex\MikTex\tex\latex\base\ot1enc.dfu
 File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -218,7 +214,7 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(D:\Programmas\Latex\MikTex\tex\latex\base\omsenc.dfu
 File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -242,24 +238,24 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen103
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -300,17 +296,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\amscls\amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks21
 \thm@bodyfont=\toks22
@@ -322,33 +318,33 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bbm\bbm.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\bbm\bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\marginnote\marginnote.sty"
-Package: marginnote 2012/03/29 v1.1i non floating margin notes for LaTeX
+(D:\Programmas\Latex\MikTex\tex\latex\marginnote\marginnote.sty
+Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
 \c@mn@abspage=\count99
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\geometry\geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks27
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(D:\Programmas\Latex\MikTex\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count100
@@ -364,28 +360,28 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen119
 \Gm@dimlist=\toks28
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\geometry\geometry.cfg))
+(D:\Programmas\Latex\MikTex\tex\latex\graphics\graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\graphics\graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\graphics\trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+(D:\Programmas\Latex\MikTex\tex\latex\00miktex\graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(D:\Programmas\Latex\MikTex\tex\latex\pdftex-def\pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count103
@@ -393,7 +389,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen120
 \Gin@req@width=\dimen121
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count104
 \float@exts=\toks29
@@ -401,11 +397,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box29
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\caption\caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+(D:\Programmas\Latex\MikTex\tex\latex\caption\caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen122
 \captionmargin@=\dimen123
@@ -418,24 +414,24 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@ContinuedFloat=\count105
 Package caption Info: float package is loaded.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+(D:\Programmas\Latex\MikTex\tex\latex\caption\subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count106
 \c@subtable=\count107
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\import\import.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\import\import.sty
 Package: import 2009/03/23  v 5.1
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wallpaper\Wallpaper.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\wallpaper\Wallpaper.sty
 
 LaTeX Warning: You have requested package `Wallpaper',
                but the package provides `wallpaper'.
 
 Package: wallpaper 2005/01/18, v1.01 easy wallpaper formatting (MHFW)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\base\ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\tools\calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count108
 \calc@Bcount=\count109
@@ -448,16 +444,16 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count110
 \calc@Cskip=\skip51
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\eso-pic\eso-pic.sty
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\atbegshi.sty
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(D:\Programmas\Latex\MikTex\tex\latex\00miktex\color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -480,15 +476,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \tileX=\skip58
 \tileY=\skip59
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+(D:\Programmas\Latex\MikTex\tex\latex\wrapfig\wrapfig.sty
 \wrapoverhang=\dimen131
 \WF@size=\dimen132
 \c@WF@wrappedlines=\count111
 \WF@box=\box30
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
-)
-(mod2A_verslag.aux
+) (mod2A_verslag.aux
 
 LaTeX Warning: Label `fig:gull' multiply defined.
 
@@ -523,7 +518,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
-Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
+Package marginnote Info: \pdfoutput not 0 or unimportant and
+(marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
 
 *geometry* driver: auto-detecting
@@ -560,7 +556,7 @@ Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(D:\Programmas\Latex\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen133
@@ -593,26 +589,25 @@ Overfull \hbox (614.36256pt too wide) has occurred while \output is active
 
 [1
 
-{C:/Users/Nand/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad/S
-egregation_voorblad.jpg>]) [1]
+{C:/Users/win 8/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad/
+Segregation_voorblad.jpg>]) [1]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 [2] (mod2A_verslag.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 7.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ (D:\Programmas\Latex\MikTex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(D:\Programmas\Latex\MikTex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
  [3]
-(Introduction.tex
+(Introduction/Introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--10
 
  []
@@ -629,21 +624,25 @@ Package pdftex.def Info: ./Introduction/vb1beginbord.jpg used on input line 14.
 File: ./Introduction/vb1eindbord.jpg Graphic file (type jpg)
 
 <use ./Introduction/vb1eindbord.jpg>
-Package pdftex.def Info: ./Introduction/vb1eindbord.jpg used on input line 21.
+Package pdftex.def Info: ./Introduction/vb1eindbord.jpg used on input line 20.
 (pdftex.def)             Requested size: 211.38832pt x 178.46797pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--43
+Underfull \hbox (badness 10000) in paragraph at lines 29--43
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--43
 
  []
 
-[4 <./Introduction/vb1beginbord.jpg> <./Introduction/vb1eindbord.jpg>] [5]
-(Model/Model.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--6
+[4 <./Introduction/vb1beginbord.jpg> <./Introduction/vb1eindbord.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+) [5] (Model/Model.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--12
 
  []
 
@@ -674,22 +673,21 @@ File: ./Model/vb3eindbord.jpg Graphic file (type jpg)
 <use ./Model/vb3eindbord.jpg>
 Package pdftex.def Info: ./Model/vb3eindbord.jpg used on input line 46.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
-
-<./Model/vb4beginbord.jpg, id=37, 843.15pt x 632.3625pt>
+ [6 <./Model/vb2beginbord.jpg> <./Model/vb2eindbord.jpg>] <./Model/vb4beginbord
+.jpg, id=41, 843.15pt x 632.3625pt>
 File: ./Model/vb4beginbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb4beginbord.jpg>
 Package pdftex.def Info: ./Model/vb4beginbord.jpg used on input line 58.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
 
-<./Model/vb4eindbord.jpg, id=38, 843.15pt x 632.3625pt>
+<./Model/vb4eindbord.jpg, id=42, 843.15pt x 632.3625pt>
 File: ./Model/vb4eindbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb4eindbord.jpg>
 Package pdftex.def Info: ./Model/vb4eindbord.jpg used on input line 64.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
- [6 <./Model/vb2beginbord.jpg> <./Model/vb2eindbord.jpg> <./Model/vb3beginbord.
-jpg> <./Model/vb3eindbord.jpg>]
+
 <./Model/buurtorde.jpg, id=43, 121.45375pt x 88.83188pt>
 File: ./Model/buurtorde.jpg Graphic file (type jpg)
 
@@ -697,30 +695,31 @@ File: ./Model/buurtorde.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Model/buurtorde.jpg used on input line 79.
 (pdftex.def)             Requested size: 60.72672pt x 44.41582pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--92
+Underfull \hbox (badness 10000) in paragraph at lines 85--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--96
+Underfull \hbox (badness 10000) in paragraph at lines 85--105
 
  []
 
-<./Model/vb5beginbord.jpg, id=44, 843.15pt x 632.3625pt>
+[7 <./Model/vb3beginbord.jpg> <./Model/vb3eindbord.jpg> <./Model/vb4beginbord.j
+pg> <./Model/vb4eindbord.jpg> <./Model/buurtorde.jpg>]
+<./Model/vb5beginbord.jpg, id=47, 843.15pt x 632.3625pt>
 File: ./Model/vb5beginbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb5beginbord.jpg>
 Package pdftex.def Info: ./Model/vb5beginbord.jpg used on input line 109.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
 
-<./Model/vb5eindbord.jpg, id=45, 843.15pt x 632.3625pt>
+<./Model/vb5eindbord.jpg, id=48, 843.15pt x 632.3625pt>
 File: ./Model/vb5eindbord.jpg Graphic file (type jpg)
 
 <use ./Model/vb5eindbord.jpg>
 Package pdftex.def Info: ./Model/vb5eindbord.jpg used on input line 115.
 (pdftex.def)             Requested size: 187.89914pt x 140.92455pt.
- [7 <./Model/vb4beginbord.jpg> <./Model/vb4eindbord.jpg> <./Model/buurtorde.jpg
-> <./Model/vb5beginbord.jpg> <./Model/vb5eindbord.jpg>]) [8] (Equilibrium.tex
+) [8 <./Model/vb5beginbord.jpg> <./Model/vb5eindbord.jpg>] (Equilibrium.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -960,11 +959,7 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_4b_2.pdf used on input line 1
 07.
 (pdftex.def)             Requested size: 375.80544pt x 234.54579pt.
  [18 <./AverageSeg/habysegfrac_sb_2.pdf>] <./AverageSeg/happy_segr_60_80_100.pd
-<<<<<<< HEAD
-f, id=135, 597.23125pt x 845.1575pt>
-=======
-f, id=127, 421.575pt x 316.18124pt>
->>>>>>> 0cb6cf99d2ea0e6d2392a800ee71f7cf80f50400
+f, id=135, 421.575pt x 316.18124pt>
 File: ./AverageSeg/happy_segr_60_80_100.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/happy_segr_60_80_100.pdf>
@@ -978,14 +973,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--12
  []
 
 LaTeX Font Info:    Try loading font information for U+bbm on input line 14.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
+(D:\Programmas\Latex\MikTex\tex\latex\bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-<<<<<<< HEAD
-<./Switch/Voorbeeld12_12_begin.pdf, id=149, 421.575pt x 316.18124pt>
-=======
-<./Switch/Voorbeeld12_12_begin.pdf, id=142, 421.575pt x 316.18124pt>
->>>>>>> 0cb6cf99d2ea0e6d2392a800ee71f7cf80f50400
+<./Switch/Voorbeeld12_12_begin.pdf, id=150, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_begin.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_begin.pdf>
@@ -993,11 +984,7 @@ Package pdftex.def Info: ./Switch/Voorbeeld12_12_begin.pdf used on input line 2
 0.
 (pdftex.def)             Requested size: 211.38832pt x 158.54373pt.
 
-<<<<<<< HEAD
-<./Switch/Voorbeeld12_12_eind.pdf, id=150, 421.575pt x 316.18124pt>
-=======
-<./Switch/Voorbeeld12_12_eind.pdf, id=143, 421.575pt x 316.18124pt>
->>>>>>> 0cb6cf99d2ea0e6d2392a800ee71f7cf80f50400
+<./Switch/Voorbeeld12_12_eind.pdf, id=151, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_eind.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_eind.pdf>
@@ -1012,53 +999,30 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5178 strings out of 493673
- 77070 string characters out of 3141533
- 147502 words of memory out of 3000000
- 8358 multiletter control sequences out of 15000+200000
+ 5176 strings out of 493673
+ 76174 string characters out of 3144389
+ 147262 words of memory out of 3000000
+ 8355 multiletter control sequences out of 15000+200000
  11908 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  37i,14n,46p,967b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
-<<<<<<< HEAD
- <C:\Users\Stijn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\b
-bm10.pk><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/public/
-amsfonts/cm/cmcsc10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Stijn/Documents/STUDEREN/MikTex
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Stijn/Documents/STUDEREN/Mi
-kTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Stijn/Documents/STUDERE
-N/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Stijn/Documents/STUD
-EREN/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Stijn/Documents/S
-TUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Stijn/Docume
-nts/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Stijn/Do
-cuments/STUDEREN/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Sti
-jn/Documents/STUDEREN/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mod2A_verslag.pdf (23 pages, 1169005 bytes).
+ <C:\Users\win 8\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\b
+bm10.pk><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Progra
+mmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Programmas/Lat
+ex/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Programmas/Latex/MikTex
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Programmas/Latex/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb><D:/Programmas/Latex/MikTex/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pf
+b><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Progr
+ammas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programmas/Lat
+ex/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programmas/Latex/MikTex/
+fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Programmas/Latex/MikTex/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mod2A_verslag.pdf (23 pages, 1173350 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
-=======
- <C:\Users\Nand\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bb
-m10.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mod2A_verslag.pdf (23 pages, 1226636 bytes).
-PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
->>>>>>> 0cb6cf99d2ea0e6d2392a800ee71f7cf80f50400
+ 223 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
