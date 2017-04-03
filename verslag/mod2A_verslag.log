@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  2 APR 2017 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.24)  3 APR 2017 20:32
 entering extended mode
 **mod2A_verslag.tex
 (mod2A_verslag.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-(D:\Programmas\Latex\MikTex\tex\latex\base\article.cls
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(D:\Programmas\Latex\MikTex\tex\latex\base\size10.clo
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,19 +21,19 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(D:\Programmas\Latex\MikTex\tex\latex\base\inputenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(D:\Programmas\Latex\MikTex\tex\latex\base\utf8.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(D:\Programmas\Latex\MikTex\tex\latex\base\t1enc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -183,7 +183,7 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(D:\Programmas\Latex\MikTex\tex\latex\base\ot1enc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -214,7 +214,7 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(D:\Programmas\Latex\MikTex\tex\latex\base\omsenc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -238,24 +238,24 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsmath.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amstext.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsgen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen103
 ))
-(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsbsy.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(D:\Programmas\Latex\MikTex\tex\latex\amsmath\amsopn.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -296,17 +296,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(D:\Programmas\Latex\MikTex\tex\latex\amsfonts\amssymb.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(D:\Programmas\Latex\MikTex\tex\latex\amsfonts\amsfonts.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(D:\Programmas\Latex\MikTex\tex\latex\amscls\amsthm.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks21
 \thm@bodyfont=\toks22
@@ -318,33 +318,33 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
-(D:\Programmas\Latex\MikTex\tex\latex\bbm\bbm.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bbm\bbm.sty"
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-(D:\Programmas\Latex\MikTex\tex\latex\marginnote\marginnote.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\marginnote\marginnote.sty"
 Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
 \c@mn@abspage=\count99
 )
-(D:\Programmas\Latex\MikTex\tex\latex\geometry\geometry.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(D:\Programmas\Latex\MikTex\tex\latex\graphics\keyval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks27
 )
-(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\ifpdf.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\ifvtex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(D:\Programmas\Latex\MikTex\tex\generic\ifxetex\ifxetex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count100
@@ -360,28 +360,28 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen119
 \Gm@dimlist=\toks28
 
-(D:\Programmas\Latex\MikTex\tex\latex\geometry\geometry.cfg))
-(D:\Programmas\Latex\MikTex\tex\latex\graphics\graphicx.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(D:\Programmas\Latex\MikTex\tex\latex\graphics\graphics.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(D:\Programmas\Latex\MikTex\tex\latex\graphics\trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(D:\Programmas\Latex\MikTex\tex\latex\00miktex\graphics.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(D:\Programmas\Latex\MikTex\tex\latex\pdftex-def\pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\infwarerr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\ltxcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count103
@@ -389,7 +389,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen120
 \Gin@req@width=\dimen121
 )
-(D:\Programmas\Latex\MikTex\tex\latex\float\float.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count104
 \float@exts=\toks29
@@ -397,10 +397,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box29
 )
-(D:\Programmas\Latex\MikTex\tex\latex\caption\caption.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(D:\Programmas\Latex\MikTex\tex\latex\caption\caption3.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen122
@@ -414,24 +414,24 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@ContinuedFloat=\count105
 Package caption Info: float package is loaded.
 )
-(D:\Programmas\Latex\MikTex\tex\latex\caption\subcaption.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count106
 \c@subtable=\count107
 )
-(D:\Programmas\Latex\MikTex\tex\latex\import\import.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\import\import.sty"
 Package: import 2009/03/23  v 5.1
 )
-(D:\Programmas\Latex\MikTex\tex\latex\wallpaper\Wallpaper.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wallpaper\Wallpaper.sty"
 
 LaTeX Warning: You have requested package `Wallpaper',
                but the package provides `wallpaper'.
 
 Package: wallpaper 2005/01/18, v1.01 easy wallpaper formatting (MHFW)
-(D:\Programmas\Latex\MikTex\tex\latex\base\ifthen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(D:\Programmas\Latex\MikTex\tex\latex\tools\calc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count108
 \calc@Bcount=\count109
@@ -444,16 +444,16 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count110
 \calc@Cskip=\skip51
 )
-(D:\Programmas\Latex\MikTex\tex\latex\eso-pic\eso-pic.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
-(D:\Programmas\Latex\MikTex\tex\generic\oberdiek\atbegshi.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
-(D:\Programmas\Latex\MikTex\tex\latex\xcolor\xcolor.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(D:\Programmas\Latex\MikTex\tex\latex\00miktex\color.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -476,32 +476,15 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \tileX=\skip58
 \tileY=\skip59
 )
-(D:\Programmas\Latex\MikTex\tex\latex\wrapfig\wrapfig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen131
 \WF@size=\dimen132
 \c@WF@wrappedlines=\count111
 \WF@box=\box30
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
-) (mod2A_verslag.aux
-
-LaTeX Warning: Label `fig:gull' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:gull' multiply defined.
-
-
-LaTeX Warning: Label `fig:tiger' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:tiger' multiply defined.
-
-
-LaTeX Warning: Label `minimal happiness 1' multiply defined.
-
-
-LaTeX Warning: Label `sub@minimal happiness 1' multiply defined.
-
+)
+(mod2A_verslag.aux
 
 LaTeX Warning: Label `fig:happyseg4b' multiply defined.
 
@@ -556,7 +539,7 @@ Package marginnote Info: \pdfoutput not 0 or unimportant and
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(D:\Programmas\Latex\MikTex\tex\context\base\supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen133
@@ -589,20 +572,21 @@ Overfull \hbox (614.36256pt too wide) has occurred while \output is active
 
 [1
 
-{C:/Users/win 8/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad/
-Segregation_voorblad.jpg>]) [1]
+{C:/Users/guanyu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Voorblad
+/Segregation_voorblad.jpg>]) [1]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 [2] (mod2A_verslag.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 7.
- (D:\Programmas\Latex\MikTex\tex\latex\amsfonts\umsa.fd
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
-(D:\Programmas\Latex\MikTex\tex\latex\amsfonts\umsb.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
@@ -783,37 +767,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--16
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--16
-
- []
-
-
-<./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg, id=63, 737.75626pt x 538.0
-1pt>
+<./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg, id=63, 562.1pt x 421.575pt
+>
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg Graphic file (type jpg
 )
  <use ./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg>
 Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg use
 d on input line 21.
-(pdftex.def)             Requested size: 187.89914pt x 137.02243pt.
+(pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
 
-<./VerslagdeelAantgen/GenormHistogramAantalgen.jpg, id=64, 690.58pt x 488.82625
-pt>
+<./VerslagdeelAantgen/GenormHistogramAantalgen.jpg, id=64, 562.1pt x 421.575pt>
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen.jpg Graphic file (type jpg)
 
- <use ./VerslagdeelAantgen/GenormHistogramAantalgen.jpg>
+<use ./VerslagdeelAantgen/GenormHistogramAantalgen.jpg>
 Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen.jpg used
  on input line 28.
-(pdftex.def)             Requested size: 187.89914pt x 132.99925pt.
+(pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
 
-<./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg, id=65, 562.1pt x 421.575pt
->
+<./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg, id=65, 733.74126pt x 460.7
+2125pt>
 File: ./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg Graphic file (type jpg
 )
  <use ./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg>
 Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen2.jpg use
 d on input line 35.
-(pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
+(pdftex.def)             Requested size: 187.89914pt x 117.97798pt.
 
 <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg, id=66, 562.1pt x 421.575pt
 >
@@ -823,16 +801,66 @@ File: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg Graphic file (type jpg
 Package pdftex.def Info: ./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg use
 d on input line 40.
 (pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
- [11 <./VerslagdeelAantgen/happinessregel_aantgen_2.pdf>])
-Underfull \hbox (badness 10000) in paragraph at lines 47--56
+ [11 <./VerslagdeelAantgen/happinessregel_aantgen_2.pdf>]
+<./VerslagdeelAantgen/QQplotATGEN3.jpg, id=75, 668.4975pt x 452.69125pt>
+File: ./VerslagdeelAantgen/QQplotATGEN3.jpg Graphic file (type jpg)
+
+<use ./VerslagdeelAantgen/QQplotATGEN3.jpg>
+Package pdftex.def Info: ./VerslagdeelAantgen/QQplotATGEN3.jpg used on input li
+ne 57.
+(pdftex.def)             Requested size: 281.85587pt x 190.86812pt.
+
+<./VerslagdeelAantgen/QQplotATGEN1.jpg, id=76, 668.4975pt x 452.69125pt>
+File: ./VerslagdeelAantgen/QQplotATGEN1.jpg Graphic file (type jpg)
+
+<use ./VerslagdeelAantgen/QQplotATGEN1.jpg>
+Package pdftex.def Info: ./VerslagdeelAantgen/QQplotATGEN1.jpg used on input li
+ne 64.
+(pdftex.def)             Requested size: 281.85587pt x 190.86812pt.
+
+<./VerslagdeelAantgen/QQplotATGEN2.jpg, id=77, 668.4975pt x 452.69125pt>
+File: ./VerslagdeelAantgen/QQplotATGEN2.jpg Graphic file (type jpg)
+
+<use ./VerslagdeelAantgen/QQplotATGEN2.jpg>
+Package pdftex.def Info: ./VerslagdeelAantgen/QQplotATGEN2.jpg used on input li
+ne 69.
+(pdftex.def)             Requested size: 281.85587pt x 190.86812pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--74
 
  []
 
 [12 <./VerslagdeelAantgen/GenormHistogramAantalgen4.jpg> <./VerslagdeelAantgen/
 GenormHistogramAantalgen.jpg> <./VerslagdeelAantgen/GenormHistogramAantalgen2.j
-pg> <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg>]
+pg> <./VerslagdeelAantgen/GenormHistogramAantalgen1.jpg>])
+Underfull \hbox (badness 10000) in paragraph at lines 75--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--56
+
+ []
+
+[13 <./VerslagdeelAantgen/QQplotATGEN3.jpg> <./VerslagdeelAantgen/QQplotATGEN1.
+jpg> <./VerslagdeelAantgen/QQplotATGEN2.jpg>] [14]
 (happiness_01/VerslagHappinessgedeelte.tex
-<./happiness_01/happinessregel-gemhappinesseind-2.pdf, id=78, 791.95876pt x 386
+<./happiness_01/happinessregel-gemhappinesseind-2.pdf, id=91, 791.95876pt x 386
 .44376pt>
 File: ./happiness_01/happinessregel-gemhappinesseind-2.pdf Graphic file (type p
 df)
@@ -850,47 +878,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--27
 
  []
 
-[13 <./happiness_01/happinessregel-gemhappinesseind-2.pdf>]
-<./happiness_01/histogram_min_happiness_een_derde.jpg, id=86, 562.1pt x 421.575
+[15 <./happiness_01/happinessregel-gemhappinesseind-2.pdf>]
+<./happiness_01/histogram_min_happiness_een_derde.jpg, id=99, 562.1pt x 421.575
 pt>
 File: ./happiness_01/histogram_min_happiness_een_derde.jpg Graphic file (type j
 pg)
  <use ./happiness_01/histogram_min_happiness_een_derde.jpg>
 Package pdftex.def Info: ./happiness_01/histogram_min_happiness_een_derde.jpg u
 sed on input line 31.
-(pdftex.def)             Requested size: 150.32504pt x 112.73964pt.
-
-Underfull \hbox (badness 1596) in paragraph at lines 32--32
-[]\OT1/cmr/m/n/9 (a) |his-togram min-i-mum hap-pi-ness
- []
-
-<./happiness_01/histogram_min_happiness_half.jpg, id=87, 562.1pt x 421.575pt>
-File: ./happiness_01/histogram_min_happiness_half.jpg Graphic file (type jpg)
-
-<use ./happiness_01/histogram_min_happiness_half.jpg>
-Package pdftex.def Info: ./happiness_01/histogram_min_happiness_half.jpg used o
-n input line 38.
-(pdftex.def)             Requested size: 150.32504pt x 112.73964pt.
-
-Underfull \hbox (badness 1394) in paragraph at lines 39--39
-[]\OT1/cmr/m/n/9 (b) |his-togram min-i-mum hap-pi-ness
- []
-
-<./happiness_01/histogram_min_happiness_een.jpg, id=88, 562.1pt x 421.575pt>
-File: ./happiness_01/histogram_min_happiness_een.jpg Graphic file (type jpg)
-
-<use ./happiness_01/histogram_min_happiness_een.jpg>
-Package pdftex.def Info: ./happiness_01/histogram_min_happiness_een.jpg used on
- input line 45.
-(pdftex.def)             Requested size: 150.32504pt x 112.73964pt.
-
-Underfull \hbox (badness 1817) in paragraph at lines 46--46
-[]\OT1/cmr/m/n/9 (c) |his-togram min-i-mum hap-pi-ness
- []
-
-) [14 <./happiness_01/histogram_min_happiness_een_derde.jpg> <./happiness_01/hi
-stogram_min_happiness_half.jpg> <./happiness_01/histogram_min_happiness_een.jpg
->] (AverageSeg/AveSegtime.tex
+(pdftex.def)             Requested size: 375.80544pt x 281.85553pt.
+) [16 <./happiness_01/histogram_min_happiness_een_derde.jpg>] (AverageSeg/AveSe
+gtime.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -905,7 +903,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-[15] <./AverageSeg/aveseg_sb_2.pdf, id=95, 409.53pt x 323.2075pt>
+[17] <./AverageSeg/aveseg_sb_2.pdf, id=106, 409.53pt x 323.2075pt>
 File: ./AverageSeg/aveseg_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/aveseg_sb_2.pdf>
@@ -921,13 +919,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--69
 
  []
 
-<./AverageSeg/aveseg_4b_2.pdf, id=96, 421.575pt x 316.18124pt>
+<./AverageSeg/aveseg_4b_2.pdf, id=107, 421.575pt x 316.18124pt>
 File: ./AverageSeg/aveseg_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/aveseg_4b_2.pdf>
 Package pdftex.def Info: ./AverageSeg/aveseg_4b_2.pdf used on input line 73.
 (pdftex.def)             Requested size: 375.80544pt x 281.85875pt.
- [16 <./AverageSeg/aveseg_sb_2.pdf>]
+ [18 <./AverageSeg/aveseg_sb_2.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
@@ -942,8 +940,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--95
 
  []
 
-[17 <./AverageSeg/aveseg_4b_2.pdf>]
-<./AverageSeg/habysegfrac_sb_2.pdf, id=121, 550.055pt x 370.38374pt>
+[19 <./AverageSeg/aveseg_4b_2.pdf>]
+<./AverageSeg/habysegfrac_sb_2.pdf, id=132, 550.055pt x 370.38374pt>
 File: ./AverageSeg/habysegfrac_sb_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_sb_2.pdf>
@@ -951,32 +949,32 @@ Package pdftex.def Info: ./AverageSeg/habysegfrac_sb_2.pdf used on input line 9
 8.
 (pdftex.def)             Requested size: 375.80544pt x 253.06139pt.
 
-<./AverageSeg/habysegfrac_4b_2.pdf, id=122, 558.085pt x 348.30125pt>
+<./AverageSeg/habysegfrac_4b_2.pdf, id=133, 558.085pt x 348.30125pt>
 File: ./AverageSeg/habysegfrac_4b_2.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/habysegfrac_4b_2.pdf>
 Package pdftex.def Info: ./AverageSeg/habysegfrac_4b_2.pdf used on input line 1
 07.
 (pdftex.def)             Requested size: 375.80544pt x 234.54579pt.
- [18 <./AverageSeg/habysegfrac_sb_2.pdf>] <./AverageSeg/happy_segr_60_80_100.pd
-f, id=135, 421.575pt x 316.18124pt>
+ [20 <./AverageSeg/habysegfrac_sb_2.pdf>] <./AverageSeg/happy_segr_60_80_100.pd
+f, id=145, 421.575pt x 316.18124pt>
 File: ./AverageSeg/happy_segr_60_80_100.pdf Graphic file (type pdf)
 
 <use ./AverageSeg/happy_segr_60_80_100.pdf>
 Package pdftex.def Info: ./AverageSeg/happy_segr_60_80_100.pdf used on input li
 ne 117.
 (pdftex.def)             Requested size: 281.05103pt x 210.7934pt.
-) [19 <./AverageSeg/habysegfrac_4b_2.pdf> <./AverageSeg/happy_segr_60_80_100.pd
-f>] [20] (Switch/Switch.tex
+) [21 <./AverageSeg/habysegfrac_4b_2.pdf> <./AverageSeg/happy_segr_60_80_100.pd
+f>] [22] (Switch/Switch.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
 LaTeX Font Info:    Try loading font information for U+bbm on input line 14.
-(D:\Programmas\Latex\MikTex\tex\latex\bbm\ubbm.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-<./Switch/Voorbeeld12_12_begin.pdf, id=150, 421.575pt x 316.18124pt>
+<./Switch/Voorbeeld12_12_begin.pdf, id=160, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_begin.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_begin.pdf>
@@ -984,45 +982,49 @@ Package pdftex.def Info: ./Switch/Voorbeeld12_12_begin.pdf used on input line 2
 0.
 (pdftex.def)             Requested size: 211.38832pt x 158.54373pt.
 
-<./Switch/Voorbeeld12_12_eind.pdf, id=151, 421.575pt x 316.18124pt>
+<./Switch/Voorbeeld12_12_eind.pdf, id=161, 421.575pt x 316.18124pt>
 File: ./Switch/Voorbeeld12_12_eind.pdf Graphic file (type pdf)
 
 <use ./Switch/Voorbeeld12_12_eind.pdf>
 Package pdftex.def Info: ./Switch/Voorbeeld12_12_eind.pdf used on input line 26
 .
 (pdftex.def)             Requested size: 211.38832pt x 158.54373pt.
-) [21 <./Switch/Voorbeeld12_12_begin.pdf> <./Switch/Voorbeeld12_12_eind.pdf>] (
-Appendix/Appendix.tex) [22]
+) [23 <./Switch/Voorbeeld12_12_begin.pdf> <./Switch/Voorbeeld12_12_eind.pdf>] (
+Appendix/Appendix.tex) [24]
 (mod2A_verslag.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5176 strings out of 493673
- 76174 string characters out of 3144389
- 147262 words of memory out of 3000000
- 8355 multiletter control sequences out of 15000+200000
+ 5189 strings out of 493673
+ 77226 string characters out of 3141527
+ 147338 words of memory out of 3000000
+ 8367 multiletter control sequences out of 15000+200000
  11908 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 37i,14n,46p,967b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\win 8\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\b
-bm10.pk><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Progra
-mmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Programmas/Lat
-ex/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Programmas/Latex/MikTex
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Programmas/Latex/MikTex/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb><D:/Programmas/Latex/MikTex/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pf
-b><D:/Programmas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Progr
-ammas/Latex/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programmas/Lat
-ex/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programmas/Latex/MikTex/
-fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Programmas/Latex/MikTex/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mod2A_verslag.pdf (23 pages, 1173350 bytes).
+ 37i,14n,46p,961b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\guanyu\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\
+bbm10.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mod2A_verslag.pdf (25 pages, 1206854 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
+ 243 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
