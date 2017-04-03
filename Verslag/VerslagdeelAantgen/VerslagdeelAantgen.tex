@@ -2,12 +2,7 @@
 \section{Average number of generations until equilibrium}
 There are numerous parameters that may affect the average number of generations until  equilibrium is reached. We chose to focus on the effect of the Happiness Rule(HR) on the average number of generations. For each HR ranging from 0 to 1 with increment 0.01, we ran 500 simulations and calculated the average, maximal and minimal generations it took to reach equilibrium. The results are shown in figure \ref{fig:avegen}.\\
 \\
-<<<<<<< HEAD
 From figure \ref{fig:avegen}, we conclude that the average number of generations (blue graph) is increasing with the Happiness Rule, which is to be expected since a higher HR implies a higher need for neighbours of the same type, and thus a lower probability that a selected individual is happy, making it more likely that he/she will move. We also note that starting at a HR of aproximately 0.7, the average number of generations appears to be nearly constant. This can be explained noting that the required number of neighbours will practically be the same. For example, if the HR were 0.8, a person with 3, 5 or 8 neighbours would require respectively 3, 5 or at least 7 of the same type. This requirement hardly changes if a HR of 0.9 is applied. The same argument explains why the average number of generations is constant at very low HR or if we raise the HR with a sufficiently small amount like 0.01.\\
-=======
-In figure \ref{fig:avegen}, we observe that the average number of generations (blue graph) is increasing with the Happiness Rule, which is expected since a higher HR requires more neighbours of the same type, and thus less probability that the selected individual is happy, making it more likely that she will move. We also note that at around a HR of 0.7, the average number of generations becomes more or less constant. This can be explained noting that the requirement for the neighbours will practically be the same. For example, with a happiness of 0.8, a person with 3, 5 or 8 neighbours would require respectively 3, 5 or at least 7 of the same type. This requirement won't change much if a HR of 0.9 is applied. The same argument explains why the average number of generations is constant at very low HR or if we raise the HR with a sufficient small amount like 0.01.\\
->>>>>>> b73a4a1d61f9e71fc44fc594cecf029334a86899
-\\
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{happinessregel_aantgen_2.pdf}
@@ -15,13 +10,9 @@ In figure \ref{fig:avegen}, we observe that the average number of generations (b
     \label{fig:avegen}
 \end{figure}
 \\
-<<<<<<< HEAD
-As is one of the research questions, it is also interesting to know how the random variable $Y$, which we denote as the number of generations it takes to reach the equilibrium, is distributed. Since $Y$ depends on the position of each individual, whose positions in turn depend on other individuals, the probability distribution of $Y$ might be complicated. Therefore, we approximate the distribution of $Y$ with a histogram (figure \ref{fig:histogram}) of bin size 1, which is justifiable since $Y$ only takes integer values. Furthermore, in order to study the effect of the HR on the distribution of $Y$, we made histograms with Hapiness Rules of 1/4, 1/3, 1/2 and 1.  We believe that the histograms are a good model for the distribution of $Y$, as by the law of large numbers, the histogram will converge to the actual distribution for large numbers of simulations, and we may consider 10000 as a large number.\\
-=======
-It is also interesting to investigate how the random variable $Y_j$, which we denote as the number of generations it takes to reach the equilibrium under HR $j$, is distributed, and how the distribution is influenced by the HR. For that reason, we ran 10000 simulations for each HR(1/4,1/3,1/2 and 1) and plotted some histograms(figure\ref{fig:histogram}). We chose bin size 1 for each histogram because $Y_j$ is a random variable that only takes integer values. So a histogram of bin size like 0.5 will not give any extra information and a loss of lots of information will occur if bin size 2 is chosen. 
->>>>>>> b73a4a1d61f9e71fc44fc594cecf029334a86899
+As is one of the research questions, it is also interesting to investigate how the random variables $Y_j$, which we denote as the number of generations it takes to reach the equilibrium under HR $j$, is distributed, and how their distributions are effected by the HR. For this purpose, we ran 10000 simulations for with Happiness Rules of 1/4,1/3,1/2 and 1 and plotted several histograms (figure\ref{fig:histogram}). We chose bin size 1 for each histogram given that $Y_j$ is a random variable that only takes integer values. Thus a histogram of a bin of for example 0.5 will not give any additional information and their would be a severe loss of information if bin size 2 is chosen. 
 \\
- 
+
 \begin{figure}[H]
 	
     \centering
@@ -52,12 +43,6 @@ It is also interesting to investigate how the random variable $Y_j$, which we de
     \caption{The probability distribution of $Y$ (the number of generations until reaching the equilibrium) is approximated with a histogram of bin size 1. For each HR(1/4, 1/3, 1/2 and 1), 10000 simulations were ran.}\label{fig:histogram}
 \end{figure}
 
-<<<<<<< HEAD
-From figure \ref{fig:histogram}, we note that the distribution of $Y$ is fairly similar to the binomial distribution. We refrain from concluding that it is binomially distributed  however, as increasing the amount of simulations does not result in a more symmetrical distribution. It is up to this point unclear to us how \(Y\) is distributed.\\
-\\
-A fact worth noting, is that both the mean and the variance increase with the happiness rule. In line with the following section, the mean remains fairly low, while the number of generations tend to be fairly spread.\\
-\textbf{Partial explanation.} While not immediately intuitive, the relatively small mean cannot be immediately explained. We do have an explanation for the relatively high frequency of the large number of generations however: If, after a few generations, equilibrium is not reached, the chance to move to a proper location decreases. Further details of this are provided in the following section. Thus, reaching equilibrium costs a fairly great amount of time.
-=======
 Looking at the histograms, all $Y_j$'s ($j\in \{1/2,1/3,1/4,1\}$) might come from the same distribution, but with different parameters, since their sample means are obviously different.\\
 In an attempt to find a good(confidence level 95\%) fit for the distribution of $Y_{1/3}$, we've used the chi-squared goodness of fit test(chi2gof) to see whether $Y_{1/3}$ is Poisson distributed. We first used the 'fitdist'-function of Matlab to calculate the maximal likelihood estimater for $\hat{\lambda}$ and then performed the chi-sqaured test. The test has rejected the null-hypothesis $H_0:Y_{1/3}\sim\text{Poisson}(\hat{\lambda})$ with significance level $\alpha=0.05$. \\   
 \\
@@ -90,6 +75,6 @@ As expected, the QQ-plots have a stairwise pattern. This is because our data cam
 \\
 With the two-sample kolomogorov-smirnov test(kstest2) of significance level $\alpha=0.05$ in Matlab, which has null-hypothesis $H_0:F(X)=G(Y)$ for $F,G$ the CDF of $X$ and $Y$, it can be concluded that these $Y_j$'s don't come from the same distribution with the same parameters. Unfortunately, we weren't able to find a test that tests whether these $Y_j$'s comes from the same family distribution(i.e. same distribution but different parameter values).\\
 \\
-%Interesting to note though, is that both the mean and the variance increase with the happiness rule. In line with the following section, we see a relatively small mean and relatively often large number of generations.\\
-%\textbf{Partial explanation.} While not immediately intuitive, the relatively small mean cannot be immediately explained. However we do have an explanation for the relatively high frequency for the large number of generations. If, after a few generations, we do not have equilibrium, moving to a better location gets harder. Further details are provided in the following section. Thus, reaching equilibrium eats relatively much time.
->>>>>>> b73a4a1d61f9e71fc44fc594cecf029334a86899
+A fact worth noting, is that both the mean and the variance increase with the happiness rule. In line with the following section, the mean remains fairly low, while the number of generations tend to be fairly spread.\\
+\textbf{Partial explanation.} While not immediately intuitive, the relatively small mean cannot be immediately explained. We do have an explanation for the relatively high frequency of the large number of generations however: If, after a few generations, equilibrium is not reached, the chance to move to a proper location decreases. Further details of this are provided in the following section. Thus, reaching equilibrium costs a fairly great amount of time.
+
