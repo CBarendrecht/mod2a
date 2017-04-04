@@ -1,7 +1,7 @@
 \section{Introduction}
 In 1978, Thomas C. Schelling developed his tipping model by placing pennies and dimes on a chess board and moved them according to various rules. 
 By viewing the pennies and dimes as two types of people, the rule of moving as a preference for the individuals, and the chess board as a city, he soon discovered that segregation takes place on the board, even when the preference of an individual is very subtle.\\
-\\
+
 Based on this idea, we created a basic model which consists of an $8\times8$ board with $40$ individuals that are divided evenly into two types. 
 The individuals are moved according to their 'Happiness' in the current place. 
 For the basic model, an individual is considered happy if $\frac{1}{3}$ of his/her second order neighbours (a person has at most $8$ neighbours) shares his type. 
@@ -29,7 +29,7 @@ An example of how this model goes in effect is given below. It is easily observe
 After that, we extended the basic model by changing the parameters such as the size of the population, the boardsize and the number of types. 
 We also included an option for random displacement: an individual which is not happy will be moved to a empty location chosen at random. 
 (That is to say, that individual will be placed to any empty spot with equal probability.)\\
-\\
+
 For both the basic and the extended model, we ran $500$ simulations multiple times and investigated to what extent certain parameters affected the segregation pattern. 
 In order to formulate our research goals precisely, the following definitions are introduced:\\
 1. \textbf{Generation}: 
@@ -41,7 +41,7 @@ A person is said to live homogenous if all of his/her neighbours share his type.
 4. \textbf{Segregation time at $n\%$}: 
 The segregation time at $n\%$ is defined as the number of generations after which $n\%$ of the population is homogenous.\\
 \newpage
-For this project, we focussed on the following main questions:\\
+For this project, we focussed on the following main questions:
 \begin{enumerate}
 	\item How do the parameters affect the equilibrium? 
 	Does the population always reach an equilibrium? 
@@ -51,6 +51,7 @@ For this project, we focussed on the following main questions:\\
 	\item What fraction of the individuals is happy after the equilibrium? 
 	Can this be optimised by changing the boardsize?
 	
-	\item What is the average segregation time at \(60\%\), \(80\%\) and \(100\%\). How is this segreggation time distributed with Happiness Rule \(1\) and how does the Happiness Rule affect the average segregation time?
+	\item What is the average segregation time at \(60\%\), \(80\%\) and \(100\%\). 
+	How is this segreggation time distributed with Happiness Rule \(1\) and how does the Happiness Rule affect the average segregation time?
 \end{enumerate}
 

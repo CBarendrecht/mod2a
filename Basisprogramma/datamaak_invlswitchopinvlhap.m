@@ -10,7 +10,7 @@ door = true;
 datatel = 0;
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 
-for rv = [0,1] %kan ook gebruikt worden voor onderzoek invloed random 
+for wis = [0,1] %kan ook gebruikt worden voor onderzoek invloed random 
                 %verplaatsen vervang dan wis door rv
     while h <= 1.001
         datatel = datatel + 1;
