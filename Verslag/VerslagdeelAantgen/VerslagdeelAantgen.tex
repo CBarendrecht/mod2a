@@ -10,7 +10,7 @@ From figure \ref{fig:avegen}, we conclude that the average number of generations
     \label{fig:avegen}
 \end{figure}
 \\
-As is one of the research questions, it is also interesting to investigate how the random variables $Y_j$, which we denote as the number of generations it takes to reach the equilibrium under HR $j$, is distributed, and how their distributions are effected by the HR. For this purpose, we ran 10000 simulations for with Happiness Rules of 1/4,1/3,1/2 and 1 and plotted several histograms (figure\ref{fig:histogram}). We chose bin size 1 for each histogram given that $Y_j$ is a random variable that only takes integer values. Thus a histogram of a bin of for example 0.5 will not give any additional information and their would be a severe loss of information if bin size 2 is chosen. 
+It is also interesting to investigate how the random variables $Y_j$, which we denote as the number of generations it takes to reach the equilibrium under HR $j$, is distributed, and how their distributions are affected by the HR. For this purpose, we ran 10000 simulations for Happiness Rules of 1/4,1/3,1/2 and 1 and plotted several histograms (figure\ref{fig:histogram}). We chose bin size 1 for each histogram given that $Y_j$ is a random variable that only takes integer values. Therefore, a histogram of a bin size such as 0.5 will not give any additional information and their would be lots of loss of information if bin size 2 is chosen(since we don't have many different generations). 
 \\
 
 \begin{figure}[H]
@@ -44,9 +44,11 @@ As is one of the research questions, it is also interesting to investigate how t
 \end{figure}
 
 Looking at the histograms, all $Y_j$'s ($j\in \{1/2,1/3,1/4,1\}$) might come from the same distribution, but with different parameters, since their sample means are obviously different.\\
-In an attempt to find a good(confidence level 95\%) fit for the distribution of $Y_{1/3}$, we've used the chi-squared goodness of fit test(chi2gof) to see whether $Y_{1/3}$ is Poisson distributed. We first used the 'fitdist'-function of Matlab to calculate the maximal likelihood estimater for $\hat{\lambda}$ and then performed the chi-sqaured test. The test has rejected the null-hypothesis $H_0:Y_{1/3}\sim\text{Poisson}(\hat{\lambda})$ with significance level $\alpha=0.05$. \\   
+\\
+For simplicity, we chose to only investigate the distribution of $Y_{1/3}$, since other $Y_j$'s might follow the same family distribution as suggested by the histrograms. We suspected that $Y_{1/3}$ might be Poisson distributed. So with this assumption, we first used the 'fitdist'-function of Matlab to calculate the maximal likelihood estimater $\hat{\lambda}$ for the real Poisson parameter $\lambda$. Then, we performed the chi-sqaured test using the chi2gof function in Matlab, with null-hypothesis $H_0:F_{1/3}=F_{P,\hat{\lambda}}$, for which $F$ is the unknown cumulative distribution function(CDF) from the data and $F_{P,\hat{\lambda}}$, the CDF from Poisson$(\hat{\lambda})$. The alternative hypothesis is $F_{1/3}\neq F_{P,\hat{\lambda}}$. Furthermore, we chose 8 bins for the chi-sqaured test(otherwise the test is not accurate due to low expected counts in some bins). The test has rejected the null-hypothesis and the test was of significance level $\alpha=0.05$. \\   
 \\
 With the same method, we've also tested whether $Y_{1/3}$ is binomial or negative binomial distributed. But again, they have been rejected by the chi-sqaured test. So we can only conclude that $Y_{1/3}$ is not Poisson, binomial and negative binomial distributed.\\
+We've also performed this statistical analysis on other $Y_j$'s(for instasnce $Y_1$), and we've obtained the same result as for $Y_{1/3}$.\\
 \\
 In order to make a better comparison of the distribution between $Y_{1/3},Y_{1/4},Y_{1/2}$ and $Y_1$, we made some QQ-plots, which is shown in figure \ref{fig:QQ-plot}.\\ 
 \begin{figure}[H]
@@ -73,8 +75,8 @@ In order to make a better comparison of the distribution between $Y_{1/3},Y_{1/4
 \end{figure}
 As expected, the QQ-plots have a stairwise pattern. This is because our data came from a discrete random variable. We see that the plots appears linear, especially the plot of $Y_{1}$ vs $Y_{1/2}$. The plot indicates that these 4 $Y_j$'s might belong to the location-scale family of some distribution.\\
 \\
-With the two-sample kolomogorov-smirnov test (kstest2) of significance level $\alpha=0.05$ in Matlab, which has null-hypothesis $H_0:F(X)=G(Y)$ for $F,G$ the CDF of $X$ and $Y$, it can be concluded that these $Y_j$'s don't come from the same distribution with the same parameters. Unfortunately, we weren't able to find a test that tests whether these $Y_j$'s comes from the same family distribution (i.e. same distribution but different parameter values).\\
+With the two-sample kolomogorov-smirnov test (kstest2) of significance level $\alpha=0.05$ in Matlab, which has null-hypothesis $H_0:F(X)=G(Y)$ for $F,G$ the CDF of $X$ and $Y$, and $H_1: F(X)\neq G(Y)$, it can be concluded that these $Y_j$'s don't come from the same distribution with the same parameters. Unfortunately, we weren't able to find a test that tests whether these $Y_j$'s comes from the same family distribution (i.e. same distribution but different parameter values).\\
 \\
-A fact worth noting, is that both the mean and the variance increase with the happiness rule. In line with the following section, the mean remains fairly low, while the number of generations tend to be fairly spread.\\
-\textbf{Partial explanation.} While not immediately intuitive, the relatively small mean cannot be immediately explained. We do have an explanation for the relatively high frequency of the large number of generations however: If, after a few generations, equilibrium is not reached, the chance to move to a proper location decreases. Further details of this are provided in the following section. Thus, reaching equilibrium costs a fairly great amount of time.
+%A fact worth noting, is that both the mean and the variance increase with the happiness rule. In line with the following section, the mean remains fairly low, while the number of generations tend to be fairly spread.\\
+%\textbf{Partial explanation.} While not immediately intuitive, the relatively small mean cannot be immediately explained. We do have an explanation for the relatively high frequency of the large number of generations however: If, after a few generations, equilibrium is not reached, the chance to move to a proper location decreases. Further details of this are provided in the following section. Thus, reaching equilibrium costs a fairly great amount of time.
 

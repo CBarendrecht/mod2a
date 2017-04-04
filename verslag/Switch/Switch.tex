@@ -35,12 +35,29 @@ A crucial difference between equilibrium with and without switching, is that if 
 This can be seen in figure \ref{fig:wissel 12} as the number of people of the green type decreased from 10 to 8, the yellow type even decreased from 10 to 6. 
 As a matter of fact, allowing switching might lead to the extinction of several types. 
 This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being quite interesting, the extinction of types is not included in this report.\\
-\section{Average number of generations reaching equilibrium(with switch)}
+\subsection{Average number of generations reaching equilibrium(with switch)}
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.9\textwidth}
         \includegraphics[width=\textwidth]{happinessrule-totaantgenwithswitchorwithoutswitch}
-        \caption{Number of generations until equilibrium on an 8x8 bord with standard setting, with and without type switching}
-        \label{fig:AantGenS}
     \end{subfigure}
+    \caption{Number of generations until equilibrium on an 8x8 bord with standard setting, with and without type switching}
+    \label{fig:AantGenS}
 \end{figure}
+In figure \ref{fig:AantGenS}, we see a comparison of the average number of generations for with and without type switching. There is a clear difference that when type switching is applied, it takes much less generations to reach the equilibrium. This is expected, since the probability of becoming the same type as the neighbours is more favored in our model, which results in a increase of happiness. Or, in a sociological view, the person is willing to adapt to the enviroment rather than moving on.\\
+\\
+From figure \ref{fig:AantGenS}, we observed that the average generations is nearly the same for HR 0.6 til 1. Just to get an idea whether this statement is justified, we selected only three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(ttest2) in Matlab. This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
+ \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
+This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. However, according to the central limit theorems, we may make this assumption for large enough sample size. To avoid difficult calculations of how big the sample size is needed, we simply chose a size of 50000. Also, in our case, we made sure $m=n$, and the test can also be adjusted to not assume equal variance.\\
+\\
+After the simulations, we obtained the following sample means:
+\begin{table}[htp]
+\centering
+\caption{Sample means of number of generations simulated with HR 0.6, 0.8 and 1, with 50000 sample size for each HR.}
+\begin{tabular}{|l|l|l|l|}
+\hline
+ HR&0.6&0.8&1 \\ \hline
+ Sample Mean&2.5213&2.5616&2.5711  \\ \hline 
+\end{tabular}
+\end{table}
+We applied the t-test two times. First time comparing the mean of HR 0.6 and 0.8. Second time for comparing the mean of 0.8 and 1. The first test rejected the null-hypothesis, the second didn't. So with 95\% confidence level, we may conclude that the average generations are unequal for HR 0.6 vs 0.8, but equal for HR 0.8 vs 1.
