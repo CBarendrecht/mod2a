@@ -3,12 +3,12 @@
 Segregation is a phenomenon taking many different forms. Rather than  limiting the scope to racial segregation, we decided to broaden our view. 
 For example, one might delve into the segregation in studies with respect to friendship. 
 In this case, for any person \(k\). The neighbours of \(k\) represent the \(k\)'s friends or the persons with whom \(k\) spends most of his time.
-In this case, \(k\)'s type, can represent either the classes he is currently taking, or the kind of sports person \(k\) is doing, or even what kind of cellphone \(k\) has.
+In this case, \(k\)'s type, can represent either the classes he is currently taking, or the kind of sports person \(k\) is doing, or more likely, \(k\)'s political beliefs.
 In any of these cases, the type of \(k\) is not necessarily set indefinitely.
-In these cases, the type of \(k\) might switch, depending on the types of his friends.\\
+In these cases, the type of \(k\) might switch, depending on the types of his friends. THis is a sociological process known as conformation and plays a major role in the everyday behaviour of people.\\
 
 This gives rise to a new modification of the model.
-For any person \(k\), before moving to a new location, \(k\) has a multinomial probability with to switch to a different type, where 
+For any person \(k\), before moving to a new location, \(k\) has a catagorical probability with to switch to a different type, where 
 \[\mathbb{P}(\text{NewType}(k)=t) = \begin{cases} 
  \frac{\#\text{Neighbours of type }t}{\text{Total number of neighbours}}	&\mbox{if } \text{total number of neighbours}>0 \\ 
 \mathbbm{1}_{\{t=\text{Type}(k)\}}   &\mbox{if } \text{total number of neighbours}=0
@@ -38,11 +38,11 @@ This can be seen in figure \ref{fig:wissel 12} as the number of people of the gr
 As a matter of fact, allowing switching might lead to the extinction of several types. 
 This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being quite interesting, the extinction of types is not included in this report.\\
 
-\section{Average number of generations reaching equilibrium (with switch)}
+\subsection{Average number of generations until equilibrium}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{happinessrule-totaantgenwithswitchorwithoutswitch}
-    \caption{Number of generations until equilibrium on an $8\times 8$ bord with standard setting, with and without type switching}
+    \caption{Number of generations until equilibrium on an $8\times 8$ board with the standard settings, with and without type switching}
     \label{fig:AantGenS}
 \end{figure}
