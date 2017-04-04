@@ -5,11 +5,10 @@ For example, one might delve into the segregation in studies with respect to fri
 In this case, for any person \(k\). The neighbours of \(k\) represent the \(k\)'s friends or the persons with whom \(k\) spends most of his time.
 In this case, \(k\)'s type, can represent either the classes he is currently taking, or the kind of sports person \(k\) is doing, or more likely, \(k\)'s political beliefs.
 In any of these cases, the type of \(k\) is not necessarily set indefinitely.
-<<<<<<< HEAD
+
 In these cases, the type of \(k\) might switch, depending on the types of his friends. This is a sociological process known as conformation and plays a major role in the everyday behaviour of people.\\
-=======
+
 In these cases, the type of \(k\) might switch, depending on the types of his friends. This is a sociological process known as conformation and plays a major role in the daily behaviour of people.\\
->>>>>>> cfc43a4268f45b7d5aabe4844593e62f22b07f4e
 
 This gives rise to a new modification of the model.
 For any person \(k\), before moving to a new location, \(k\) has a catagorical probability with to switch to a different type, where 
@@ -40,19 +39,21 @@ Note that this is well defined, since for total number of neighbours \(> 0\), we
 A crucial difference between equilibrium with and without switching, is that if switching is allowed, the concentration of the types may differ between the starting board and the equilibrium status. 
 This can be seen in figure \ref{fig:wissel 12} as the number of people of the green type decreased from 10 to 8, the yellow type even decreased from 10 to 6. 
 As a matter of fact, allowing switching might lead to the extinction of several types. 
-<<<<<<< HEAD
-This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being quite interesting, the extinction of types is not included in this report.\\
+
+This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being quite interesting, the extinction of types is not included in this report.
 What will be studied in this report, is the effect of switching, on the given research questions. In other words, how will the results discussed in this report, vary when switching is allowed. 
 \newpage
 
 \subsection{Average number of generations until equilibrium}
-The first graph to be discussed, will be the effect of switching on the average number of generations until equilibrium. From figure \ref{fig:aantgen}, we deduced that on average, a board reaches equilibrium in only a few generations. This however decreases even more drastically when switching goes in effect:
-=======
-This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being quite interesting, the extinction of types is not included in this report. What will be studied in this report, is the effect of switching, on the given research questions. In other words, how will the results discussed in this report, vary when switching is allowed. 
+The first graph to be discussed, will be the effect of switching on the average number of generations until equilibrium. 
+From figure \ref{fig:aantgen}, we deduced that on average, a board reaches equilibrium in only a few generations. This however decreases even more drastically when switching goes in effect:
+
+This is not generally the case for lower bounds on the happiness rule, but if the happiness rule is increased, several types might cease to exist. Despite this being quite interesting, the extinction of types is not included in this report. 
+What will be studied in this report, is the effect of switching, on the given research questions. In other words, how will the results discussed in this report, vary when switching is allowed. 
 \newpage
 
 \subsection{Average number of generations until equilibrium}
->>>>>>> cfc43a4268f45b7d5aabe4844593e62f22b07f4e
+
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.9\textwidth}
@@ -61,19 +62,27 @@ This is not generally the case for lower bounds on the happiness rule, but if th
     \caption{Number of generations until equilibrium on an 8x8 bord with standard setting, with and without type switching}
     \label{fig:AantGenS}
 \end{figure}
-<<<<<<< HEAD
+
 As seen in figure \ref{fig:AantGenS}, the time until a board reaches equilibrium will not increase beyond an average of 2.5 generations. 
 What is notable, is that the average generations until equiibrium is hardly affected by the happiness rule when switching is allowed, whereas it plays a major rule in the basic model. 
 This is due to the construction of switching. The allowing of switching gives every unhappy indivdual an option to switch types prior to moving to a new location. 
 If for example a pair of opposite types lives together, the first will switch type to the second. As a result, the first individual remain in place, moreover, the second individuals happiness will be 1 rather than 0 and will thus remain in place as well. 
 In fact, switch can be interpreted as giving every indivdual an 'additional turn' per generation. Due to these consequences result in the strong decrease in the average number of generations.
-=======
-In figure \ref{fig:AantGenS}, we see a comparison of the average number of generations for with and without type switching. There is a clear difference that when type switching is applied, it takes much less generations to reach the equilibrium. This is expected, since the probability of becoming the same type as the neighbours is more favored in our model, which results in a increase of happiness. Or, in a sociological view, the person is willing to adapt to the enviroment rather than moving on.\\
-\\
-From figure \ref{fig:AantGenS}, we observed that the average generations is nearly the same for HR 0.6 until 1. Just to get an idea whether this statement is justified, we selected only three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(ttest2) in Matlab. This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
+
+In figure \ref{fig:AantGenS}, we see a comparison of the average number of generations for with and without type switching. 
+There is a clear difference that when type switching is applied, it takes much less generations to reach the equilibrium. 
+This is expected, since the probability of becoming the same type as the neighbours is more favored in our model, which results in a increase of happiness. 
+Or, in a sociological view, the person is willing to adapt to the enviroment rather than moving on.\\
+
+From figure \ref{fig:AantGenS}, we observed that the average generations is nearly the same for HR 0.6 until 1. 
+Just to get an idea whether this statement is justified, we selected only three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(ttest2) in Matlab. 
+This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
  \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
-This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. However, according to the central limit theorems, we may make this assumption for large enough sample size. To avoid difficult calculations of how big the sample size is needed, we simply chose a size of 50000. Also, in our case, we made sure $m=n$, and the test can also be adjusted to not assume equal variance.\\
-\\
+This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. 
+However, according to the central limit theorems, we may make this assumption for large enough sample size. 
+To avoid difficult calculations of how big the sample size is needed, we simply chose a size of 50000. 
+Also, in our case, we made sure $m=n$, and the test can also be adjusted to not assume equal variance.\\
+
 After the simulations, we obtained the following sample means:
 \begin{table}[htp]
 \centering
@@ -84,9 +93,11 @@ After the simulations, we obtained the following sample means:
  Sample Mean&2.5213&2.5616&2.5711  \\ \hline 
 \end{tabular}
 \end{table}
-We applied the t-test twice. First time comparing the mean of HR 0.6 and 0.8. Second time for comparing the mean of 0.8 and 1. The first test rejected the null-hypothesis, the second did not. So with 95\% confidence level, we may conclude that the average generations are unequal for HR 0.6 vs 0.8, but equal for HR 0.8 vs 1.
+We applied the t-test twice. 
+First time comparing the mean of HR 0.6 and 0.8. 
+Second time for comparing the mean of 0.8 and 1. 
+The first test rejected the null-hypothesis, the second did not. 
+So with 95\% confidence level, we may conclude that the average generations are unequal for HR 0.6 vs 0.8, but equal for HR 0.8 vs 1.
 
 
 
-
->>>>>>> cfc43a4268f45b7d5aabe4844593e62f22b07f4e
