@@ -8,9 +8,9 @@ hh = str2num(answer{1});
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 volg = randperm(sum(n),sum(n));
 
-Happy=[1/2,1/3];
+Happy=[1/2,1/3,1/4,1];
 
-for j=1:length(Happy)
+for j=1:1%length(Happy)
     clear gen;
     for i = 1:hh
         [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,Happy(j),vk,r,rv,acrim,1,kans,wis);
@@ -48,6 +48,6 @@ end
 % ylabel('Aantal Keer');
 % title('Histogram Aantal Generaties');
 
-figure;
-qqplot(GEN(1,:),GEN(2,:));
-title('QQ-plot aantgen 1/4 vs 1/3');
+%figure;
+%qqplot(GEN(1,:),GEN(2,:));
+%title('QQ-plot aantgen 1/4 vs 1/3');

@@ -83,6 +83,6 @@ function [data,g,totmoves,maxhappy,gemhappy,minhappy,segklaar,segr,telswitch] = 
         end
     end
     segr = sum(floor(A(6,:)))/sum(n);
-    data = teller;
+    data = teller-1;
 end
 
