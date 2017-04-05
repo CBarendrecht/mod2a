@@ -141,23 +141,29 @@ The results are shown below.
 
 \subsubsection{Question 4}
 
-We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. The plots are shown below.
+We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. To approximate these distributions, we ran 5000 simulations each and plotted them below.
 \begin{figure}[H]
 \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_segregation.pdf}
-    \caption{On the standard board and for $HR=1$, }
+    \caption{On the standard board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen60}
 \end{subfigure}
 ~
 \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/80_segregation.pdf}
-    \caption{On the standard board and for $HR=1$, }
+    \caption{On the standard board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
+    \label{fig:segaantgen80}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_80_QQ_plot.pdf}
+    \caption{A QQ plot for the above two datas.}
     \label{fig:segaantgen80}
 \end{subfigure}
 \end{figure}
-To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%. We performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in tabel 2.
+To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%, we performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and the alternative hypothesis is $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in table 2.
 \begin{table}[htp]
 \centering
 \caption{Sample means of number of generations until 60\% and 80\% homogenous group is reached with HR 1.}
