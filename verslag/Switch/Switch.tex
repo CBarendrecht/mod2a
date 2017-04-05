@@ -116,9 +116,16 @@ Just like in section 4, in order to get an idea about the distribution of the ra
     For each HR ($1/4$, $1/3$, $1/2$ and $1$), $5000$ simulations were ran.}
     \label{fig:histogramSw}
 \end{figure}
-Again, all $Y_{s,j}$'s appears to be following the same distribution just as without switch(section 4). The histograms suggest that the $Y_{j,s}$'s might follow a geometrical distribution, which is a Negative Binomial with $r=1$. But we could not perform the same statistical analysis as in section 4, because the maximum likelihood estimators for the Negative Binomial could not be calculated through the fitdist or other functions. This is due to the fact that the sample means exceeded the sample variance. So from this we could conclude that $Y_{j,s}$'s cannot be geometrically(or NB) distributed.\\
-\\
-It is much more interesting to compare the distribution of $Y_{j,s}$ with $Y_{j}$. A remarkable observation is that the histograms of $Y_{j,s}$ completely lost it's symmetry compared to the histograms of $Y_j$. Apparently, type switching stimulates segregation so well that it only takes 1 generation to reach equilibrium(remark: we always start with 1 generation, so the fastest segregation is reached at the 2nd generation). To further examine how type swithcing affects generations until equilirbium, we chose to compare $Y_{1,s}$ with $Y_1$ in a QQ-plot:
+
+Again, all $Y_{s,j}$'s appears to be following the same distribution just as without switch (section 4). 
+The histograms suggest that the $Y_{j,s}$'s might follow a geometrical distribution, which is a Negative Binomial with $r=1$. 
+But we could not perform the same statistical analysis as in section 4, because the maximum likelihood estimators for the Negative Binomial could not be calculated through the fitdist or other functions. 
+This is due to the fact that the sample means exceeded the sample variance. So from this we could conclude that $Y_{j,s}$'s cannot be geometrically (or NB) distributed.\\
+
+It is much more interesting to compare the distribution of $Y_{j,s}$ with $Y_{j}$. A remarkable observation is that the histograms of $Y_{j,s}$ completely lost it's symmetry compared to the histograms of $Y_j$. 
+Apparently, type switching stimulates segregation so well that it only takes 1 generation to reach equilibrium(remark: we always start with 1 generation, so the fastest segregation is reached at the 2nd generation). 
+To further examine how type swithcing affects generations until equilirbium, we chose to compare $Y_{1,s}$ with $Y_1$ in a QQ-plot:
+
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.8\textwidth}
@@ -127,7 +134,36 @@ It is much more interesting to compare the distribution of $Y_{j,s}$ with $Y_{j}
     \caption{QQ-plot of $Y_{1,s}$ vs $Y_1$}
     \label{fig:QQplotSw}
 \end{figure}  
+
 We see from figure \ref{fig:QQplotSw} that starting from quantile 3 of $Y_1$, the line is flat. This is expected because the most quantile of $Y_{1,s}$ is concentrated on 2. After the flat line we see a linear pattern, which suggests that the 'tail' part of $Y_{1,s}$ and $Y_1$ are not too differently distributed. This can be also observed in the histograms.
+
+\subsection{Happiness at equilibrium}
+
+Secondly, we investigate the effect of the ability to switch type on the mean happiness after the equilibrium is reached.
+We research this effect for different values of the Happiness Rule like we did in section \ref{sec:meanhappy}.
+In this section, we found that the mean happiness at equilibrium increases as the Happiness Rule gets higher.
+Intuitively, we expect a higher happiness when individuals can switch type, because the chance to become happier by switching is really big.
+This follows directly from the probability distribution we defined earlier in this section.\\
+
+Now, we will make the same graph for the same settings except for switch; we turn it on. 
+Then, we can compare these results.
+We make this comparisation in figure \ref{fig:meanhappyswitch}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{happinessrule-meanhappiness-switch.pdf}
+    \caption{The effect of the ability to switch and the Happiness Rule on the mean happiness at equilibrium}
+    \label{fig:meanhappyswitch}
+\end{figure}
+
+This is a really nice result.
+It seems that switch causes a much higher average happiness in equilibrium, as expected.
+However, for Happiness Rules higher than $0.8$, we see that the mean happiness on the board is a little bit lower, if the individuals can change type.
+This can maybe be explained by the number of generations.
+We already saw that mean number of generations is less if switch is included.
+That implies less chances for each individual to get a happiness as high as possible.
+Thus, the mean happiness will be lower.
+For the lower Happiness Rules, the switch has a much higher influence, because the chance to get a high happiness is significantly higher than keeping a lower happiness.
 
 \subsection{Average segregation time}
 The final topic to be discussed in this report, will be the effect of conformation on the (average) segregation time. 
@@ -141,7 +177,12 @@ For any \(n\in [0,100]\). We will consider the time until which \(n\%\) of the p
     \caption{The average segregation as a function of the segregation fraction with switch (pink) and without switch (blue)}
     \label{fig:avesegsw}
 \end{figure}
+
 From figure \ref{fig:avesegsw}, the hypothesis that the average segregation time is lower for every fraction, if switching is allowed. 
 A less trivial result of conformity, is that the average segregation time is nearly constant between the fractions \(0.5\) and \(0.8\). 
 To test whether it is justified to make this claim, we will conduct the \(t\)-test as described in section \ref{subsec:avegensw}. We will test if the segregation time at \(60\%\) and \(80\%\) have the same mean value if 5000 simulations are ran each. 
-The \(t\)-test, rejected the null-hypothesis that \(60\%\) segregation and \(80\%\) segregation share the same mean value. Here the respective values were.
+The \(t\)-test, rejected the null-hypothesis that \(60\%\) segregation and \(80\%\) segregation share the same mean value. When the respective means were 2 and 2.0136. As mentioned in the introduction, a mean of 2 generations implies here, that the board has reached \(60\%\), in at most 1 generation (Every individual has moved or switched type only once at most.)
+We conclude that on the standard board with HR 1, segregation at \(n\%\) takes place in less than one generation, for any \(n\leq 0.7\). 
+It is interesting to note that both graphs appear constant for any \(q\leq \frac{1}{3}\). 
+This can be explained as follows. In both scenarios, the segregated fraction has been reached, by the boards default setup and thus no person will move before segregation has been reached.
+Another remarkable similarity between both graphs, is that they tend to grow with the same order between a fraction of 0.3 and 0.5.
