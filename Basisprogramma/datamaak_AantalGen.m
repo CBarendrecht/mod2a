@@ -10,7 +10,7 @@ volg = randperm(sum(n),sum(n));
 
 Happy=[1/2,1/3,1/4,1];
 
-for j=1:length(Happy)
+for j=1:1%length(Happy)
     clear gen;
     for i = 1:hh
         [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,Happy(j),vk,r,rv,acrim,1,kans,wis);
