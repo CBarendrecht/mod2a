@@ -160,9 +160,11 @@ We will now focus on a more relevant question, namely the distribution of the $6
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_80_QQ_plot.pdf}
     \caption{A QQ plot for the above two data sets.}
-    \label{fig:segaantgen80}
+    \label{fig:qqplotsegaantgen}
 \end{subfigure}
 \end{figure}
+In both figures we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples really are statistically different.\\
+
 To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%, we performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and the alternative hypothesis is $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in table 2.
 \begin{table}[htp]
 \centering
@@ -170,7 +172,8 @@ To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homo
 \begin{tabular}{|l|l|l|}
 \hline
  Fraction homogenous group(\%)&60&80 \\ \hline
- Sample Mean&2.0892&2.8322  \\ \hline 
+ Sample Mean&2.0892&2.8322  \\
+ Sample Variance & 0.1349 & 0.3013\\ \hline 
 \end{tabular}
 \end{table}
 The test has rejected the null-hypothesis, which is expected because the difference of the sample means are around 0.8, which should exceeds the critical value of the test.
