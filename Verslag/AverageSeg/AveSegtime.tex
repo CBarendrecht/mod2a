@@ -143,10 +143,19 @@ The results are shown below.
 
 We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. The plots are shown below.
 \begin{figure}[H]
+\begin{subfigure}{0.45\textwidth}
     \centering
-    \includegraphics[width=280px]{./60_80_segregation_aantgen/60_segregation.pdf}
+    \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_segregation.pdf}
     \caption{On the standard board and for $HR=1$, }
-    \label{fig:happyseg4b}
+    \label{fig:segaantgen60}
+\end{subfigure}
+~
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/80_segregation.pdf}
+    \caption{On the standard board and for $HR=1$, }
+    \label{fig:segaantgen80}
+\end{subfigure}
 \end{figure}
 To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%. We performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in tabel 2.
 \begin{table}[htp]
