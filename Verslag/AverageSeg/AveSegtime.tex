@@ -135,14 +135,41 @@ The results are shown below.
 \begin{figure}[H]
     \centering
     \includegraphics[width=280px]{happy_segr_60_80_100.pdf}
+<<<<<<< HEAD
+    \caption{For each $HR = 0,0.025,...,1$ on the standard board, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
+    \label{fig:happysegfrac}
+=======
     \caption{For each $HR = 0,0.025,...,1$, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
     \label{fig:happyseg4c}
+>>>>>>> 677c7e0fc9c456bf3fa8da61d4b6e9b7f60f04a8
 \end{figure}
 
 \subsubsection{Question 4}
+<<<<<<< HEAD
+We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. The plots are shown below.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}
+    \includegraphics[width=280px]{./60_80_segregation_aantgen/60_segregation.pdf}
+    \caption{On the standard board and for $HR=1$, }
+    \label{fig:happyseg4b}
+    \end{subfigure}
+\end{figure}
+=======
 We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. 
-The plots are shown below.
+The plots are shown below.\\
+To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%. We performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in tabel 2.
+\begin{table}[htp]
+\centering
+\caption{Sample means of number of generations until 60\% and 80\% homogenous group is reached with HR 1.}
+\begin{tabular}{|l|l|l|}
+\hline
+ Fraction homogenous group(\%)&60&80 \\ \hline
+ Sample Mean&2.0892&2.8322  \\ \hline 
+\end{tabular}
+\end{table}
+The test has rejected the null-hypothesis, which is expected because the difference of the sample means are around 0.8, which should exceeds the critical value of the test.
 
 
 
-
+>>>>>>> 677c7e0fc9c456bf3fa8da61d4b6e9b7f60f04a8
