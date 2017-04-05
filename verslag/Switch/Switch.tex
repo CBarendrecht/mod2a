@@ -4,11 +4,9 @@ Segregation is a phenomenon taking many different forms. Rather than  limiting t
 For example, one might delve into the segregation in studies with respect to friendship. 
 In this case, for any person \(k\). The neighbours of \(k\) represent the \(k\)'s friends or the persons with whom \(k\) spends most of his time.
 In this case, \(k\)'s type, can represent either the classes he is currently taking, or the kind of sports person \(k\) is doing, or more likely, \(k\)'s political beliefs.
-In any of these cases, the type of \(k\) is not necessarily set indefinitely.
-
+In any of these cases, the type of \(k\) is not necessarily set indefinitely.\\
 In these cases, the type of \(k\) might switch, depending on the types of his friends. This is a sociological process known as conformation and plays a major role in the everyday behaviour of people.\\
 
-In these cases, the type of \(k\) might switch, depending on the types of his friends. This is a sociological process known as conformation and plays a major role in the daily behaviour of people.\\
 
 This gives rise to a new modification of the model.
 For any person \(k\), before moving to a new location, \(k\) has a catagorical probability with to switch to a different type, where 
@@ -16,7 +14,7 @@ For any person \(k\), before moving to a new location, \(k\) has a catagorical p
  \frac{\#\text{Neighbours of type }t}{\text{Total number of neighbours}}	&\mbox{if } \text{total number of neighbours}>0 \\ 
 \mathbbm{1}_{\{t=\text{Type}(k)\}}   &\mbox{if } \text{total number of neighbours}=0
 \end{cases}\]
-Note that this is well defined, since for total number of neighbours \(> 0\), we have \( \mathbb{P}(\text{NewType}(k)=t) \geq 0\) and \(\sum_{i=0}^{\text{types}}\mathbb{P}(\text{NewType}(k)=t)=1\). An example of how this may effect the equilibrium, is illustrated below:
+Note that this is well defined, since if total number of neighbours \(> 0\), we have \( \mathbb{P}(\text{NewType}(k)=t) \geq 0\) and \(\sum_{i=0}^{\text{types}}\mathbb{P}(\text{NewType}(k)=t)=1\). An example of how this may effect the equilibrium, is illustrated below:
 
 \begin{figure}[H]
 	\centering
@@ -131,3 +129,15 @@ It is much more interesting to compare the distribution of $Y_{j,s}$ with $Y_{j}
 \end{figure}  
 We see from figure \ref{fig:QQplotSw} that starting from quantile 3 of $Y_1$, the line is flat. This is expected because the most quantile of $Y_{1,s}$ is concentrated on 2. After the flat line we see a linear pattern, which suggests that the 'tail' part of $Y_{1,s}$ and $Y_1$ are not too differently distributed. This can be also observed in the histograms.
 
+\subsection{Average segregation time}
+The final topic to be discussed in this report, will be the effect of conformation on the (average) segregation time. 
+For this purpose, we will compare the results obtained in section \ref{sec:aveseg} with the results if switching were allowed. 
+We will only consider the results for the standard board.\\
+For any \(n\in [0,100]\). We will consider the time until which \(n\%\) of the population lives in homogenous groups. With a chosen HR of 1, we obtain:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Avesegsw2}
+    \caption{Average (blue) segregated fraction as a result of happiness on the 4-Type board. Also included max (green) and min (red).}
+    \label{fig:avesegsw}
+\end{figure}
