@@ -23,7 +23,7 @@ for j=1:2
     end
 end
 
-y=ttest2(mean(gen(1,:)),mean(gen(2,:)),'Vartype','unequal');
+y=ttest2(gen(1,:),gen(2,:),'Vartype','unequal');
 
 if y
     disp('Hypothese verworpen');
