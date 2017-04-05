@@ -61,14 +61,8 @@ This is expected, since the probability of becoming the same type as the neighbo
 Or, in a sociological view, the person is willing to adapt to the enviroment rather than moving on.\\
 
 From figure \ref{fig:AantGenS}, we observed that the average generations is nearly constant for any HR in the interval \((0.6,1)\). 
-Just to get an idea whether this statement is justified, we selected only three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(ttest2) in Matlab. 
-This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
- \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
-This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. 
-However, according to the central limit theorems, we may make this assumption for large enough sample size. 
-To avoid difficult calculations of how big the sample size is needed, we simply chose a size of 50000. 
-Also, in our case, we made sure $m=n$, and the test can also be adjusted to not assume equal variance.\\
-
+Just to get an idea whether this statement is justified, we selected only three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(for more description about this test, see section Model and Statistical Methods) in Matlab. Because the histograms shows that the data might follow a asymmetric distribution and this t-test requires the difference of the means to be normally distributed, we chose a sample size of 50000 to ensure normality through the CLT.\\
+\\
 After the simulations, we obtained the following sample means:
 \begin{table}[htp]
 \centering

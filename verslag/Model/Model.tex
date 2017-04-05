@@ -1,4 +1,5 @@
-\section{Our Model}
+\section{Model and statistical methods}
+\subsection{Our Model}
 As mentioned in the introduction, we will mostly be investigating the basic model: segregation of $20$ individuals of type $1$ and $20$ individuals of type $2$ on an $8 \times 8$ board.
 In this model an individual is considered unhappy if less than \(\frac{1}{3}\) of his/her neighbours shares his/her type. If an individual is unhappy, this individual will move to the nearest place where he/she would be happier.
 Any person without neighbours is by definition considered unhappy (so his/her happiness is $0$), since people prefer living with others over living alone.
@@ -133,5 +134,17 @@ This means that the chance to become of type $t$ is the fraction of neighbours o
 This is a correct probability distribution, because this sums up to $1$.
 Individuals without neighbours will not switch type, because they have no neighbours who influence them.
 We will investigate the influence of the second type of switching further in section \ref{section:switch}.
+\subsection{The applied statistical test}
+\textbf{The two sample t-test}:\\
+For the following sections, we 've often used the two sample t-test (ttest2) from Matlab for comparing the means of two distribution. We define that two means are comparable when they are equal. Otherwise, they are not comparable.\\
+\\
+This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
+ \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
+This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. 
+However, according to the central limit theorems, we may make this assumption for large enough sample size. 
+To avoid difficult calculations of how big the sample size is needed, we simply chose a size of 5000. In section 7.1, we even chose a sample size of 50000, due to the asymmetric distribution of our data. Also, for simplicity, we usually took $m=n$. Furthermore, we adjusted test to not assume equal variance for the data distribution(this is achieved by setting 'Vartype' as unequal in Matlab).\\
+\\
+\textbf{Other tests}:\\
+For testing the goodness of fit for our hypothesized distribution in section 4 and 7, we've used the two-sample kolomogorov-smirnov test and the chi-sqaured test in Matlab. More information about these tests can be found on Mathworks.  
 
 
