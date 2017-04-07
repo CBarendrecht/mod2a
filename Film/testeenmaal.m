@@ -28,7 +28,7 @@ num_lines = 1;
 defaultans = {'Voorbeeld.avi'};
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 Filenaam=answer{1};
- 
+maxframe=5;
 
 [n,types,lengte,breedte,happy,vk,r,randvp,acrim, kans, wisselen] = Menu();
 A = info(n,lengte,breedte,types,acrim);
@@ -51,7 +51,7 @@ hold on
 image(B+ones(lengte,breedte));
 colormap(map);
 pause(0.1);
-for frame=1:9
+for frame=1:maxframe
     mymovie(vert)=getframe;
     vert=vert+1;
 end
@@ -83,7 +83,7 @@ while klaar == false
                 image(B + ones(lengte,breedte));
                 colormap(map);
                 pause(0.1);
-                for frame=1:9
+                for frame=1:maxframe
                     mymovie(vert)=getframe;
                     vert=vert+1;
                 end
@@ -101,7 +101,7 @@ while klaar == false
             image(B + ones(lengte,breedte));
             colormap(map);
             pause(0.1);
-            for frame=1:9
+            for frame=1:maxframe
                 mymovie(vert)=getframe;
                 vert=vert+1;
             end
