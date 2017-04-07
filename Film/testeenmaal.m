@@ -25,7 +25,7 @@ map = [1, 1, 1
 prompt ={'filenaam.avi'};
 dlg_title = 'Input';
 num_lines = 1;
-defaultans = {'Voorbeeld.avi'};
+defaultans = {'ditwordtdenaamvanhetfilmpjedatjemaakt.avi'};
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 Filenaam=answer{1};
  
@@ -80,7 +80,7 @@ while klaar == false
                 end
                 A(1,i) = Y;
                 B(A(2,i),A(3,i))=A(1,i);
-                image(B + ones(lengte,breedte));
+                image(B +10*K+ ones(lengte,breedte));
                 colormap(map);
                 pause(0.1);
                 for frame=1:9
@@ -98,7 +98,7 @@ while klaar == false
             else %randomverplaatsen
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
             end
-            image(B + ones(lengte,breedte));
+            image(B+10*K + ones(lengte,breedte));
             colormap(map);
             pause(0.1);
             for frame=1:9
@@ -149,3 +149,4 @@ Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
 Film=VideoWriter(Filenaam);
 open(Film);
 writeVideo(Film,mymovie);
+close(Film);
