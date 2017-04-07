@@ -22,7 +22,13 @@ map = [1, 1, 1
        0, 0.8, 0.3
        0.2, 0.2, 0.2
        ];
-
+prompt ={'filenaam.avi'};
+dlg_title = 'Input';
+num_lines = 1;
+defaultans = {'Voorbeeld.avi'};
+answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
+Filenaam=answer{1};
+ 
 
 [n,types,lengte,breedte,happy,vk,r,randvp,acrim, kans, wisselen] = Menu();
 A = info(n,lengte,breedte,types,acrim);
@@ -34,26 +40,28 @@ totmoves = 0;
 nonmoves = 0;
 telswitch = 0;
 telnosw = 0;
+
+
 volg = randperm(sum(n),sum(n));
+
+vert=1;
 
 figure
 hold on
+image(B+ones(lengte,breedte));
+colormap(map);
+pause(0.1);
+for frame=1:9
+    mymovie(vert)=getframe;
+    vert=vert+1;
+end
+
 while klaar == false 
     klaar = true;
     
     for j = 1:sum(n)
         i = volg(j); % de j-de persoon van de volgorde wordt nu nagegaan
         
-        %Wisselkans bij twee types
-        if kans > 0
-            Y = binornd(1,kans);
-            if Y == 1
-                A(1,i) = 3 - A(1,i); % Alleen voor twee types
-                telswitch = telswitch + 1;
-            else
-                telnosw = telnosw + 1;
-            end
-        end
         %wisselkans bij meerdere types afhankelijk van happiness
         if wisselen == true && happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             for k = 1:types
@@ -75,6 +83,10 @@ while klaar == false
                 image(B + ones(lengte,breedte));
                 colormap(map);
                 pause(0.1);
+                for frame=1:9
+                    mymovie(vert)=getframe;
+                    vert=vert+1;
+                end
             end
         end
         %verplaatsen aan de hand van de blijheidseis
@@ -89,6 +101,10 @@ while klaar == false
             image(B + ones(lengte,breedte));
             colormap(map);
             pause(0.1);
+            for frame=1:9
+                mymovie(vert)=getframe;
+                vert=vert+1;
+            end
         else %kijken of er verplaatst is
             v = false;
         end
@@ -130,4 +146,6 @@ end
 display('klaar');
 
 Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
-
+Film=VideoWriter(Filenaam);
+open(Film);
+writeVideo(Film,mymovie);
