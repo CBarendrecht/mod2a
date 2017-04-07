@@ -1,15 +1,15 @@
 
 \section{Average segregation time}\label{sec:aveseg}
-As mentioned in the introduction, the segregation time at \(n\%\) is defined as the number of generations until at least \(n\%\) of the population on a board lives in homogenous groups. 
+As mentioned in the introduction, the segregation time at \(p\%\) is defined as the number of generations until at least \(p\%\) of the population on a board lives in homogenous groups. 
 Where person \(i\) is said to live homogenous if for any neighbour \(j\) of \(i\), we have \(\text{Type}(j)=\text{Type}(i)\).
-This gives immediate rise to questions concerning the relation between the choice of \(n\) and the average segregation time at \(n\%\). 
-Furthermore, it is unclear if segregation at \(n\%\) is guaranteed before a board reaches an equilibrium and what the effect is of the happiness boundary on the existence of a segregation time.\\
+This gives immediate rise to questions concerning the relation between the choice of \(n\) and the average segregation time at \(p\%\). 
+Furthermore, it is unclear if segregation at \(p\%\) is guaranteed before a board reaches an equilibrium and what the effect is of the happiness boundary on the existence of a segregation time.\\
 
 To research any of the given questions, we will first have to formalise our choices of board as well as the questions proposed.\\
 
 
 \subsection{Formalisations}
-Prior to starting any test or properly formalising our research questions however, we note that segratation at \(n\%\) does not necessarily have to happen: 
+Prior to starting any test or properly formalising our research questions however, we note that segratation at \(p\%\) does not necessarily have to happen: 
 If we consider \(n=100\) on the standard board with happiness \(1/3\). We will nearly never have total segregation before the board reaches an equilibrium.
 Therefore one might instead consider the average fraction of segregation at equilibrium,for any given happiness fraction. \\
 
@@ -45,9 +45,9 @@ Population per type: & 20 & 16
 \end{table}
 \\
 The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots as the standard board. The choice of happiness on these boards is 1 unlike the usual \(\frac{1}{3}\). 
-This guarantees that for any \(n\leq 100\), segregation at \(n\%\) takes place prior to the board reaching an equilibrium. 
-To observe the average segregation time \(n\%\) for any \(n\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(n\%\).
-Likewise the average segregated fraction will be estimate by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
+This guarantees that for any \(n\leq 100\), segregation at \(p\%\) takes place prior to the board reaching an equilibrium. 
+To observe the average segregation time \(p\%\) for any \(n\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(p\%\).
+Likewise the average segregated fraction will be estimated by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
 \subsection{Results}
 \subsubsection{Question 1}
 The results regarding the first question are shown below:\\

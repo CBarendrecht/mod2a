@@ -43,7 +43,7 @@ What will be studied in this report, is the effect of switching, on the given re
 \newpage
 
 \subsection{Average number of generations until equilibrium}\label{subsec:avegensw}
-The first graph to be discussed, will be the effect of switching on the average number of generations until equilibrium. 
+First, the effect of switching on the average number of generations until equilibrium will be discussed. 
 From figure \ref{fig:avegen}, we deduced that on average, a board reaches equilibrium in only a few generations. This however decreases even more drastically when switching goes in effect:
 
 \begin{figure}[H]
@@ -51,22 +51,22 @@ From figure \ref{fig:avegen}, we deduced that on average, a board reaches equili
     \begin{subfigure}{0.9\textwidth}
         \includegraphics[width=\textwidth]{happinessrule-totaantgenwithswitchorwithoutswitch}
     \end{subfigure}
-    \caption{Number of generations until equilibrium on an 8x8 bord with standard setting, with and without type switching}
+    \caption{Number of generations until equilibrium on an 8x8 board with standard setting, with and without type switching}
     \label{fig:AantGenS}
 \end{figure}
 
 In figure \ref{fig:AantGenS}, we see a comparison of the average number of generations for with and without type switching. 
-There is a clear difference that when type switching is applied, it takes much less generations to reach the equilibrium. 
-This is expected, since the probability of becoming the same type as the neighbours is more favored in our model, which results in a increase of happiness. 
+Clearly, when type switching is applied, it takes much less generations to reach the equilibrium. 
+This is expected, since the probability of becoming the same type as the neighbours is more favored in this model, which results in an increase of happiness. 
 Or, in a sociological view, the person is willing to adapt to the enviroment rather than moving on.\\
 
-From figure \ref{fig:AantGenS}, we observed that the average generations is nearly constant for any HR in the interval \((0.6,1)\). 
-Just to get an idea whether this statement is justified, we selected only three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(for more description about this test, see section Model and Statistical Methods) in Matlab. Because the histograms shows that the data might follow a asymmetric distribution and this t-test requires the difference of the means to be normally distributed, we chose a sample size of 50000 to ensure normality through the CLT.\\
+From figure \ref{fig:AantGenS}, we observed that the average number of generations to reach equilibrium is nearly constant for any HR in the interval \((0.6,1)\). 
+Just to get an idea whether this statement is justified, we selected three HR's, namely 0.6, 0.8 and 1 and performed the two sample t-test(for more description about this test, see section Model and Statistical Methods) in Matlab. Because the histograms show that the data might follow an asymmetric distribution and this t-test requires the difference of the means to be normally distributed, we chose a sample size of 50000 to ensure normality through the Central Limit Theorem.\\
 \\
-After the simulations, we obtained the following sample means:
+The sample means are shown in Table 3:
 \begin{table}[htp]
 \centering
-\caption{Sample means of number of generations simulated with HR 0.6, 0.8 and 1, with 50000 sample size for each HR.}
+\caption{Sample means of number of generations to reach equilibrium simulated with HR 0.6, 0.8 and 1, with 50000 sample size for each HR.}
 \begin{tabular}{|l|l|l|l|}
 \hline
  HR&0.6&0.8&1 \\ \hline
@@ -76,25 +76,25 @@ After the simulations, we obtained the following sample means:
 \\
 We applied the t-test twice. First time comparing the mean of HR 0.6 and 0.8. Second time for comparing the mean of 0.8 and 1. The first test rejected the null-hypothesis, the second did not. So with 95\% confidence level, we may conclude that the average generations are unequal for HR 0.6 vs 0.8, but equal for HR 0.8 vs 1.\\
 \newpage
-Just like in section 4, in order to get an idea about the distribution of the random variable of $Y_{j,s}$(referring to the notation in section 4, with s meaning type switching), we plotted again histograms for HR 1/4, 1/3, 1/2 and 1. This is shown in figure \ref{fig:histogramSw}.
+Similar to section 4, in order to get an idea about the distribution of the random variable of $Y_{j,s}$(referring to the notation in section 4, with s meaning type switching), we plotted again histograms for HR $\frac{1}{4}$, $\frac{1}{3}$, $\frac{1}{2}$ and $1$ in figure \ref{fig:histogramSw}.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{AantGen1.pdf}
-        \caption{5000 simulations of number of generations until equilibrium with HR 1/4 with switch}
+        \caption{5000 simulations of number of generations until equilibrium with HR $\frac{1}{4}$ with switch}
         \label{hists hap 1/4}
     \end{subfigure}
 	~
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{AantGen2.pdf}
-        \caption{5000 simulations of number of generations until equilibrium with HR 1/3 with switch}
+        \caption{5000 simulations of number of generations until equilibrium with HR $\frac{1}{3}$ with switch}
         \label{hists hap 1/3}
     \end{subfigure}
 	~
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{AantGen3.pdf}
-        \caption{5000 simulations of number of generations until equilibrium with HR 1/2 with switch}
+        \caption{5000 simulations of number of generations until equilibrium with HR $\frac{1}{2}$ with switch}
         \label{hists hap 1/2}
     \end{subfigure}
     ~
@@ -104,17 +104,18 @@ Just like in section 4, in order to get an idea about the distribution of the ra
         \label{hists hap 1}
     \end{subfigure}
     \caption{The probability distribution of $Y$ (the number of generations until reaching the equilibrium) is approximated with a histogram of bin size 1. 
-    For each HR ($1/4$, $1/3$, $1/2$ and $1$), $5000$ simulations were ran.}
+    For each HR ($\frac{1}{4}$, $\frac{1}{3}$, $\frac{1}{2}$ and $1$), $5000$ simulations were ran.}
     \label{fig:histogramSw}
 \end{figure}
 
-Again, all $Y_{s,j}$'s appears to be following the same distribution just as without switch (section 4). 
+Again, all $Y_{s,j}$'s appear to be following the same distribution just as without switch (section 4). 
 The histograms suggest that the $Y_{j,s}$'s might follow a geometrical distribution, which is a Negative Binomial with $r=1$. 
 But we could not perform the same statistical analysis as in section 4, because the maximum likelihood estimators for the Negative Binomial could not be calculated through the fitdist or other functions. 
 This is due to the fact that the sample means exceeded the sample variance. So from this we could conclude that $Y_{j,s}$'s cannot be geometrically (or NB) distributed.\\
 
 It is much more interesting to compare the distribution of $Y_{j,s}$ with $Y_{j}$. A remarkable observation is that the histograms of $Y_{j,s}$ completely lost it's symmetry compared to the histograms of $Y_j$. 
-Apparently, type switching stimulates segregation so well that it only takes 1 generation to reach equilibrium(remark: we always start with 1 generation, so the fastest segregation is reached at the 2nd generation). 
+Apparently, type switching stimulates segregation so well that it only takes 1 generation to reach equilibrium (remark: we always start with 1 generation, so the fastest segregation is reached at the 2nd generation).\\
+\\ 
 To further examine how type swithcing affects generations until equilirbium, we chose to compare $Y_{1,s}$ with $Y_1$ in a QQ-plot:
 
 \begin{figure}[H]
@@ -126,7 +127,7 @@ To further examine how type swithcing affects generations until equilirbium, we 
     \label{fig:QQplotSw}
 \end{figure}  
 
-We see from figure \ref{fig:QQplotSw} that starting from quantile 3 of $Y_1$, the line is flat. This is expected because the most quantile of $Y_{1,s}$ is concentrated on 2. After the flat line we see a linear pattern, which suggests that the 'tail' part of $Y_{1,s}$ and $Y_1$ are not too differently distributed. This can be also observed in the histograms.
+Starting from quantile 3 of $Y_1$, the line is flat, which is expected because the most quantile of $Y_{1,s}$ is concentrated on 2. After the flat line we see a linear pattern, which suggests that the 'tail' part of $Y_{1,s}$ and $Y_1$ are not too differently distributed. This is also seen by comparing the figure \ref{fig:histogramSw} with figure 9.
 
 \subsection{Happiness at equilibrium}
 
@@ -160,7 +161,7 @@ For the lower Happiness Rules, the switch has a much higher influence, because t
 The final topic to be discussed in this report, will be the effect of conformation on the (average) segregation time. 
 For this purpose, we will compare the results obtained in section \ref{sec:aveseg} with the results if switching were allowed. 
 We will only consider the results for the standard board.\\
-For any \(n\in [0,100]\). We will consider the time until which \(n\%\) of the population lives in homogenous groups. With a chosen HR of 1, we obtain:
+For any \(n\in [0,100]\). We will consider the time until which \(p\%\) of the population lives in homogenous groups. With a chosen HR of 1, we obtain:
 
 \begin{figure}[H]
     \centering
@@ -173,7 +174,7 @@ From figure \ref{fig:avesegsw}, the hypothesis that the average segregation time
 A less trivial result of conformity, is that the average segregation time is nearly constant between the fractions \(0.5\) and \(0.8\). 
 To test whether it is justified to make this claim, we will conduct the \(t\)-test as described in section \ref{subsec:avegensw}. We will test if the segregation time at \(60\%\) and \(80\%\) have the same mean value if 5000 simulations are ran each. 
 The \(t\)-test, rejected the null-hypothesis that \(60\%\) segregation and \(80\%\) segregation share the same mean value. When the respective means were 2 and 2.0136. As mentioned in the introduction, a mean of 2 generations implies here, that the board has reached \(60\%\), in at most 1 generation (Every individual has moved or switched type only once at most.)
-We conclude that on the standard board with HR 1, segregation at \(n\%\) takes place in less than one generation, for any \(n\leq 0.7\). 
+We conclude that on the standard board with HR 1, segregation at \(p\%\) takes place in less than one generation, for any \(n\leq 0.7\). 
 It is interesting to note that both graphs appear constant for any \(q\leq \frac{1}{3}\). 
 This can be explained as follows. In both scenarios, the segregated fraction has been reached, by the boards default setup and thus no person will move before segregation has been reached.
 Another remarkable similarity between both graphs, is that they tend to grow with the same order between a fraction of 0.3 and 0.5.
