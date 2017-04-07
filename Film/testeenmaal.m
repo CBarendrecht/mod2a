@@ -83,15 +83,12 @@ while klaar == false
         if happiness(B,K,A(2,i),A(3,i),A(1,i),vk,r,A(5,i)) < happy
             if (~randvp) 
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
-                image(B + ones(lengte,breedte));
-                colormap(map);
-                pause(0.01);
             else %randomverplaatsen
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
-                image(B + ones(lengte,breedte));
-                colormap(map);
-                pause(0.01);
             end
+            image(B + ones(lengte,breedte));
+            colormap(map);
+            pause(0.1);
         else %kijken of er verplaatst is
             v = false;
         end
