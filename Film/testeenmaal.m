@@ -85,9 +85,12 @@ while klaar == false
                 [A,B,K,v] = verplaats(A,B,K,i,lengte,breedte,vk,r);
                 image(B + ones(lengte,breedte));
                 colormap(map);
-                pause(0.1);
+                pause(0.01);
             else %randomverplaatsen
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
+                image(B + ones(lengte,breedte));
+                colormap(map);
+                pause(0.01);
             end
         else %kijken of er verplaatst is
             v = false;
