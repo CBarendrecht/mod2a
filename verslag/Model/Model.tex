@@ -10,7 +10,7 @@ The model however can be changed by preference in several ways.\\
 First of all, the board size can be varied.
 If no other parameters are altered, this will only imply that the board becomes fuller or emptier.
 Secondly, we can change the number of types on the board.
-For instance, one can consider a $12\times 12$ board with $10$ types of individuals and $10$ individuals per type: see figure \ref{fig:example big board}.
+For instance, one can consider a $12\times 12$ board with $10$ types of individuals and $10$ individuals per type: see Figure \ref{fig:example big board}.
 As one can see, far more individuals have been moved to another place on the board and segregation takes place.
 
 \vspace{-10pt}
@@ -38,7 +38,7 @@ Subsesquently, we can vary our 'Happiness Rule': the minimal fraction of neighbo
 The expectation is that the time to reach equilibrium increases as the Happiness Rule is strengthened.
 This makes sense as every individual needs to be surrounded by relatively more neighbours of his/her own type.
 In consequence, larger homogenous groups will be formed after segregation with a higher Happiness Rule.
-In figure \ref{fig:examplehap2/3} and \ref{fig:examplehap1} the effect of a Happiness Rule of respectively $\frac{2}{3}$ and $1$ on the board after segregation is illustrated.
+In Figures \ref{fig:examplehap2/3} and \ref{fig:examplehap1} the effect of a Happiness Rule of respectively $\frac{2}{3}$ and $1$ on the board after segregation is illustrated.
 \vspace{-10pt}
 \begin{figure}[H]
 	\centering
@@ -78,8 +78,8 @@ In figure \ref{fig:examplehap2/3} and \ref{fig:examplehap1} the effect of a Happ
     \label{fig:examplehap1}
 \end{figure}
 
-We can see that in figure \ref{fig:example hap 1 end} every individual has only neighbours of their own type due to the happinessrule of $1$.
-We will elaborate on the influence of the happinessrule on the model in section $4$ and $5$.\\
+In Figure \ref{fig:example hap 1 end} it is illustrated that every individual lives homogenous if a Happiness Rule of $1$ is applied.
+We will elaborate on the effect of the Happiness Rule on the model in sections \ref{sec:aantgen} and \ref{sec:meanhappy}.\\
 
 \begin{wrapfigure}{r}{0.3\textwidth}
 \vspace{-20pt}
@@ -100,7 +100,7 @@ We will not examine the effect of the type of neighbourhood on the segregation i
 However, some interesting graphs are included in the appendix.\\
 
 Moreover, we included the possibility for individuals to move to a random place on the board if he/she is not happy, rather than moving to the closest position.
-In the basic model he/she will move to the nearest place where he/she will become happier, With random displacement, we expect that it takes longer to reach an equilibrium.
+In the basic model he/she will move to the nearest place where he/she will become happier. With random displacement, we expect that it takes longer to reach an equilibrium.
 As above, we will not discuss the impact of the random displacement in our report, but we added some results in our appendix.\\
 
 Furthermore, we expanded the model with the so-called 'criminals'.
@@ -131,25 +131,24 @@ So the unhappy individuals will not become happier on these places.
 \end{figure}
 
 Last, we made it possible for individuals to switch to another type.
-In our model there are two types of switching.
-The first is only possible if the only individuals are of type $1$ and type $2$.
-In this version of switching, every person has in every generation a chance $p$ of switching to the other type.
-In the other version, every unhappy individual will change type under the influence of his/her neighbours.
-This means that the chance to become of type $t$ is the fraction of neighbours of type $t$.
-This is a correct probability distribution, because this sums up to $1$.
-Individuals without neighbours will not switch type, because they have no neighbours who influence them.
-We will investigate the influence of the second type of switching further in section \ref{section:switch}.
+In our model there are two versions of switching.
+The first version is only possible if there are only two different types present on the board.
+In this version of switching, every person has a chance $p$ of switching to the other type before he moves.
+In the other version, every unhappy individual will switch type depending on the type of his/her neighbours.
+This is further elaborated on in section \ref{section:switch}.
+Individuals without neighbours will not switch types, since they have no neighbours who extert their influence on them.
+We will investigate the effect of the second version of switching further in section \ref{section:switch}.
 \subsection{The applied statistical test}
 \textbf{The two sample t-test}:\\
-For the following sections, we 've often used the two sample t-test (ttest2) from Matlab for comparing the means of two distribution. We define that two means are comparable when they are equal. Otherwise, they are not comparable.\\
+For the following sections, we will mostly use the two sample t-test (ttest2) from Matlab for comparing the means of two distributions. We consider two means to be comparable when they are equal. Otherwise, they are not comparable.\\
 \\
 This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
  \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
 This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. 
-However, according to the central limit theorems, we may make this assumption for large enough sample size. 
-Although exact calculations are required to determine the sample size, we simply chose a size of 5000. In section 7.1, we even chose a sample size of 50000, due to the asymmetric distribution of our data. Also, for simplicity, we usually took $m=n$. Furthermore, we adjusted test to not assume equal variance for the data distribution(this is achieved by setting 'Vartype' as unequal in Matlab).\\
+However, according to the central limit theorems, we may make this assumption only for a sufficiently large sample size. 
+Although exact calculations are required to determine the sample size, we simply chose a sample size of 5000. In section \ref{subsec:avegensw}, we even chose a sample size of 50000, due to the asymmetric distribution of our data. Also, for simplicity, we usually took $m=n$. Furthermore, we have adjusted the test, such that it does not assume the two data sets have an equal variance for the data distribution (this is achieved by setting 'Vartype' as unequal in Matlab).\\
 \\
 \textbf{Other tests}:\\
-For testing the goodness of fit of our hypothesized distribution in section 4 and 7, we've used the two-sample kolomogorov-smirnov test and the chi-sqaured test in Matlab. More information about these tests can be found on Mathworks.  
+For testing the goodness of fit of our hypothesized distribution in sections \ref{sec:aantgen} and \ref{section:switch}, we have used the two-sample kolomogorov-smirnov test and the chi-squared test in Matlab. More information about these tests can be found on Mathworks.  
 
 

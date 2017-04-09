@@ -6,7 +6,7 @@ Based on intuition, this is expected to be true.
 An individual who moves, will move to a place where relatively more neighbours share his/her type, intuitively, this should imply that the average happiness of the population increases during each generation. 
 In the basic model however, this is not always true. 
 Even though equilibrium is nearly always reached in finite time, there exists cases in which it allows a periodic solution. 
-One example of such scenario is given below:
+An example of a scenerio in which this occurs is given below.
 
 \begin{figure}[H]
     \centering
@@ -37,21 +37,21 @@ One example of such scenario is given below:
     \caption{A possible configuration of the standard board in which the equilibrium will never be reached. The numbers indicate the turn order of an individuals. The two different colour indicates the two types. The equilibrium is not reached due to the periodic movements of individuals $37$ and $38$. The movements of inviduals $37$ and $38$ are tracked and shown in subfigure a to d in a chronological order.}\label{fig:equilibrium counterexample}
 \end{figure}
 
-In figure \ref{fig:equilibrium counterexample}, a possible configuration in which  equilibrium will not be reached is shown. 
+In Figure \ref{fig:equilibrium counterexample}, a possible configuration in which  equilibrium will not be reached is shown. 
 The numbers represent the turn order ($1$ is selected first followed by $2$, etc.). 
 Red and black indicate  the two different types. It is easily observed that that individuals $1$ to $36$ satisfy the happiness condition. $37$ however does not. 
 During $37$'s turn, we note that his/her happiness equals $0$. 
-The closest empty location has a happiness of $\frac{1}{7} > 0$. 
-And thus $37$ will move to the given location, which is indicated in figure \ref{fig:movement2}.
+The closest empty location has a happiness of $\frac{1}{7}$. 
+And thus $37$ will move to the given location, which is indicated in Figure \ref{fig:movement2}.
 Next in line to move is $38$. 
 Individual $38$ has a happiness of $\frac{2}{7}$, which is less than the required $\frac{1}{3}$ and will thus have to move. 
 The closest spot with greater happiness is the nearby corner spot with happiness $\frac{1}{3}$. 
-So $38$ will move to that location, which is shown in figure \ref{fig:movement3}.\\
+So $38$ will move to that location, which is shown in Figure \ref{fig:movement3}.\\
 
 The indviduals \(1\) to \(36\) will remain pleased and will thus remain in place. 
 Thus $37$ is the first candidate to be moved. $37$ has a happiness $\frac{1}{7} < \frac{1}{3}$. 
 The closest empty spot has happiness $\frac{1}{6} > \frac{1}{7}$, thus $37$ will move to this location. 
-Since this location was te former spot of \(38\), we conclude that  $37$ and $38$ have swapped positions, as is shown in figure \ref{fig:movement4}.\\
+Since this location was te former spot of \(38\), we conclude that  $37$ and $38$ have swapped positions, as is shown in Figure \ref{fig:movement4}.\\
 Since $37$ and $38$ are of the same type, these $3$ moves will continue periodically and thus we find a periodic solution.\\
 
 \textbf{Now what went wrong?} \\
