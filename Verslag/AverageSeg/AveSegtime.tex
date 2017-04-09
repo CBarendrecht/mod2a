@@ -2,7 +2,7 @@
 \section{Average segregation time}\label{sec:aveseg}
 As mentioned in the introduction, the segregation time at \(p\%\) is defined as the number of generations until at least \(p\%\) of the population on a board lives in homogenous groups. 
 Where person \(i\) is said to live homogenous if for any neighbour \(j\) of \(i\), we have \(\text{Type}(j)=\text{Type}(i)\).
-This gives immediate rise to questions concerning the relation between the choice of \(n\) and the average segregation time at \(p\%\). 
+This gives immediate rise to questions concerning the relation between the choice of \(p\) and the average segregation time at \(p\%\). 
 Furthermore, it is unclear if segregation at \(p\%\) is guaranteed before a board reaches an equilibrium and what the effect is of the happiness boundary on the existence of a segregation time.\\
 
 To research any of the given questions, we will first have to formalise our choices of board as well as the questions proposed.\\
@@ -10,7 +10,7 @@ To research any of the given questions, we will first have to formalise our choi
 
 \subsection{Formalisations}
 Prior to starting any test or properly formalising our research questions however, we note that segratation at \(p\%\) does not necessarily have to happen: 
-If we consider \(n=100\) on the standard board with happiness \(1/3\). We will nearly never have total segregation before the board reaches an equilibrium.
+If we consider \(p=100\) on the standard board with happiness \(1/3\). We will nearly never have total segregation before the board reaches an equilibrium.
 Therefore one might instead consider the average fraction of segregation at equilibrium,for any given happiness fraction. \\
 
 Furthermore, the average segregation time as function of the segregation fraction should theoretically be a strictly increasing function since for any given board we have:
@@ -45,8 +45,8 @@ Population per type: & 20 & 16
 \end{table}
 \\
 The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots as the standard board. The choice of happiness on these boards is 1 unlike the usual \(\frac{1}{3}\). 
-This guarantees that for any \(n\leq 100\), segregation at \(p\%\) takes place prior to the board reaching an equilibrium. 
-To observe the average segregation time \(p\%\) for any \(n\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(p\%\).
+This guarantees that for any \(p\leq 100\), segregation at \(p\%\) takes place prior to the board reaching an equilibrium. 
+To observe the average segregation time \(p\%\) for any \(p\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(p\%\).
 Likewise the average segregated fraction will be estimated by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
 \subsection{Results}
 \subsubsection{Question 1}
@@ -60,13 +60,13 @@ The results regarding the first question are shown below:\\
 
 Most notable of figure \ref{fig:avesegsb} is that it is neither linear nor exponential, which is what one might initially expect. Instead, it appears to be partially exponential and partially lineair. From the figure, we note that the average segregation time increases fastest between 0.4 and 0.5. 
 Which is to say that it takes three times longer for 50\% of the population to live in homogenous groups than for 40\%.
-Also note that the 'lift off' is approximately at $\frac{1}{3}$, but it is unlikely that this has anything to do with the standard happiness rule of $\frac{1}{3}$.\\
+Also note that the 'lift off' is approximately at $\frac{1}{3}$.
 
 \textbf{Partial explanation} \\
-The first part of this graph is easilyunderstood. 
-When the board is initially formed, the odds are fairly high that several persons might already live homogenous, Due to the HR of 1, any non homgenous person will move, resulting in a further segregation. As the boundary of \(10\%\) is fairly low, it is likely that this will be achieved in less than 1 generation. 
+The first part of this graph is easily understood. 
+When the board is initially formed, the odds are fairly high that several persons might already live homogenous. Due to the HR of 1, any non homogenous person will move, resulting in a further segregation. As the boundary of \(10\%\) is fairly low, it is likely that this will be achieved in less than 1 generation. 
 The second interesting segment of this graph is the segment between 0.4 and 0.5, as mentioned, the figure shows that it takes considerably longer to reach a segregation of \(50\%\) than it takes to reach \(40\%\). 
-This can be argued from a sociological perspective as follows some people are in general unhappy with their lives and will thus move to a new location anyways, the process of segregation, is a fairly lenghty process this way. However once people discover that their close neighbours are moving, they in turn decide to move as well. 
+This can be argued from a sociological perspective as follows. Some people are in general unhappy with their lives and will thus move to a new location anyways, the process of segregation, is a fairly lenghty process this way. However once people discover that their close neighbours are moving, they in turn decide to move as well. 
 This does not neccessarily result in more moves, however as one type leaves, the other type is to remain in place, since they will tend to be more homogenous when their opposite type leaves.
 Thus once 50$\%$ segregation has been reached, it becomes easier to segregate even further. Since the repositioning of one individual may result in three people becoming homogenous. This explains the part between $50\%$ and $70\%$. It might appear reasonable to believe that this increase will continue and that it that it would take at most two more generations to reach equilibrium but after $70\%$ segregation, it becomes harder for individuals to move to a homgenous location.
  This is also heavliy impacted by the laws defined in the model, a person will not move to the best location but to the closest better location, which might lead to a person moving from one disfavourable location to another. \\
@@ -130,40 +130,64 @@ A thing of interest however, is that the averages of both figure \ref{fig:happys
 This is because, as mentioned earlier, the effect of the Happiness Rule is quite discrete when using second order neighbourhood.
 
 \subsubsection{Question 3}
-In order to answer the third question, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025, and for each segregation $\%$, 60, 80 and 100. 
+In order to answer the third question, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025, for $60\%$,$80\%$ and $100\%$ segregation.\\
 The results are shown below.
 \begin{figure}[H]
     \centering
     \includegraphics[width=280px]{happy_segr_60_80_100.pdf}
     \caption{For each $HR = 0,0.025,...,1$, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
-    \label{fig:happyseg4c}
+    \label{fig:happysegsc}
 \end{figure}
+
 
 \subsubsection{Question 4}
 
 We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. To approximate these distributions, we ran 5000 simulations each and plotted them below.
 \begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
+\begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_segregation.pdf}
     \caption{On the standard board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
-    \label{fig:segaantgen60}
+    \label{fig:segaantgen_s60}
 \end{subfigure}
 ~
-\begin{subfigure}{0.5\textwidth}
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/60_segregation.pdf}
+    \caption{On the 4-Type board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
+    \label{fig:segaantgen_460}
+\end{subfigure}
+~
+\begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/80_segregation.pdf}
     \caption{On the standard board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
-    \label{fig:segaantgen80}
+    \label{fig:segaantgen_s80}
 \end{subfigure}
-\begin{subfigure}{0.5\textwidth}
+~
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/80_segregation.pdf}
+    \caption{On the 4-Type board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
+    \label{fig:segaantgen_480}
+\end{subfigure}
+~
+\begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_80_QQ_plot.pdf}
     \caption{A QQ plot for the above two data sets.}
-    \label{fig:qqplotsegaantgen}
+    \label{fig:qqplotsegaantgen_s}
 \end{subfigure}
+~
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/60_80_QQ_plot.pdf}
+    \caption{A QQ plot for the above two data sets.}
+    \label{fig:qqplotsegaantgen_4}
+\end{subfigure}
+\caption{The results for the standard board (left) and the 4-Type board (right)}
 \end{figure}
-In both figures we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples really are statistically different.\\
+In both figures we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples are different with statistical relevance.\\
 
 To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%, we performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and the alternative hypothesis is $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in table 2.
 \begin{table}[htp]
