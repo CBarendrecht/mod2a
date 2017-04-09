@@ -131,55 +131,67 @@ This is because, as mentioned earlier, the effect of the Happiness Rule is quite
 
 \subsubsection{Question 3}
 In order to answer the third question, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025, for $60\%$,$80\%$ and $100\%$ segregation.\\
-The results are shown below.
+The results are shown in figure \ref{fig:happysegr}.
 \begin{figure}[H]
+	\begin{subfigure}{0.4\textwidth}
     \centering
-    \includegraphics[width=280px]{happy_segr_60_80_100.pdf}
-    \caption{For each $HR = 0,0.025,...,1$, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
+    \includegraphics[width=\textwidth]{happy_segr_60_80_100.pdf}
     \label{fig:happysegsc}
+    \caption{The standard board.}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{happy_segr_60_80_100_4b.pdf}
+    \label{fig:happyseg4c}
+    \caption{The 4-Type board.}
+    \end{subfigure}
+    \caption{For each $HR = 0,0.025,...,1$, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
+    \label{fig:happysegr}
 \end{figure}
-
+Of note is the similarity of the two graphs, with one notable exception. In contrast to the standard board, on the 4-Type board, full segregation is not guaranteed by a Happiness Rule of 1 (or 0.8).\\
+We will not discuss these graphs in detail.
 
 \subsubsection{Question 4}
 
 We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. To approximate these distributions, we ran 5000 simulations each and plotted them below.
 \begin{figure}[H]
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_segregation.pdf}
     \caption{On the standard board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_s60}
 \end{subfigure}
 ~
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/60_segregation.pdf}
     \caption{On the 4-Type board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_460}
 \end{subfigure}
 ~
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/80_segregation.pdf}
     \caption{On the standard board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_s80}
 \end{subfigure}
 ~
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/80_segregation.pdf}
     \caption{On the 4-Type board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_480}
 \end{subfigure}
 ~
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_80_QQ_plot.pdf}
     \caption{A QQ plot for the above two data sets.}
     \label{fig:qqplotsegaantgen_s}
 \end{subfigure}
 ~
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/60_80_QQ_plot.pdf}
     \caption{A QQ plot for the above two data sets.}
@@ -187,8 +199,9 @@ We will now focus on a more relevant question, namely the distribution of the $6
 \end{subfigure}
 \caption{The results for the standard board (left) and the 4-Type board (right)}
 \end{figure}
-In both figures we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples are different with statistical relevance.\\
+Based on the histograms, one might expect that for both boards, the distribution of the $60\%$ and $80\%$ might come from  the same location-family of distributions. However, the QQ-plots indicate that we don't have enough information to confirm this, so we may not assume this to be true.
 
+In the figures on the left, we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples for the standard board are different with statistical relevance. For simplicity, we did not perform this test for the 4-Type board.\\
 To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%, we performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and the alternative hypothesis is $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in table 2.
 \begin{table}[htp]
 \centering
@@ -200,4 +213,5 @@ To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homo
  Sample Variance & 0.1349 & 0.3013\\ \hline 
 \end{tabular}
 \end{table}
-The test has rejected the null-hypothesis, which is expected because the difference of the sample means are around 0.8, which should exceeds the critical value of the test.
+The test has rejected the null-hypothesis, which is expected because the difference of the sample means are around 0.8, which should exceeds the critical value of the test.\\
+
