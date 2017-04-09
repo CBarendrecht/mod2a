@@ -22,16 +22,18 @@ map = [1, 1, 1
        0, 0.8, 0.3
        0.2, 0.2, 0.2
        ];
-prompt ={'filenaam.avi'};
+prompt = {'filenaam.avi'};
 dlg_title = 'Input';
 num_lines = 1;
 defaultans = {'ditwordtdenaamvanhetfilmpjedatjemaakt.avi'};
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
-Filenaam=answer{1};
-maxframe=5;
+Filenaam = answer{1};
+maxframe = 5;
 
 [n,types,lengte,breedte,happy,vk,r,randvp,acrim, kans, wisselen] = Menu();
-A = info(n,lengte,breedte,types,acrim);
+%A = info(n,lengte,breedte,types,acrim);
+%A1 = A;
+A = importdata('A1.mat');
 [B, K] = bord(A,lengte,breedte,sum(n),acrim);
 [C, K1] = bord(A,lengte,breedte,sum(n),acrim);
 klaar = false;
@@ -42,19 +44,19 @@ telswitch = 0;
 telnosw = 0;
 
 
-volg = randperm(sum(n),sum(n));
-
-vert=1;
+volg = importdata('volg1.mat');
+vert = 1;
 
 figure
 hold on
-image(B+ones(lengte,breedte));
+image(B + 10*K + ones(lengte,breedte));
 colormap(map);
-pause(0.1);
-for frame=1:maxframe
-    mymovie(vert)=getframe;
-    vert=vert+1;
+
+for frame = 1:maxframe
+    mymovie(vert) = getframe;
+    vert = vert+1;
 end
+pause(2);
 
 while klaar == false 
     klaar = true;
@@ -83,9 +85,9 @@ while klaar == false
                 image(B +10*K+ ones(lengte,breedte));
                 colormap(map);
                 pause(0.1);
-                for frame=1:maxframe
-                    mymovie(vert)=getframe;
-                    vert=vert+1;
+                for frame = 1:maxframe
+                    mymovie(vert) = getframe;
+                    vert = vert+1;
                 end
             end
         end
@@ -98,12 +100,12 @@ while klaar == false
             else %randomverplaatsen
                 [A,B,K,v] = verplaats_random(A,B,K,i,lengte,breedte);
             end
-            image(B+10*K + ones(lengte,breedte));
+            image(B + 10*K + ones(lengte,breedte));
             colormap(map);
             pause(0.1);
-            for frame=1:maxframe
-                mymovie(vert)=getframe;
-                vert=vert+1;
+            for frame = 1:maxframe
+                mymovie(vert) = getframe;
+                vert = vert + 1;
             end
         else %kijken of er verplaatst is
             v = false;
@@ -146,7 +148,7 @@ end
 display('klaar');
 
 Beginbord = C + ones(lengte,breedte) + 10*K1;% idem
-Film=VideoWriter(Filenaam);
+Film = VideoWriter(Filenaam);
 open(Film);
 writeVideo(Film,mymovie);
 close(Film);
