@@ -4,6 +4,8 @@ As mentioned in the result, we could not find a proper fit for the distribution 
 \\
 Another remark about the histograms, is that unfortunately, there is a small convention error for the number of generations(an error that we found out too late). Our model generations counters always start from 1, thus equilibrium can never be reached at the first generation by definition. This convention is actually confusing because the counter would give 2 if 1 generation has passed. So in our model, we actually assumed that one generation has always passed. But this error does not seem to affect the histogram more than just a shift of the mean.\\
 \\
+\subsection{Average segregation time}
+Like average number of generations, a distribution of the $60\%$ and $80\%$ segregation times could not be found. We should note that, when running a simulation that takes 500 instances for a given happiness rule, some uncertaincy still remains. This is best shown in figure \ref{fig:happyseg4b}, where, due to the discrete effect of the happiness rule, the average segregated fraction should be a perfect stairs pattern, but the figure shows some distortion. Of course, this is expected since 500 is 'large' but not infinite. One could discuss whether the step size for the happiness rule dependence should have been chosen larger. Since for second order neighbourhood, the number of possible happiness values is quite limited. However, due to the beforementioned inaccuracy, setting this step size too large decreases the accuracy of those figures that include happiness rule dependence.
 
 
   
