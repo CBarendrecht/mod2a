@@ -5,13 +5,13 @@ Where person \(i\) is said to live homogenous if for any neighbour \(j\) of \(i\
 This gives immediate rise to questions concerning the relation between the choice of \(p\) and the average segregation time at \(p\%\). 
 Furthermore, it is unclear if segregation at \(p\%\) is guaranteed before a board reaches an equilibrium and what the effect is of the happiness boundary on the existence of a segregation time.\\
 
-To research any of the given questions, we will first have to formalise our choices of board as well as the questions proposed.\\
+To study any of the given questions, we will first have to formalise our choices of board as well as the questions proposed.\\
 
 
 \subsection{Formalisations}
-Prior to starting any test or properly formalising our research questions however, we note that segratation at \(p\%\) does not necessarily have to happen: 
-If we consider \(p=100\) on the standard board with happiness \(1/3\). We will nearly never have total segregation before the board reaches an equilibrium.
-Therefore one might instead consider the average fraction of segregation at equilibrium,for any given happiness fraction. \\
+Prior to starting any test or properly formalising our research questions however, we note that segregation at \(p\%\) is not guaranteed to take place.
+For example, if we consider \(p=100\) on the standard board with Happiness Rule \(1/3\), we will nearly never have total segregation before the board reaches an equilibrium.
+Therefore one might instead consider the average fraction of segregation at equilibrium, for any given happiness fraction. \\
 
 Furthermore, the average segregation time as function of the segregation fraction should theoretically be a strictly increasing function since for any given board we have:
 \begin{align*}
@@ -21,7 +21,7 @@ Furthermore, the average segregation time as function of the segregation fractio
 Having noted these facts, we can now properly formalise the research questions.\\
 The following questions are proposed:
 \begin{enumerate}
- \item What is the relation between the average segregation time and \(n\).
+ \item What is the relation between the average segregation time and \(p\).
  \item What is the average segregated fraction of the population after a board reaches equilibrium for given choices of happiness.
  \item For any Happiness Rule ranging from 0 to 1, how often do we reach at least $60\%$, at least $80\%$ or even full ($100\%$) segregation?
  \item For $60\%$ and $80\%$ segregation, what distribution do we get for the segregation time, if $HR = 1$? Are these comparable?
@@ -29,28 +29,30 @@ The following questions are proposed:
 
 To establish results regarding these questions, we consider different setups in testings. We will be testing two different boards.
 The first board to be analysed is the standard board. The second board is a larger 
-"4-Type" board. The details are specified below:
+"4-Type" board. The details are specified in Table \ref{tab:specs}:
 \begin{table}[h!]
 \centering
-\caption{Specs of the two considered boards}
-\label{my-label}
+\caption{The specifcations of the two considered boards}
+\label{tab:specs}
 \begin{tabular}{l|l|l}
   & Standard Board & 4-Type Board\\ \hline
-Number of types:& 2 & 4 \\ 
- Length:& 8 & 10  \\
- Width:& 8 & 10  \\
- Happiness:& 1 & 1  \\
-Population per type: & 20 & 16  
+Number of types & 2 & 4 \\ 
+ Length & 8 & 10  \\
+ Width & 8 & 10  \\
+ Happiness & 1 & 1  \\
+Population per type & 20 & 16  
 \end{tabular}
 \end{table}
 \\
 The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots as the standard board. The choice of happiness on these boards is 1 unlike the usual \(\frac{1}{3}\). 
 This guarantees that for any \(p\leq 100\), segregation at \(p\%\) takes place prior to the board reaching an equilibrium. 
-To observe the average segregation time \(p\%\) for any \(p\), 500 simulations will be ran per board and averaged out in order to give an approximation for the average segregation time at \(p\%\).
+To observe the average segregation time \(p\%\) for any \(p\), 500 simulations were ran per board and averaged out in order to give an approximation for the average segregation time at \(p\%\).
 Likewise the average segregated fraction will be estimated by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
+
 \subsection{Results}
+
 \subsubsection{Question 1}
-The results regarding the first question are shown below:\\
+The results regarding the first question, namely what is the relation between the average segregation time and \(p\) are shown below:\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{aveseg_sb_2}
@@ -58,20 +60,20 @@ The results regarding the first question are shown below:\\
     \label{fig:avesegsb}
 \end{figure}
 
-Most notable of figure \ref{fig:avesegsb} is that it is neither linear nor exponential, which is what one might initially expect. Instead, it appears to be partially exponential and partially lineair. From the figure, we note that the average segregation time increases fastest between 0.4 and 0.5. 
+Most notable of Figure \ref{fig:avesegsb} is that the relation between the average segregation time and \(p\), opposite to expectations, is neither linear nor exponential. Instead, it appears to be partially exponential and partially lineair. From the figure, we note that the average segregation time increases fastest between 0.4 and 0.5. 
 Which is to say that it takes three times longer for 50\% of the population to live in homogenous groups than for 40\%.
-Also note that the 'lift off' is approximately at $\frac{1}{3}$.
+Also note that the 'lift off' is approximately at $\frac{1}{3}$.\\
 
 \textbf{Partial explanation} \\
 The first part of this graph is easily understood. 
 When the board is initially formed, the odds are fairly high that several persons might already live homogenous. Due to the HR of 1, any non homogenous person will move, resulting in a further segregation. As the boundary of \(10\%\) is fairly low, it is likely that this will be achieved in less than 1 generation. 
-The second interesting segment of this graph is the segment between 0.4 and 0.5, as mentioned, the figure shows that it takes considerably longer to reach a segregation of \(50\%\) than it takes to reach \(40\%\). 
-This can be argued from a sociological perspective as follows. Some people are in general unhappy with their lives and will thus move to a new location anyways, the process of segregation, is a fairly lenghty process this way. However once people discover that their close neighbours are moving, they in turn decide to move as well. 
-This does not neccessarily result in more moves, however as one type leaves, the other type is to remain in place, since they will tend to be more homogenous when their opposite type leaves.
+As mentioned above, the second interesting segment of this graph is the segment between 0.4 and 0.5, as mentioned, the figure shows that it takes considerably longer to reach a segregation of \(50\%\) than it takes to reach \(40\%\). 
+This can be argued from a sociological perspective as follows. Some people are in general unhappy with their lives and will thus move to a new location anyways. The process of segregation, is a fairly lenghty process this way. However once people discover that their close neighbours are moving, they in turn decide to move as well. 
+This does not neccessarily result in more moves, however as one type leaves a neighboorhood, the other type is to remain in place, since the neighbours of this type will tend to be more homogenous when their opposite type leaves.
 Thus once 50$\%$ segregation has been reached, it becomes easier to segregate even further. Since the repositioning of one individual may result in three people becoming homogenous. This explains the part between $50\%$ and $70\%$. It might appear reasonable to believe that this increase will continue and that it that it would take at most two more generations to reach equilibrium but after $70\%$ segregation, it becomes harder for individuals to move to a homgenous location.
- This is also heavliy impacted by the laws defined in the model, a person will not move to the best location but to the closest better location, which might lead to a person moving from one disfavourable location to another. \\
+ This is also heavily impacted by the laws defined in the model, a person will not move to the best location but to the closest better location, which might lead to a person moving from one disfavourable location to another. \\
 
-Next, we consider the same question however this time on the 4-Type board. This gives  following results:
+Next, we consider the same question however this time on the 4-Type board (Figure \ref{fig:aveseg4b}).
 
 
  \begin{figure}[H]
@@ -81,7 +83,7 @@ Next, we consider the same question however this time on the 4-Type board. This 
     \label{fig:aveseg4b}
 \end{figure}
 
-The most notable difference between this figure and the figure \ref{fig:avesegsb} is that the 'lift off' lies happens much earlier than in figure \ref{fig:avesegsb}. 
+The most notable difference between Figure \ref{fig:aveseg4b} and Figure \ref{fig:avesegsb} is that the 'lift off' happens much earlier on the 4-Type board than in Figure \ref{fig:avesegsb}. 
 Although this difference feels intuitive, we will give a formal explanation. 
 Consider the probability that any individual $i$ has $a$ neighbours of the same type, and no neighbours of another type, given $k-a$ empty spots, where $k$ is the maximum number of possible neighbours for the location of $i$. 
 In the basic model, this probability equals
@@ -100,10 +102,10 @@ The 4-Type board has relatively more interior locations and fewer edge positions
 However the people/boardspace ratio is maintained in both models and thus should not have too much of an impact on the results.\\
 
 Another effect is the rise of the number of generations, that is, the time it takes before the board reaches full segregation. 
-However, this effect is less strong than one might initially expect. 
-On the standard board, it takes on average $5.5$ generations to reach full segregation. On the 4-Type board however, it takes $8.5$.\\
+Interestingly, this effect is less strong than one might initially expect. 
+On the standard board, it takes on average $5.5$ generations to reach full segregation. On the 4-Type board however, it takes $8.5$ generations.\\
 
-The remaining part of figure \ref{fig:aveseg4b} is quite similar to figure \ref{fig:avesegsb}: quick rise, followed by a slightly decreasing ascending relation. 
+The remaining part of Figure \ref{fig:aveseg4b} is quite similar to figure \ref{fig:avesegsb}: quick rise, followed by a slightly decreasing ascending relation. 
 The explanation is similar to that of the basic model.
 \subsubsection{Question 2}
 \begin{figure}[H]
