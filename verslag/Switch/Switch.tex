@@ -51,7 +51,7 @@ From Figure \ref{fig:avegen}, we deduced that on average, a board reaches equili
     \begin{subfigure}{0.9\textwidth}
         \includegraphics[width=\textwidth]{happinessrule-totaantgenwithswitchorwithoutswitch}
     \end{subfigure}
-    \caption{Number of generations until equilibrium on an 8x8 board with standard setting, with and without type switching}
+    \caption{Number of generations until equilibrium on an 8x8 board with standard settings, with and without type switching}
     \label{fig:AantGenS}
 \end{figure}
 
@@ -61,7 +61,7 @@ This is expected, since the probability of becoming the same type as the neighbo
 Or, in a sociological view, the person is willing to adapt to the environment rather than moving on.\\
 
 From Figure \ref{fig:AantGenS}, we observed that the average number of generations to reach equilibrium is nearly constant for any HR in the interval \((0.6,1)\). 
-Just to get an idea whether this statement is justified, we selected three HR's, namely 0.6, 0.8 and 1 and performed the two sample \(t\)-test (for more description about this test, see section \ref{subsec:stattest}, Model and Statistical Methods) in Matlab. Because the histograms show that the data might follow an asymmetric distribution and this \(t\)-test requires the difference of the means to be normally distributed, we chose a sample size of 50000 to ensure normality through the Central Limit Theorem.\\
+Just to get an idea whether this statement is justified, we selected three different HR values, namely 0.6, 0.8 and 1 and performed the two sample \(t\)-test (for more description about this test, see section \ref{subsec:stattest}, Model and Statistical Methods) in Matlab. Because the histograms show that the data might follow an asymmetric distribution and this \(t\)-test requires the difference of the means to be normally distributed, we chose a sample size of 50000 to ensure normality through the Central Limit Theorem.\\
 \\
 The sample means are shown in Table 3:
 \begin{table}[htp]
@@ -114,7 +114,7 @@ But we could not perform the same statistical analysis as in section 4, because 
 This is due to the fact that the sample means exceeded the sample variance. So from this we could conclude that $Y_{j,s}$'s cannot be geometrically (or NB) distributed.\\
 
 It is much more interesting to compare the distribution of $Y_{j,s}$ with $Y_{j}$. A remarkable observation is that the histograms of $Y_{j,s}$ completely lost it's symmetry compared to the histograms of $Y_j$. 
-Apparently, type switching stimulates segregation so well that it only takes 1 generation to reach equilibrium (remark: we always start with 1 generation, so the fastest segregation is reached at the 2nd generation).\\
+Apparently, type switching stimulates segregation so well that it only takes 1 generation to reach equilibrium (remark: we always start with 1 generation, so the fastest segregation is reached at the second generation).\\
 \\ 
 To further examine how type swithcing affects generations until equilirbium, we chose to compare $Y_{1,s}$ with $Y_1$ in a QQ-plot:
 
@@ -169,7 +169,7 @@ From Figure \ref{fig:avesegsw}, the hypothesis that the average segregation time
 A less trivial result of conformity, is that the average segregation time is nearly constant between the fractions \(0.5\) and \(0.8\). 
 To test whether it is justified to make this claim,  the \(t\)-test as described in section \ref{subsec:stattest} was conducted. We will test if the segregation time at \(60\%\) and \(80\%\) have the same mean value if 5000 simulations are ran each. 
 The \(t\)-test, rejected the null-hypothesis that \(60\%\) segregation and \(80\%\) segregation share the same mean value (the respective means were 2 and 2.01 with th ability to switch). As mentioned in the introduction, a mean of 2 generations implies here, that the board has reached \(60\%\), in at most 1 generation, i.e. every individual has moved or switched type only once at most.
-We conclude that on the standard board with HR 1, segregation at \(p\%\) takes place in less than one generation, for any \(n\leq 0.7\).\\
+We conclude that on the standard board with HR 1, segregation at \(p\%\) takes place in less than one generation, for any \(p\leq 70\%\).\\
  
 It is interesting to note that both graphs appear constant for any \(q\leq \frac{1}{3}\). 
 This can be explained as follows. In both scenarios, the segregated fraction has been reached, by the boards default setup and thus no person will move before segregation has been reached.
