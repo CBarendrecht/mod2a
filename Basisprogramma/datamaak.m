@@ -10,7 +10,7 @@ door = true;
 datatel = 0;
 [n,t,l,b,h,vk,r,rv,acrim,kans,wis] = Menu();
 
-while h <= 1.001
+while h <= 1.001 %h kan vervangen worden door andere variabele
     datatel = datatel + 1;
     
     for j = 1:10
@@ -32,7 +32,7 @@ while h <= 1.001
     gmh = zeros(hh);
     mnh = zeros(hh);
             
-    volg = randperm(sum(n),sum(n));
+    volg = randperm(sum(n),sum(n)); %volgorde individuen langsgaan maken
     for i = 1:hh
         [gen(i),v,moves(i),x,y,z,segklaar,segr(i),totsw(i)] = simulatie(volg,n,t,l,b,h,vk,r,rv,acrim,1,kans,wis);
         if gen(i) < 10001
@@ -102,7 +102,7 @@ while h <= 1.001
     %ylabel('Totaal Aantal Moves');
     %title('Aantal Generaties vs. Totaal Aantal Moves');
     
-    for i = 1:(hh-tel)
+    for i = 1:(hh-tel) %elke kolom even 'lang' maken
         for j = gen(i)+1:max(gen)
             mxh(j,i) = mxh(gen(i),i);
             gmh(j,i) = gmh(gen(i),i);
@@ -130,10 +130,10 @@ while h <= 1.001
     h = h + stapg;
     disp(h);
     
-    clear mnh;
-    clear mxh;
-    clear gmh;
-    clear g;
+    clear mnh; %deze data worden overgeschreven in iedere iteratie
+    clear mxh; %en varieren van grootte per iteratie dus
+    clear gmh; %moeten ze aan het eind van iedere iteratie 
+    clear g;   %verwijderd worden
     clear gen;
     clear moves;
     clear noeq;
@@ -143,7 +143,7 @@ while h <= 1.001
     clear del;
 end %while
 
-for i = 1:datatel
+for i = 1:datatel %elke kolom even 'lang' maken
     for j = DATA(i,21)+1:max(DATA(:,21))
         GMMXH(j,i) = GMMXH(DATA(i,21),i);
         GMGMH(j,i) = GMGMH(DATA(i,21),i);
@@ -153,7 +153,6 @@ end
 
 %hier kun je nog meer grafieken maken a.d.h.v. 
 %wat je veranderd hebt en wat je wil weten
-
 figure;
 scatter(DATA(:,13),DATA(:,18),25,[1,0,0],'p','filled');
 xlabel('Happinessregel');
