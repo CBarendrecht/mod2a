@@ -63,23 +63,25 @@ For simplicity, we chose to mainly investigate the distribution of $Y_{1/3}$, si
 With the same method, we also tested whether $Y_{1/3}$ could be binomially or negative binomially distributed. But once again, they have been rejected by the chi-squared test. So we can only conclude that $Y_{1/3}$ is not Poisson, binomially or negative binomially distributed.\\
 We have also performed this statistical analysis on other $Y_j$'s (for instance $Y_1$), and  obtained the same result as for $Y_{1/3}$.\\
 
-In order to make a better comparison of the distribution between $Y_{1/4},Y_{1/3},Y_{1/2}$ and $Y_1$, several QQ-plots were made. Thich is shown in Figure \ref{fig:QQ-plot}.\\ 
+In order to make a better comparison of the distribution between $Y_{1/4},Y_{1/3},Y_{1/2}$ and $Y_1$, several QQ-plots were made. 
+This is shown in Figure \ref{fig:QQ-plot}.\\ 
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{0.8\textwidth}
-    \includegraphics[width=\textwidth]{QQplotATGEN3.pdf}
+    \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{QQplotATGEN3-klein.pdf}
     \caption{QQ-plot of $Y_{1}$ vs $Y_{1/2}$}
         \label{fig:QQplotATGEN3}
     \end{subfigure}
-    
-    \begin{subfigure}{0.8\textwidth}
-    \includegraphics[width=\textwidth]{QQplotATGEN1.pdf}
+    ~
+    \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{QQplotATGEN1-klein.pdf}
     \caption{QQ-plot of $Y_{1/3}$ vs $Y_{1/2}$}
         \label{fig:QQplotATGEN1}
     \end{subfigure}
-    \begin{subfigure}{0.8\textwidth}
-    \includegraphics[width=\textwidth]{QQplotATGEN2.pdf}
+    ~
+    \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{QQplotATGEN2-klein.pdf}
     \caption{QQ-plot of $Y_{1/4}$ vs $Y_{1/2}$}
         \label{fig:QQplotATGEN2}
     \end{subfigure}
@@ -92,7 +94,7 @@ This is because the data came from a discrete random variable.
 The plots appear to be linear, especially the plot of $Y_{1}$ vs $Y_{1/2}$. 
 The plot indicates that these 4 $Y_j$'s might belong to the location-scale family of the same distribution.\\
 
-With the two-sample kolomogorov-smirnov test (kstest2) of significance level $\alpha=0.05$ in Matlab, which has null-hypothesis $H_0:F(X)=G(Y)$ for $F,G$ the CDF of $X$ and $Y$, it can be concluded that these $Y_j$'s do not come from the same distribution with the same parameters. 
+With the two-sample Kolomogorov-Smirnov test (kstest2) of significance level $\alpha=0.05$ in Matlab, which has null-hypothesis $H_0:F(X)=G(Y)$ for $F,G$ the CDF of $X$ and $Y$, it can be concluded that these $Y_j$'s do not come from the same distribution with the same parameters. 
 Unfortunately, we were not able to find a test that tests whether these $Y_j$'s comes from the same family distribution (i.e. same distribution but different parameter values).\\
 
 
