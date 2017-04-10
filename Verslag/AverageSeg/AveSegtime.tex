@@ -156,43 +156,38 @@ We will not discuss these graphs in detail.
 
 We will now focus on a more relevant question, namely the distribution of the $60\%$ and $80\%$ segregation time. To approximate these distributions, we ran 5000 simulations each and plotted them below.
 \begin{figure}[H]
-\begin{subfigure}{0.4\textwidth}
-    \centering
+\centering
+\begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_segregation.pdf}
     \caption{On the standard board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_s60}
 \end{subfigure}
 ~
-\begin{subfigure}{0.4\textwidth}
-    \centering
+\begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/60_segregation.pdf}
     \caption{On the 4-Type board and for $HR=1$, the number of times any number of generations till $60\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_460}
 \end{subfigure}
 ~
-\begin{subfigure}{0.4\textwidth}
-    \centering
+\begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/80_segregation.pdf}
     \caption{On the standard board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_s80}
 \end{subfigure}
 ~
-\begin{subfigure}{0.4\textwidth}
-    \centering
+\begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/80_segregation.pdf}
     \caption{On the 4-Type board and for $HR=1$, the number of times any number of generations till $80\%$ segregation occured, based on 5000 simulations.}
     \label{fig:segaantgen_480}
 \end{subfigure}
 ~
-\begin{subfigure}{0.4\textwidth}
-    \centering
+\begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/60_80_QQ_plot.pdf}
     \caption{A QQ plot for the above two data sets.}
     \label{fig:qqplotsegaantgen_s}
 \end{subfigure}
 ~
-\begin{subfigure}{0.4\textwidth}
-    \centering
+\begin{subfigure}{0.35\textwidth}
     \includegraphics[width=\textwidth]{./60_80_segregation_aantgen/4TypeBoard/60_80_QQ_plot.pdf}
     \caption{A QQ plot for the above two data sets.}
     \label{fig:qqplotsegaantgen_4}
@@ -201,7 +196,8 @@ We will now focus on a more relevant question, namely the distribution of the $6
 \end{figure}
 Based on the histograms, one might expect that for both boards, the distribution of the $60\%$ and $80\%$ might come from  the same location-family of distributions. However, the QQ-plots indicate that we don't have enough information to confirm this, so we may not assume this to be true.
 
-In the figures on the left, we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples for the standard board are different with statistical relevance. For simplicity, we did not perform this test for the 4-Type board.\\
+In the figures on the left, we see that the number of values for the number of generations that actually appear, is relatively small. This makes it hard to perform tests on the actual distribution of this stochastic. However, we did test whether the means of the two samples for the standard board are different with statistical relevance. For simplicity, we did not perform this test for the 4-Type board.
+
 To test whether the average generations $\mu_{60\%}$ it takes to reach 60\% homogenous group is equal to the average generations $\mu_{80\%}$ for 80\%, we performed the ttest2 on these two averages. The null-hypothesis is $H_0:\mu_{60\%}=\mu_{80\%}$, and the alternative hypothesis is $H_1: \mu_{60\%}\neq \mu_{80\%}$. For this test, we estimated $\mu_{60\%}$ and $\mu_{80\%}$ with the sample means of sample size 5000. The results are shown in table 2.
 \begin{table}[htp]
 \centering
