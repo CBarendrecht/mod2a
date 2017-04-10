@@ -141,13 +141,15 @@ We will investigate the effect of the second version of switching further in sec
 \subsection{The applied statistical test}\label{subsec:stattest}
 \textbf{The two sample \(t\)-test}:\\
 For the following sections, we will mostly use the two sample \(t\)-test (ttest2) from Matlab for comparing the means of two distributions. We consider two means to be comparable when they are equal. Otherwise, they are not comparable.\\
-\\
+
 This \(t\)-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X=(X_1,\dotsc,X_m)$ and $Y=(Y_1,\dotsc,Y_n)$, against $H_1:\mu\neq\nu$. It uses the test statistics:
  \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
+
 This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. 
 However, according to the central limit theorems, we may make this assumption only for a sufficiently large sample size. 
-Although exact calculations are required to determine the sample size, we simply chose a sample size of 5000. In section \ref{subsec:avegensw}, we even chose a sample size of 50000, due to the asymmetric distribution of our data. Also, for simplicity, we usually took $m=n$. Furthermore, we have adjusted the test, such that it does not assume the two data sets have an equal variance for the data distribution (this is achieved by setting 'Vartype' as unequal in Matlab).\\
-\\
+Although exact calculations are required to determine the sample size, we simply chose a sample size of 5000. In section \ref{subsec:avegensw}, we even chose a sample size of 50000, due to the asymmetric distribution of our data. 
+Also, for simplicity, we usually took $m=n$. Furthermore, we have adjusted the test, such that it does not assume the two data sets have an equal variance for the data distribution (this is achieved by setting 'Vartype' as unequal in Matlab).\\
+
 \textbf{Other tests}:\\
 For testing the goodness of fit of our hypothesized distribution in sections \ref{sec:aantgen} and \ref{section:switch}, we have used the two-sample kolomogorov-smirnov test and the chi-squared test in Matlab. More information about these tests can be found on Mathworks.  
 
