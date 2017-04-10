@@ -44,7 +44,7 @@ Population per type & 20 & 16
 \end{tabular}
 \end{table}
 \\
-The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited spots as the standard board. The choice of happiness on these boards is 1 unlike the usual \(\frac{1}{3}\). 
+The 4-Type board is constructed to maintain the same ratio of inhabited and uninhabited locations as the standard board. The choice of happiness on these boards is 1 unlike the usual \(\frac{1}{3}\). 
 This guarantees that for any \(p\leq 100\), segregation at \(p\%\) takes place prior to the board reaching an equilibrium. 
 To observe the average segregation time \(p\%\) for any \(p\), 500 simulations were ran per board and averaged out in order to give an approximation for the average segregation time at \(p\%\).
 Likewise the average segregated fraction will be estimated by the average of the segregated fraction of an equilibrium from 500 simulations with given happiness \(q\).
@@ -105,53 +105,51 @@ Another effect is the rise of the number of generations, that is, the time it ta
 Interestingly, this effect is less strong than one might initially expect. 
 On the standard board, it takes on average $5.5$ generations to reach full segregation. On the 4-Type board however, it takes $8.5$ generations.\\
 
-The remaining part of Figure \ref{fig:aveseg4b} is quite similar to figure \ref{fig:avesegsb}: quick rise, followed by a slightly decreasing ascending relation. 
+The remaining part of Figure \ref{fig:aveseg4b} is quite similar to figure \ref{fig:avesegsb}: a quick rise, followed by a slightly decreasing ascending relation. 
 The explanation is similar to that of the basic model.
 \subsubsection{Question 2}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{habysegfrac_sb_2}
-    \caption{Average segregated fraction as a result of happiness on the standard board}
+    \caption{Average segregated fraction as a result of happiness on the standard board. The red and green dots represent the minimum and maximum segregrated fraction of 500 boards for the given happiness. }
     \label{fig:happysegsb}
 \end{figure}
 
-Figure \ref{fig:happysegsb} displays three scattered values. 
-The red and green dots represent the minimum and maximum segregrated fraction of 500 boards for the given happiness. 
-Notable in this picture is that the average segregated value is greater than the happiness. 
-Another thing worth noting is that the segregated fractions tend to appear in different groups seperated by relatively large percentages.
+Figure \ref{fig:happysegsb} displays the average segregated fraction, the minimum segregated fraction and the maximum segregated fraction ar equilibrium, as a function of the Happines Rule.
+Notable in this Figure is that the average segregated fraction is greater than the happiness. 
+Another point worth noting is that the segregated fractions tend to appear in different groups seperated by relatively large percentages.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{habysegfrac_4b_2}
-    \caption{Average (blue) segregated fraction as a result of happiness on the 4-Type board. Also included max (green) and min (red).}
+    \caption{Average (blue) segregated fraction as a result of happiness on the 4-Type board. In green the respective maximum segregated fraction is shown, in red the respective minimum segregated fraction is shown}
     \label{fig:happyseg4b}
 \end{figure}
 
-Figure \ref{fig:happyseg4b} shows that contrast to the standard board, this board does not respect the property that the average segregated fraction is always greater than or equal to the happiness. 
-A thing of interest however, is that the averages of both figure \ref{fig:happysegsb} and \ref{fig:happyseg4b} seem to cluster. 
-This is because, as mentioned earlier, the effect of the Happiness Rule is quite discrete when using second order neighbourhood.
+Figure \ref{fig:happyseg4b} shows that in contrast to the standard board, the 4-Type board does not respect the property that the average segregated fraction is always greater than or equal to the happiness. 
+A point of interest however, is that the averages of both Figures \ref{fig:happysegsb} and \ref{fig:happyseg4b} seem to cluster. 
+This is because, as mentioned earlier, the effect of the Happiness Rule is discrete when using second order neighbourhood.
 
 \subsubsection{Question 3}
-In order to answer the third question, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025, for $60\%$,$80\%$ and $100\%$ segregation.\\
-The results are shown in figure \ref{fig:happysegr}.
+In order to answer the third question, for any given Happiness Rule, how often is \(60\%,80\%\) and \(100\%\) segregation reach, we ran 500 simulations for each HR ranging from 0 to 1 with increment 0.025.\\
+The results are shown in Figure \ref{fig:happysegr}.
 \begin{figure}[H]
+	\centering
 	\begin{subfigure}{0.4\textwidth}
-    \centering
     \includegraphics[width=\textwidth]{happy_segr_60_80_100.pdf}
     \label{fig:happysegsc}
     \caption{The standard board.}
     \end{subfigure}
     ~
     \begin{subfigure}{0.4\textwidth}
-    \centering
     \includegraphics[width=\textwidth]{happy_segr_60_80_100_4b.pdf}
     \label{fig:happyseg4c}
     \caption{The 4-Type board.}
     \end{subfigure}
-    \caption{For each $HR = 0,0.025,...,1$, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
+    \caption{For each Happiness Rule ranging from 0 to 1 with increments 0.025, the fraction of the simulations in which 60$\%$ (blue),80$\%$ (green) and 100$\%$ (red) segregation is reached.}
     \label{fig:happysegr}
 \end{figure}
-Of note is the similarity of the two graphs, with one notable exception. In contrast to the standard board, on the 4-Type board, full segregation is not guaranteed by a Happiness Rule of 1 (or 0.8).\\
+It is notable that the two graphs are fairly similar, with one key difference. In contrast to the standard board, on the 4-Type board, full segregation is not guaranteed by a Happiness Rule of 1 (or 0.8). This implies that the board reached an equilibrium state in which no person is able to move to a better location, despite the fact that the boards have the same inhabited to uninhabited location ratio.\\
 We will not discuss these graphs in detail.
 
 \subsubsection{Question 4}
