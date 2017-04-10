@@ -94,7 +94,7 @@ In addition,  the type of neighbourhood can be changed.
 The neighbourhood is  by default a second order neighbourhood, in which both the adjacent and diagonal people are considered neighbours. 
 There exists only one smaller type of neighbourhood: the first order neighbourhood. 
 Only adjacent neighbours are accounted for this type of neighbourhood; a person has up to four neighbours.
-The way the different types of neighbourhood are defined is illustrated in figure \ref{fig:neighbourhood}.
+The way the different types of neighbourhood are defined is illustrated in Figure \ref{fig:neighbourhood}.
 Here, $0$ represents the individual himself and every other place displays which order of  of neighbourhood it belongs to.
 We will not examine the effect of the type of neighbourhood on the segregation in our model in this report.
 However, some interesting graphs are included in the appendix.\\
@@ -107,7 +107,7 @@ Furthermore, we expanded the model with the so-called 'criminals'.
 One can choose to have $c$ out of the $n$ individuals behave as if they were a criminal.
 Any person who is not a criminal himself, does not like criminals in his neighbourhood, and thus his/her happiness will be $0$, overruling any positive effect of friendly neighbours, if a criminal lives in his/her neighbourhood.
 As a result, all criminals should end up living together.
-In figure \ref{fig:examplecrim}, one can see an example of the basic model with $10$ criminals among the $40$ individuals.
+In Figure \ref{fig:examplecrim}, one can see an example of the basic model with $10$ criminals among the $40$ individuals.
 It is visible that our expectation is not always the outcome.
 In this case, equilibrium is reached, because every unhappy individual cannot move to another place, since every empty location is in the neighbourhood of a criminal.
 So the unhappy individuals will not become happier on these places.
@@ -138,11 +138,11 @@ In the other version, every unhappy individual will switch type depending on the
 This is further elaborated on in section \ref{section:switch}.
 Individuals without neighbours will not switch types, since they have no neighbours who extert their influence on them.
 We will investigate the effect of the second version of switching further in section \ref{section:switch}.
-\subsection{The applied statistical test}
-\textbf{The two sample t-test}:\\
-For the following sections, we will mostly use the two sample t-test (ttest2) from Matlab for comparing the means of two distributions. We consider two means to be comparable when they are equal. Otherwise, they are not comparable.\\
+\subsection{The applied statistical test}\label{subsec:stattest}
+\textbf{The two sample \(t\)-test}:\\
+For the following sections, we will mostly use the two sample \(t\)-test (ttest2) from Matlab for comparing the means of two distributions. We consider two means to be comparable when they are equal. Otherwise, they are not comparable.\\
 \\
-This t-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X$ and $Y$, against $H_1:\mu\neq\nu$. It uses the test statistics:
+This \(t\)-test tests the null-hypothesis $H_0:\mu=\nu$ with $\mu,\nu$ respectively the mean of the distribution of $X=(X_1,\dotsc,X_m)$ and $Y=(Y_1,\dotsc,Y_n)$, against $H_1:\mu\neq\nu$. It uses the test statistics:
  \[T=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{S^2_X}{m}-\frac{S^2_Y}{n}}}\]
 This test assumes that the mean difference $\mu-\nu$ is normally distributed, and since our data are from the discrete random variables, this assumption would not make sense. 
 However, according to the central limit theorems, we may make this assumption only for a sufficiently large sample size. 
