@@ -28,7 +28,7 @@ num_lines = 1;
 defaultans = {'ditwordtdenaamvanhetfilmpjedatjemaakt.avi'};
 answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 Filenaam = answer{1};
-maxframe = 5;
+maxframe = 3;
 
 [n,types,lengte,breedte,happy,vk,r,randvp,acrim, kans, wisselen] = Menu();
 %A = info(n,lengte,breedte,types,acrim);
@@ -45,18 +45,19 @@ telnosw = 0;
 
 
 volg = importdata('volg1.mat');
+%volg = randperm(sum(n),sum(n));
 vert = 1;
 
 figure
 hold on
 image(B + 10*K + ones(lengte,breedte));
 colormap(map);
-
-for frame = 1:maxframe
+pause(0.1);
+for frame = 1:10
     mymovie(vert) = getframe;
     vert = vert+1;
 end
-pause(2);
+
 
 while klaar == false 
     klaar = true;
